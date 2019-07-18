@@ -26,7 +26,9 @@ namespace SourceManager.Desktop
         private void FrmSourceManager_Load(object sender, EventArgs e)
         {
             txtPasta.Text = Reg.Read("PastaVerifica");
-
+            this.Text = Application.ProductName + " - " 
+                + Application.CompanyName
+                + "          Version: " + Application.ProductVersion;
             initProcess();
             finishProcess();
         }
@@ -91,8 +93,9 @@ namespace SourceManager.Desktop
 
         private void lbRepo_DoubleClick(object sender, EventArgs e)
         {
-            System.Diagnostics.Process.Start("explorer.exe", 
-                System.IO.Path.Combine(txtPasta.Text, lbRepo.SelectedItem.ToString()));
+            var repo = txtPasta.Text + lbRepo.SelectedItem.ToString();
+
+            System.Diagnostics.Process.Start("explorer.exe", repo);
         }
 
         private void btnPesquisar_Click(object sender, EventArgs e)

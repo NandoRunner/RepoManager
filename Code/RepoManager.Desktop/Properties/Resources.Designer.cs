@@ -79,5 +79,15 @@ namespace SourceManager.Desktop.Properties {
                 return ((System.Drawing.Icon)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Icon semelhante a (Ícone).
+        /// </summary>
+        internal static System.Drawing.Icon vc_git {
+            get {
+                object obj = ResourceManager.GetObject("vc_git", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
+            }
+        }
     }
 }

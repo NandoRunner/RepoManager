@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RepoManager.Desktop", "Code
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FAndradeTecInfo.Utils", "..\..\_Resource\FandradeTecInfoUtils\FAndradeTecInfo.Utils.csproj", "{D27F1821-F7C8-4D31-BE57-8452279F0B4C}"
 EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "RepoManager.Setup", "Code\RepoManager.Setup\RepoManager.Setup.vdproj", "{FD25EE7D-FB28-487E-A103-6FCA90486354}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,8 @@ Global
 		{D27F1821-F7C8-4D31-BE57-8452279F0B4C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D27F1821-F7C8-4D31-BE57-8452279F0B4C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D27F1821-F7C8-4D31-BE57-8452279F0B4C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FD25EE7D-FB28-487E-A103-6FCA90486354}.Debug|Any CPU.ActiveCfg = Debug
+		{FD25EE7D-FB28-487E-A103-6FCA90486354}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

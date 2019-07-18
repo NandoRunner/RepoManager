@@ -36,30 +36,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>Resources\iconfinder_social_media_social_media_logo_git_1916016.ico</ApplicationIcon>
+    <ApplicationIcon>Resources\vc_git.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Carbon.Data.Protection, Version=0.21.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Carbon.Data.Protection.0.21.0\lib\netstandard2.0\Carbon.Data.Protection.dll</HintPath>
-    </Reference>
-    <Reference Include="Carbon.Json, Version=1.9.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Carbon.Json.1.9.0\lib\netstandard2.0\Carbon.Json.dll</HintPath>
-    </Reference>
-    <Reference Include="Carbon.Packaging, Version=1.32.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Carbon.Packaging.1.32.0\lib\netstandard2.0\Carbon.Packaging.dll</HintPath>
-    </Reference>
-    <Reference Include="Carbon.Storage, Version=1.18.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Carbon.Storage.1.18.0\lib\netstandard2.0\Carbon.Storage.dll</HintPath>
-    </Reference>
-    <Reference Include="Carbon.VersionControl, Version=1.9.1.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Carbon.VersionControl.1.9.1\lib\netstandard2.0\Carbon.VersionControl.dll</HintPath>
-    </Reference>
-    <Reference Include="Carbon.Versioning, Version=1.5.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Carbon.Versioning.1.5.0\lib\netstandard2.0\Carbon.Versioning.dll</HintPath>
-    </Reference>
-    <Reference Include="GitHub, Version=1.14.1.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\GitHub.1.14.1\lib\netstandard2.0\GitHub.dll</HintPath>
-    </Reference>
     <Reference Include="LibGit2Sharp, Version=0.26.0.0, Culture=neutral, PublicKeyToken=7cbde695407f0333, processorArchitecture=MSIL">
       <HintPath>..\..\packages\LibGit2Sharp.0.26.0\lib\net46\LibGit2Sharp.dll</HintPath>
     </Reference>
@@ -142,6 +121,9 @@
       <Project>{d27f1821-f7c8-4d31-be57-8452279f0b4c}</Project>
       <Name>FAndradeTecInfo.Utils</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vc_git.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
