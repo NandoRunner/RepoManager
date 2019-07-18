@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace SourceManager.Desktop.Business
 {
-    public class GitBusiness
+    public class RepoBusiness
     {
         private string _basePath;
         private ListBox _lbRepo;
@@ -18,9 +18,11 @@ namespace SourceManager.Desktop.Business
         private int numRepos;
         private int numPendingRepos;
 
+        public StringBuilder sb;
+
         private ArrayList lstRepos;
 
-        public GitBusiness(string basePath, ref ListBox lbRepo, ref StatusStrip statusStrip)
+        public RepoBusiness(string basePath, ref ListBox lbRepo, ref StatusStrip statusStrip)
         {
             _basePath = basePath;
             _lbRepo = lbRepo;
@@ -30,6 +32,8 @@ namespace SourceManager.Desktop.Business
             numPendingRepos = 0;
 
             lstRepos = new ArrayList();
+
+            sb = new StringBuilder();
 
             LoadRepos(_basePath);
 
@@ -56,15 +60,15 @@ namespace SourceManager.Desktop.Business
 
         public void CheckPending()
         {
-            ExecSubDirectories(_basePath, true);
+            ExecSubDirectories(true);
         }
 
         public void ListAll()
         {
-            ExecSubDirectories(_basePath, false);
+            ExecSubDirectories(false);
         }
 
-        private void ExecSubDirectories(string directory, bool onlyPending)
+        private void ExecSubDirectories(bool onlyPending)
         {
             foreach (string repo in lstRepos)
             {
@@ -73,7 +77,7 @@ namespace SourceManager.Desktop.Business
 
                 if (!onlyPending)
                 {
-                    _lbRepo.Items.Add(repo);
+                    _lbRepo.Items.Add(repo.Replace(_basePath, ""));
                     _lbRepo.Refresh();
                     ((ToolStripLabel)_statusStrip.Items[0]).Text = (++numRepos).ToString() + " repositórios encontrados";
                     _statusStrip.Refresh();
@@ -85,7 +89,7 @@ namespace SourceManager.Desktop.Business
 
                 if (rs.IsDirty)
                 {
-                    _lbRepo.Items.Add(repo);
+                    _lbRepo.Items.Add(repo.Replace(_basePath, ""));
                     _lbRepo.Refresh();
                     ((ToolStripLabel)_statusStrip.Items[0]).Text = (++numPendingRepos).ToString() + " repositórios com pendências encontrados"; ;
                     _statusStrip.Refresh();

@@ -61,6 +61,16 @@ namespace SourceManager.Desktop.Properties {
         }
         
         /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap iconfinder_Log_Out_27856 {
+            get {
+                object obj = ResourceManager.GetObject("iconfinder_Log_Out_27856", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Icon semelhante a (Ícone).
         /// </summary>
         internal static System.Drawing.Icon iconfinder_social_media_social_media_logo_git_1916016 {

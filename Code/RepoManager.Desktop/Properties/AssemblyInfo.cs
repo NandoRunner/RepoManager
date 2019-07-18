@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // As informações gerais sobre um assembly são controladas por
 // conjunto de atributos. Altere estes valores de atributo para modificar as informações
 // associada a um assembly.
-[assembly: AssemblyTitle("Source Manager Desktop")]
+[assembly: AssemblyTitle("Repo Manager Desktop")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("FAndrade TecInfo")]
-[assembly: AssemblyProduct("SourceManager.Desktop")]
+[assembly: AssemblyProduct("RepoManager")]
 [assembly: AssemblyCopyright("Copyright ©  2019")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -33,4 +33,4 @@ using System.Runtime.InteropServices;
 // utilizando o "*" como mostrado abaixo:
 // [assembly: AssemblyVersion("1.0.*")]
 [assembly: AssemblyVersion("1.19.0.0")]
-[assembly: AssemblyFileVersion("1.19.0.0")]
+[assembly: AssemblyFileVersion("1.19.0.1")]
