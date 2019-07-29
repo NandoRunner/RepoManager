@@ -30,7 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmSourceManager));
-            this.lbRepo = new System.Windows.Forms.ListBox();
+            this.lbLog = new System.Windows.Forms.ListBox();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.tsLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.tsProgressBar = new System.Windows.Forms.ToolStripProgressBar();
@@ -47,17 +47,16 @@
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // lbRepo
+            // lbLog
             // 
-            this.lbRepo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbRepo.FormattingEnabled = true;
-            this.lbRepo.ItemHeight = 16;
-            this.lbRepo.Location = new System.Drawing.Point(12, 168);
-            this.lbRepo.Name = "lbRepo";
-            this.lbRepo.Size = new System.Drawing.Size(741, 196);
-            this.lbRepo.TabIndex = 2;
-            this.lbRepo.SelectedIndexChanged += new System.EventHandler(this.lbRepo_SelectedIndexChanged);
-            this.lbRepo.DoubleClick += new System.EventHandler(this.lbRepo_DoubleClick);
+            this.lbLog.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbLog.FormattingEnabled = true;
+            this.lbLog.ItemHeight = 16;
+            this.lbLog.Location = new System.Drawing.Point(12, 168);
+            this.lbLog.Name = "lbLog";
+            this.lbLog.Size = new System.Drawing.Size(741, 196);
+            this.lbLog.TabIndex = 2;
+            this.lbLog.DoubleClick += new System.EventHandler(this.lbRepo_DoubleClick);
             // 
             // statusStrip1
             // 
@@ -98,6 +97,8 @@
             // 
             // btnSair
             // 
+            this.btnSair.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSair.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnSair.ImageIndex = 0;
             this.btnSair.ImageList = this.imageList1;
             this.btnSair.Location = new System.Drawing.Point(643, 60);
@@ -126,6 +127,7 @@
             // btnAbrir
             // 
             this.btnAbrir.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.btnAbrir.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAbrir.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAbrir.Image = ((System.Drawing.Image)(resources.GetObject("btnAbrir.Image")));
             this.btnAbrir.Location = new System.Drawing.Point(681, 12);
@@ -138,6 +140,7 @@
             // btnPesquisar
             // 
             this.btnPesquisar.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.btnPesquisar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnPesquisar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPesquisar.Image = ((System.Drawing.Image)(resources.GetObject("btnPesquisar.Image")));
             this.btnPesquisar.Location = new System.Drawing.Point(643, 12);
@@ -149,6 +152,7 @@
             // 
             // btnListAll
             // 
+            this.btnListAll.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnListAll.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnListAll.Location = new System.Drawing.Point(23, 60);
             this.btnListAll.Name = "btnListAll";
@@ -160,6 +164,7 @@
             // 
             // btnCheck
             // 
+            this.btnCheck.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCheck.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCheck.Location = new System.Drawing.Point(371, 60);
             this.btnCheck.Name = "btnCheck";
@@ -181,9 +186,10 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.CancelButton = this.btnSair;
             this.ClientSize = new System.Drawing.Size(765, 415);
             this.Controls.Add(this.statusStrip1);
-            this.Controls.Add(this.lbRepo);
+            this.Controls.Add(this.lbLog);
             this.Controls.Add(this.panel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmSourceManager";
@@ -200,7 +206,7 @@
         }
 
         #endregion
-        private System.Windows.Forms.ListBox lbRepo;
+        private System.Windows.Forms.ListBox lbLog;
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.ToolStripStatusLabel tsLabel;
         private System.Windows.Forms.ToolStripProgressBar tsProgressBar;

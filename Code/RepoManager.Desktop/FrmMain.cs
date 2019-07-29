@@ -45,7 +45,7 @@ namespace SourceManager.Desktop
             tsLabel.Text = "Inicializando o processamento...";
             this.Refresh();
 
-            RepoBusiness gb = new RepoBusiness(txtPasta.Text, ref lbRepo, ref statusStrip1);
+            RepoBusiness gb = new RepoBusiness(txtPasta.Text, ref lbLog, ref statusStrip1);
 
             gb.CheckPending();
 
@@ -66,7 +66,7 @@ namespace SourceManager.Desktop
             tsLabel.Text = "Inicializando o processamento...";
             this.Refresh();
 
-            RepoBusiness gb = new RepoBusiness(txtPasta.Text, ref lbRepo, ref statusStrip1);
+            RepoBusiness gb = new RepoBusiness(txtPasta.Text, ref lbLog, ref statusStrip1);
 
             gb.ListAll();
 
@@ -79,7 +79,7 @@ namespace SourceManager.Desktop
         {
             Cursor.Current = Cursors.WaitCursor;
             panel1.Enabled = false;
-            lbRepo.Items.Clear();
+            lbLog.Items.Clear();
             tsProgressBar.Value = 0;
             tsLabel.Text = "";
         }
@@ -93,9 +93,11 @@ namespace SourceManager.Desktop
 
         private void lbRepo_DoubleClick(object sender, EventArgs e)
         {
-            var repo = txtPasta.Text + lbRepo.SelectedItem.ToString();
-
-            System.Diagnostics.Process.Start("explorer.exe", repo);
+            ProcessStartInfo psi = new ProcessStartInfo();
+            psi.FileName = "cmd";
+            psi.Arguments = @"/k ""C:\Program Files\Git\usr\bin\bash.exe"" --login -i ";
+            psi.WorkingDirectory = txtPasta.Text + lbLog.SelectedItem.ToString();
+            System.Diagnostics.Process.Start(psi);
         }
 
         private void btnPesquisar_Click(object sender, EventArgs e)
@@ -117,7 +119,10 @@ namespace SourceManager.Desktop
 
         private void btnSair_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            if (MessageBox.Show("Deseja mesmo sair?", Application.ProductName, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
         }
 
         private bool ValidarCampos()
@@ -141,9 +146,5 @@ namespace SourceManager.Desktop
             return true;
         }
 
-        private void lbRepo_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
     }
 }
