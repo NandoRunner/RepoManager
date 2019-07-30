@@ -86,18 +86,17 @@ namespace SourceManager.Desktop
 
         private void finishProcess()
         {
-
             panel1.Enabled = true;
             Cursor.Current = Cursors.Default;
         }
 
         private void lbRepo_DoubleClick(object sender, EventArgs e)
         {
-            ProcessStartInfo psi = new ProcessStartInfo();
-            psi.FileName = "cmd";
-            psi.Arguments = @"/k ""C:\Program Files\Git\usr\bin\bash.exe"" --login -i ";
-            psi.WorkingDirectory = txtPasta.Text + lbLog.SelectedItem.ToString();
-            System.Diagnostics.Process.Start(psi);
+            if (lbLog.SelectedIndex == -1)
+                return;
+
+            var rb = new RepoBusiness(txtPasta.Text + lbLog.SelectedItem.ToString());
+            rb.RunGitBash();
         }
 
         private void btnPesquisar_Click(object sender, EventArgs e)
@@ -146,5 +145,27 @@ namespace SourceManager.Desktop
             return true;
         }
 
+        private void abrirNoExplorerToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var rb = new RepoBusiness(txtPasta.Text + lbLog.SelectedItem.ToString());
+            rb.OpenExplorer();
+        }
+
+        private void gitBashToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var rb = new RepoBusiness(txtPasta.Text + lbLog.SelectedItem.ToString());
+            rb.RunGitBash();
+
+        }
+
+        private void contextMenuStrip1_Opening(object sender, CancelEventArgs e)
+        {
+            bool selected = true;
+
+            if (lbLog.SelectedIndex == -1) selected = false;
+
+            abrirNoExplorerToolStripMenuItem.Enabled = selected;
+            gitBashToolStripMenuItem.Enabled = selected;
+        }
     }
 }

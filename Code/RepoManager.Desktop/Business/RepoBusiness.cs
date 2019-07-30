@@ -13,6 +13,7 @@ namespace SourceManager.Desktop.Business
     public class RepoBusiness
     {
         private string _basePath;
+        private string _workingPath;
         private ListBox _lbRepo;
         private StatusStrip _statusStrip;
         private int numRepos;
@@ -21,6 +22,31 @@ namespace SourceManager.Desktop.Business
         public StringBuilder sb;
 
         private ArrayList lstRepos;
+
+        public RepoBusiness(string workingPath)
+        {
+            _workingPath = workingPath;
+        }
+        
+        public void OpenExplorer()
+        {
+            var psi = new System.Diagnostics.ProcessStartInfo
+            {
+                FileName = "explorer.exe",
+                Arguments = _workingPath
+            };
+            System.Diagnostics.Process.Start(psi);
+        }
+
+        public void RunGitBash()
+        {
+            var psi = new System.Diagnostics.ProcessStartInfo();
+            psi.FileName = "cmd.exe";
+            psi.Arguments = @"/k ""C:\Program Files\Git\usr\bin\bash.exe"" --login -i ";
+            psi.WorkingDirectory = _workingPath;
+            System.Diagnostics.Process.Start(psi);
+        }
+
 
         public RepoBusiness(string basePath, ref ListBox lbRepo, ref StatusStrip statusStrip)
         {

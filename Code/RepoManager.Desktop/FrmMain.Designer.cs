@@ -31,6 +31,10 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmSourceManager));
             this.lbLog = new System.Windows.Forms.ListBox();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.abrirNoExplorerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripSeparator();
+            this.gitBashToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.tsLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.tsProgressBar = new System.Windows.Forms.ToolStripProgressBar();
@@ -43,12 +47,14 @@
             this.btnListAll = new System.Windows.Forms.Button();
             this.btnCheck = new System.Windows.Forms.Button();
             this.txtPasta = new System.Windows.Forms.TextBox();
+            this.contextMenuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // lbLog
             // 
+            this.lbLog.ContextMenuStrip = this.contextMenuStrip1;
             this.lbLog.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbLog.FormattingEnabled = true;
             this.lbLog.ItemHeight = 16;
@@ -57,6 +63,37 @@
             this.lbLog.Size = new System.Drawing.Size(741, 196);
             this.lbLog.TabIndex = 2;
             this.lbLog.DoubleClick += new System.EventHandler(this.lbRepo_DoubleClick);
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.abrirNoExplorerToolStripMenuItem,
+            this.toolStripMenuItem1,
+            this.gitBashToolStripMenuItem});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(181, 76);
+            this.contextMenuStrip1.Opening += new System.ComponentModel.CancelEventHandler(this.contextMenuStrip1_Opening);
+            // 
+            // abrirNoExplorerToolStripMenuItem
+            // 
+            this.abrirNoExplorerToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("abrirNoExplorerToolStripMenuItem.Image")));
+            this.abrirNoExplorerToolStripMenuItem.Name = "abrirNoExplorerToolStripMenuItem";
+            this.abrirNoExplorerToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.abrirNoExplorerToolStripMenuItem.Text = "Abrir no Explorer";
+            this.abrirNoExplorerToolStripMenuItem.Click += new System.EventHandler(this.abrirNoExplorerToolStripMenuItem_Click);
+            // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(177, 6);
+            // 
+            // gitBashToolStripMenuItem
+            // 
+            this.gitBashToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("gitBashToolStripMenuItem.Image")));
+            this.gitBashToolStripMenuItem.Name = "gitBashToolStripMenuItem";
+            this.gitBashToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.gitBashToolStripMenuItem.Text = "Git Bash";
+            this.gitBashToolStripMenuItem.Click += new System.EventHandler(this.gitBashToolStripMenuItem_Click);
             // 
             // statusStrip1
             // 
@@ -196,6 +233,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Source Manager";
             this.Load += new System.EventHandler(this.FrmSourceManager_Load);
+            this.contextMenuStrip1.ResumeLayout(false);
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
             this.panel1.ResumeLayout(false);
@@ -219,6 +257,10 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnSair;
         private System.Windows.Forms.ImageList imageList1;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem abrirNoExplorerToolStripMenuItem;
+        private System.Windows.Forms.ToolStripSeparator toolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem gitBashToolStripMenuItem;
     }
 }
 
