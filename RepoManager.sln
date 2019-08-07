@@ -5,7 +5,7 @@ VisualStudioVersion = 15.0.28307.572
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RepoManager.Desktop", "Code\RepoManager.Desktop\RepoManager.Desktop.csproj", "{729A2B61-1744-4484-B1FF-5250FDDC5271}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FAndradeTecInfo.Utils", "..\..\_Resource\FandradeTecInfoUtils\FAndradeTecInfo.Utils.csproj", "{D27F1821-F7C8-4D31-BE57-8452279F0B4C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FAndradeTecInfo.Utils", "..\_Resource\FandradeTecInfoUtils\FAndradeTecInfo.Utils.csproj", "{D27F1821-F7C8-4D31-BE57-8452279F0B4C}"
 EndProject
 Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "RepoManager.Setup", "Code\RepoManager.Setup\RepoManager.Setup.vdproj", "{FD25EE7D-FB28-487E-A103-6FCA90486354}"
 EndProject

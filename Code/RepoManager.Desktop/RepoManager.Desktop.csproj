@@ -117,13 +117,13 @@
     <None Include="Resources\iconfinder_Log Out_27856.png" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\..\_Resource\FandradeTecInfoUtils\FAndradeTecInfo.Utils.csproj">
+    <None Include="Resources\vc_git.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\_Resource\FandradeTecInfoUtils\FAndradeTecInfo.Utils.csproj">
       <Project>{d27f1821-f7c8-4d31-be57-8452279f0b4c}</Project>
       <Name>FAndradeTecInfo.Utils</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\vc_git.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
