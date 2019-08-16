@@ -10,7 +10,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using FAndradeTecInfo.Utils;
 using SourceManager.Desktop.Business;
-
+using SourceManager.Desktop.Controllers;
+using SourceManager.Desktop.Model;
 
 namespace SourceManager.Desktop
 {
@@ -29,8 +30,8 @@ namespace SourceManager.Desktop
             this.Text = Application.ProductName + " - " 
                 + Application.CompanyName
                 + "          Version: " + Application.ProductVersion;
-            initProcess();
-            finishProcess();
+            BeginProcess();
+            EndProcess();
         }
 
         private void btnCheck_Click(object sender, EventArgs e)
@@ -40,9 +41,9 @@ namespace SourceManager.Desktop
                 return;
             }
 
-            initProcess();
+            BeginProcess(sender);
 
-            tsLabel.Text = "Inicializando o processamento...";
+            tsLabel.Text = "Starting processing...";
             this.Refresh();
 
             RepoBusiness gb = new RepoBusiness(txtPasta.Text, ref lbLog, ref statusStrip1);
@@ -51,19 +52,16 @@ namespace SourceManager.Desktop
 
             Reg.Write("PastaVerifica", txtPasta.Text);
 
-            finishProcess();
+            EndProcess(sender);
         }
 
         private void btnListAll_Click(object sender, EventArgs e)
         {
-            if (!ValidarCampos())
-            {
-                return;
-            }
+            if (!ValidarCampos()) return;
 
-            initProcess();
+            BeginProcess(sender);
 
-            tsLabel.Text = "Inicializando o processamento...";
+            tsLabel.Text = "Starting processing...";
             this.Refresh();
 
             RepoBusiness gb = new RepoBusiness(txtPasta.Text, ref lbLog, ref statusStrip1);
@@ -72,21 +70,64 @@ namespace SourceManager.Desktop
 
             Reg.Write("PastaVerifica", txtPasta.Text);
 
-            finishProcess();
+            EndProcess(sender);
         }
 
-        private void initProcess()
+        private void btnListBlocked_Click(object sender, EventArgs e)
+        {
+            if (!ValidarCampos()) return;
+
+            BeginProcess(sender);
+
+            tsLabel.Text = "Starting processing...";
+            this.Refresh();
+
+            RepoBusiness gb = new RepoBusiness(txtPasta.Text, ref lbLog, ref statusStrip1);
+
+            gb.ListBlocked();
+
+            Reg.Write("PastaVerifica", txtPasta.Text);
+
+            EndProcess(sender);
+
+        }
+
+        private void BeginProcess(object sender = null)
         {
             Cursor.Current = Cursors.WaitCursor;
-            panel1.Enabled = false;
+            pnMain.Enabled = false;
+            lbLog.DataSource = null;
             lbLog.Items.Clear();
             tsProgressBar.Value = 0;
             tsLabel.Text = "";
+
+            foreach(Control c in pnMain.Controls)
+            {
+                if (c.GetType() == typeof(Button))
+                {
+                    c.BackColor = Color.Wheat;
+                }
+            }
+            if (sender != null)
+            {
+                ((Button)sender).BackColor = Color.Salmon;
+                bool visible = true;
+                if (((Button)sender).Name == "btnListBlocked")
+                {
+                    visible = false;
+                }
+                desbloquearToolStripMenuItem.Visible = !visible;
+                ignorarChecagemToolStripMenuItem.Visible = visible;
+
+            }
+
         }
 
-        private void finishProcess()
+        private void EndProcess(object sender = null)
         {
-            panel1.Enabled = true;
+            if (sender != null) ((Button)sender).BackColor = Color.Orange;
+
+            pnMain.Enabled = true;
             Cursor.Current = Cursors.Default;
         }
 
@@ -166,6 +207,45 @@ namespace SourceManager.Desktop
 
             abrirNoExplorerToolStripMenuItem.Enabled = selected;
             gitBashToolStripMenuItem.Enabled = selected;
+            ignorarChecagemToolStripMenuItem.Enabled = selected;
+            desbloquearToolStripMenuItem.Enabled = selected;
+        }
+
+        private async void btnTrelloBoards_Click(object sender, EventArgs e)
+        {
+
+            TrelloController trello = new TrelloController();
+            var ret = await trello.GetBoards();
+
+            foreach (TrelloBoard tb in ret)
+            {
+                lbLog.Items.Add(tb.name);
+            }
+
+            lbLog.Refresh();
+
+        }
+
+        private void ignorarChecagemToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            BeginProcess();
+
+            var rb = new RepoBusiness(txtPasta.Text + lbLog.SelectedItem.ToString());
+            rb.IgnoreCheck();
+
+            EndProcess();
+        }
+
+
+
+        private void desbloquearToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            BeginProcess();
+
+            var rb = new RepoBusiness(txtPasta.Text + lbLog.SelectedItem.ToString());
+            rb.IgnoreCheck(false);
+
+            EndProcess();
         }
     }
 }

@@ -35,10 +35,13 @@
             this.abrirNoExplorerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripSeparator();
             this.gitBashToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripSeparator();
+            this.ignorarChecagemToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.tsLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.tsProgressBar = new System.Windows.Forms.ToolStripProgressBar();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.pnMain = new System.Windows.Forms.Panel();
+            this.btnTrelloBoards = new System.Windows.Forms.Button();
             this.btnSair = new System.Windows.Forms.Button();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.label1 = new System.Windows.Forms.Label();
@@ -47,9 +50,11 @@
             this.btnListAll = new System.Windows.Forms.Button();
             this.btnCheck = new System.Windows.Forms.Button();
             this.txtPasta = new System.Windows.Forms.TextBox();
+            this.btnListBlocked = new System.Windows.Forms.Button();
+            this.desbloquearToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.contextMenuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
-            this.panel1.SuspendLayout();
+            this.pnMain.SuspendLayout();
             this.SuspendLayout();
             // 
             // lbLog
@@ -69,31 +74,46 @@
             this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.abrirNoExplorerToolStripMenuItem,
             this.toolStripMenuItem1,
-            this.gitBashToolStripMenuItem});
+            this.gitBashToolStripMenuItem,
+            this.toolStripMenuItem2,
+            this.ignorarChecagemToolStripMenuItem,
+            this.desbloquearToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(181, 76);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(241, 104);
             this.contextMenuStrip1.Opening += new System.ComponentModel.CancelEventHandler(this.contextMenuStrip1_Opening);
             // 
             // abrirNoExplorerToolStripMenuItem
             // 
             this.abrirNoExplorerToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("abrirNoExplorerToolStripMenuItem.Image")));
             this.abrirNoExplorerToolStripMenuItem.Name = "abrirNoExplorerToolStripMenuItem";
-            this.abrirNoExplorerToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.abrirNoExplorerToolStripMenuItem.Text = "Abrir no Explorer";
+            this.abrirNoExplorerToolStripMenuItem.Size = new System.Drawing.Size(240, 22);
+            this.abrirNoExplorerToolStripMenuItem.Text = "Open in Explorer";
             this.abrirNoExplorerToolStripMenuItem.Click += new System.EventHandler(this.abrirNoExplorerToolStripMenuItem_Click);
             // 
             // toolStripMenuItem1
             // 
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(177, 6);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(237, 6);
             // 
             // gitBashToolStripMenuItem
             // 
             this.gitBashToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("gitBashToolStripMenuItem.Image")));
             this.gitBashToolStripMenuItem.Name = "gitBashToolStripMenuItem";
-            this.gitBashToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.gitBashToolStripMenuItem.Size = new System.Drawing.Size(240, 22);
             this.gitBashToolStripMenuItem.Text = "Git Bash";
             this.gitBashToolStripMenuItem.Click += new System.EventHandler(this.gitBashToolStripMenuItem_Click);
+            // 
+            // toolStripMenuItem2
+            // 
+            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(237, 6);
+            // 
+            // ignorarChecagemToolStripMenuItem
+            // 
+            this.ignorarChecagemToolStripMenuItem.Name = "ignorarChecagemToolStripMenuItem";
+            this.ignorarChecagemToolStripMenuItem.Size = new System.Drawing.Size(240, 22);
+            this.ignorarChecagemToolStripMenuItem.Text = "Ignore Check Pending Changes";
+            this.ignorarChecagemToolStripMenuItem.Click += new System.EventHandler(this.ignorarChecagemToolStripMenuItem_Click);
             // 
             // statusStrip1
             // 
@@ -117,20 +137,35 @@
             this.tsProgressBar.Name = "tsProgressBar";
             this.tsProgressBar.Size = new System.Drawing.Size(100, 16);
             // 
-            // panel1
+            // pnMain
             // 
-            this.panel1.BackColor = System.Drawing.Color.LightGray;
-            this.panel1.Controls.Add(this.btnSair);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.btnAbrir);
-            this.panel1.Controls.Add(this.btnPesquisar);
-            this.panel1.Controls.Add(this.btnListAll);
-            this.panel1.Controls.Add(this.btnCheck);
-            this.panel1.Controls.Add(this.txtPasta);
-            this.panel1.Location = new System.Drawing.Point(12, 12);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(741, 137);
-            this.panel1.TabIndex = 17;
+            this.pnMain.BackColor = System.Drawing.Color.LemonChiffon;
+            this.pnMain.Controls.Add(this.btnListBlocked);
+            this.pnMain.Controls.Add(this.btnTrelloBoards);
+            this.pnMain.Controls.Add(this.btnSair);
+            this.pnMain.Controls.Add(this.label1);
+            this.pnMain.Controls.Add(this.btnAbrir);
+            this.pnMain.Controls.Add(this.btnPesquisar);
+            this.pnMain.Controls.Add(this.btnListAll);
+            this.pnMain.Controls.Add(this.btnCheck);
+            this.pnMain.Controls.Add(this.txtPasta);
+            this.pnMain.Location = new System.Drawing.Point(12, 12);
+            this.pnMain.Name = "pnMain";
+            this.pnMain.Size = new System.Drawing.Size(741, 137);
+            this.pnMain.TabIndex = 17;
+            // 
+            // btnTrelloBoards
+            // 
+            this.btnTrelloBoards.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnTrelloBoards.Enabled = false;
+            this.btnTrelloBoards.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTrelloBoards.Location = new System.Drawing.Point(471, 60);
+            this.btnTrelloBoards.Name = "btnTrelloBoards";
+            this.btnTrelloBoards.Size = new System.Drawing.Size(130, 38);
+            this.btnTrelloBoards.TabIndex = 24;
+            this.btnTrelloBoards.Text = "&List Trello Boards";
+            this.btnTrelloBoards.UseVisualStyleBackColor = true;
+            this.btnTrelloBoards.Click += new System.EventHandler(this.btnTrelloBoards_Click);
             // 
             // btnSair
             // 
@@ -157,9 +192,9 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(20, 19);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(118, 16);
+            this.label1.Size = new System.Drawing.Size(129, 16);
             this.label1.TabIndex = 22;
-            this.label1.Text = "Pasta de Projetos:";
+            this.label1.Text = "Base Repos Folder:";
             // 
             // btnAbrir
             // 
@@ -193,9 +228,9 @@
             this.btnListAll.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnListAll.Location = new System.Drawing.Point(23, 60);
             this.btnListAll.Name = "btnListAll";
-            this.btnListAll.Size = new System.Drawing.Size(255, 38);
+            this.btnListAll.Size = new System.Drawing.Size(130, 38);
             this.btnListAll.TabIndex = 19;
-            this.btnListAll.Text = "&List All Repos";
+            this.btnListAll.Text = "&List All";
             this.btnListAll.UseVisualStyleBackColor = true;
             this.btnListAll.Click += new System.EventHandler(this.btnListAll_Click);
             // 
@@ -203,21 +238,41 @@
             // 
             this.btnCheck.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCheck.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCheck.Location = new System.Drawing.Point(371, 60);
+            this.btnCheck.Location = new System.Drawing.Point(159, 60);
             this.btnCheck.Name = "btnCheck";
-            this.btnCheck.Size = new System.Drawing.Size(255, 38);
+            this.btnCheck.Size = new System.Drawing.Size(170, 38);
             this.btnCheck.TabIndex = 18;
-            this.btnCheck.Text = "&Check Pending Chnanges Repos";
+            this.btnCheck.Text = "&Check Pending Changes";
             this.btnCheck.UseVisualStyleBackColor = true;
             this.btnCheck.Click += new System.EventHandler(this.btnCheck_Click);
             // 
             // txtPasta
             // 
             this.txtPasta.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPasta.Location = new System.Drawing.Point(144, 16);
+            this.txtPasta.Location = new System.Drawing.Point(155, 16);
             this.txtPasta.Name = "txtPasta";
-            this.txtPasta.Size = new System.Drawing.Size(482, 22);
+            this.txtPasta.Size = new System.Drawing.Size(468, 22);
             this.txtPasta.TabIndex = 17;
+            // 
+            // btnListBlocked
+            // 
+            this.btnListBlocked.BackColor = System.Drawing.Color.Salmon;
+            this.btnListBlocked.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnListBlocked.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnListBlocked.Location = new System.Drawing.Point(335, 60);
+            this.btnListBlocked.Name = "btnListBlocked";
+            this.btnListBlocked.Size = new System.Drawing.Size(130, 38);
+            this.btnListBlocked.TabIndex = 25;
+            this.btnListBlocked.Text = "&List Blocked";
+            this.btnListBlocked.UseVisualStyleBackColor = false;
+            this.btnListBlocked.Click += new System.EventHandler(this.btnListBlocked_Click);
+            // 
+            // desbloquearToolStripMenuItem
+            // 
+            this.desbloquearToolStripMenuItem.Name = "desbloquearToolStripMenuItem";
+            this.desbloquearToolStripMenuItem.Size = new System.Drawing.Size(240, 22);
+            this.desbloquearToolStripMenuItem.Text = "Unblock Check";
+            this.desbloquearToolStripMenuItem.Click += new System.EventHandler(this.desbloquearToolStripMenuItem_Click);
             // 
             // FrmSourceManager
             // 
@@ -227,17 +282,17 @@
             this.ClientSize = new System.Drawing.Size(765, 415);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.lbLog);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.pnMain);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmSourceManager";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Source Manager";
+            this.Text = "Repo Manager";
             this.Load += new System.EventHandler(this.FrmSourceManager_Load);
             this.contextMenuStrip1.ResumeLayout(false);
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.pnMain.ResumeLayout(false);
+            this.pnMain.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -248,7 +303,7 @@
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.ToolStripStatusLabel tsLabel;
         private System.Windows.Forms.ToolStripProgressBar tsProgressBar;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel pnMain;
         internal System.Windows.Forms.Button btnAbrir;
         internal System.Windows.Forms.Button btnPesquisar;
         private System.Windows.Forms.Button btnListAll;
@@ -261,6 +316,11 @@
         private System.Windows.Forms.ToolStripMenuItem abrirNoExplorerToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem gitBashToolStripMenuItem;
+        private System.Windows.Forms.Button btnTrelloBoards;
+        private System.Windows.Forms.ToolStripSeparator toolStripMenuItem2;
+        private System.Windows.Forms.ToolStripMenuItem ignorarChecagemToolStripMenuItem;
+        private System.Windows.Forms.Button btnListBlocked;
+        private System.Windows.Forms.ToolStripMenuItem desbloquearToolStripMenuItem;
     }
 }
 
