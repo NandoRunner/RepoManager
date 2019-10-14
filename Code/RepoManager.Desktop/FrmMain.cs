@@ -142,14 +142,16 @@ namespace SourceManager.Desktop
 
         private void btnPesquisar_Click(object sender, EventArgs e)
         {
-            FolderBrowserDialog fbd = new FolderBrowserDialog();
+            using (FolderBrowserDialog fbd = new FolderBrowserDialog
+            {
+                SelectedPath = txtPasta.Text
+            })
+            {
+                DialogResult result = fbd.ShowDialog();
 
-            fbd.SelectedPath = txtPasta.Text;
-
-            DialogResult result = fbd.ShowDialog();
-
-            if (result == DialogResult.OK)
-                txtPasta.Text = fbd.SelectedPath;
+                if (result == DialogResult.OK)
+                    txtPasta.Text = fbd.SelectedPath;
+            }
         }
 
         private void btnAbrir_Click(object sender, EventArgs e)
@@ -228,24 +230,24 @@ namespace SourceManager.Desktop
 
         private void ignorarChecagemToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            BeginProcess();
+            //BeginProcess();
 
             var rb = new RepoBusiness(txtPasta.Text + lbLog.SelectedItem.ToString());
             rb.IgnoreCheck();
 
-            EndProcess();
+            //EndProcess();
         }
 
 
 
         private void desbloquearToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            BeginProcess();
+            //BeginProcess();
 
             var rb = new RepoBusiness(txtPasta.Text + lbLog.SelectedItem.ToString());
             rb.IgnoreCheck(false);
 
-            EndProcess();
+            //EndProcess();
         }
     }
 }

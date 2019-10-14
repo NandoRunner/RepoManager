@@ -37,10 +37,12 @@
             this.gitBashToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripSeparator();
             this.ignorarChecagemToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.desbloquearToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.tsLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.tsProgressBar = new System.Windows.Forms.ToolStripProgressBar();
             this.pnMain = new System.Windows.Forms.Panel();
+            this.btnListBlocked = new System.Windows.Forms.Button();
             this.btnTrelloBoards = new System.Windows.Forms.Button();
             this.btnSair = new System.Windows.Forms.Button();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
@@ -50,8 +52,6 @@
             this.btnListAll = new System.Windows.Forms.Button();
             this.btnCheck = new System.Windows.Forms.Button();
             this.txtPasta = new System.Windows.Forms.TextBox();
-            this.btnListBlocked = new System.Windows.Forms.Button();
-            this.desbloquearToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.contextMenuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.pnMain.SuspendLayout();
@@ -115,6 +115,13 @@
             this.ignorarChecagemToolStripMenuItem.Text = "Ignore Check Pending Changes";
             this.ignorarChecagemToolStripMenuItem.Click += new System.EventHandler(this.ignorarChecagemToolStripMenuItem_Click);
             // 
+            // desbloquearToolStripMenuItem
+            // 
+            this.desbloquearToolStripMenuItem.Name = "desbloquearToolStripMenuItem";
+            this.desbloquearToolStripMenuItem.Size = new System.Drawing.Size(240, 22);
+            this.desbloquearToolStripMenuItem.Text = "Unblock Check";
+            this.desbloquearToolStripMenuItem.Click += new System.EventHandler(this.desbloquearToolStripMenuItem_Click);
+            // 
             // statusStrip1
             // 
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -154,10 +161,22 @@
             this.pnMain.Size = new System.Drawing.Size(741, 137);
             this.pnMain.TabIndex = 17;
             // 
+            // btnListBlocked
+            // 
+            this.btnListBlocked.BackColor = System.Drawing.Color.Salmon;
+            this.btnListBlocked.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnListBlocked.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnListBlocked.Location = new System.Drawing.Point(335, 60);
+            this.btnListBlocked.Name = "btnListBlocked";
+            this.btnListBlocked.Size = new System.Drawing.Size(130, 38);
+            this.btnListBlocked.TabIndex = 25;
+            this.btnListBlocked.Text = "&List Blocked";
+            this.btnListBlocked.UseVisualStyleBackColor = false;
+            this.btnListBlocked.Click += new System.EventHandler(this.btnListBlocked_Click);
+            // 
             // btnTrelloBoards
             // 
             this.btnTrelloBoards.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnTrelloBoards.Enabled = false;
             this.btnTrelloBoards.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTrelloBoards.Location = new System.Drawing.Point(471, 60);
             this.btnTrelloBoards.Name = "btnTrelloBoards";
@@ -253,26 +272,6 @@
             this.txtPasta.Name = "txtPasta";
             this.txtPasta.Size = new System.Drawing.Size(468, 22);
             this.txtPasta.TabIndex = 17;
-            // 
-            // btnListBlocked
-            // 
-            this.btnListBlocked.BackColor = System.Drawing.Color.Salmon;
-            this.btnListBlocked.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnListBlocked.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnListBlocked.Location = new System.Drawing.Point(335, 60);
-            this.btnListBlocked.Name = "btnListBlocked";
-            this.btnListBlocked.Size = new System.Drawing.Size(130, 38);
-            this.btnListBlocked.TabIndex = 25;
-            this.btnListBlocked.Text = "&List Blocked";
-            this.btnListBlocked.UseVisualStyleBackColor = false;
-            this.btnListBlocked.Click += new System.EventHandler(this.btnListBlocked_Click);
-            // 
-            // desbloquearToolStripMenuItem
-            // 
-            this.desbloquearToolStripMenuItem.Name = "desbloquearToolStripMenuItem";
-            this.desbloquearToolStripMenuItem.Size = new System.Drawing.Size(240, 22);
-            this.desbloquearToolStripMenuItem.Text = "Unblock Check";
-            this.desbloquearToolStripMenuItem.Click += new System.EventHandler(this.desbloquearToolStripMenuItem_Click);
             // 
             // FrmSourceManager
             // 

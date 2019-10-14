@@ -13,19 +13,19 @@ namespace SourceManager.Desktop.Business
 {
     public class RepoBusiness
     {
-        private string _basePath;
-        private string _workingPath;
-        private ListBox _lbRepo;
-        private StatusStrip _statusStrip;
+        private readonly string _basePath;
+        private readonly string _workingPath;
+        private readonly ListBox _lbRepo;
+        private readonly StatusStrip _statusStrip;
         private int numRepos;
         private int numPendingRepos;
 
-        private List<string> listIgnoreCheck;
+        private readonly List<string> listIgnoreCheck;
 
 
         public StringBuilder sb;
 
-        private ArrayList lstRepos;
+        private readonly ArrayList lstRepos;
 
         public RepoBusiness(string workingPath)
         {
@@ -115,10 +115,12 @@ namespace SourceManager.Desktop.Business
 
         public void RunGitBash()
         {
-            var psi = new System.Diagnostics.ProcessStartInfo();
-            psi.FileName = "cmd.exe";
-            psi.Arguments = @"/k ""C:\Program Files\Git\usr\bin\bash.exe"" --login -i ";
-            psi.WorkingDirectory = _workingPath;
+            var psi = new System.Diagnostics.ProcessStartInfo
+            {
+                FileName = "cmd.exe",
+                Arguments = @"/k ""C:\Program Files\Git\usr\bin\bash.exe"" --login -i ",
+                WorkingDirectory = _workingPath
+            };
             System.Diagnostics.Process.Start(psi);
         }
 

@@ -11,11 +11,11 @@ namespace SourceManager.Desktop.Business.Implementattions
 {
     public class TrelloBoardImpl : ITrelloBoardBusiness
     {
-        private string _memberid = "5b7dfab28663063a70b30e6a";
+        //private string _memberid = "5b7dfab28663063a70b30e6a";
 
-        private string _appKey = "43b7ac5e55b3a18b697b6dc25d16e9bd";
+        private readonly string _appKey = "43b7ac5e55b3a18b697b6dc25d16e9bd";
 
-        private string _userToken = "5dbfeaa0b9e600883dc77d500fe25dd96c749eac6cb13e0181b38d41457e8930";
+        private readonly string _userToken = "5dbfeaa0b9e600883dc77d500fe25dd96c749eac6cb13e0181b38d41457e8930";
 
         public TrelloBoardImpl()
         {
@@ -45,8 +45,10 @@ namespace SourceManager.Desktop.Business.Implementattions
 
                 foreach (var board in me.Boards)
                 {
-                    var t = new TrelloBoard();
-                    t.name = board.Name;
+                    var t = new TrelloBoard
+                    {
+                        name = board.Name
+                    };
                     ret.Add(t);
                 }
             }
