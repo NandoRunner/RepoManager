@@ -1,11 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Threading;
-using System.Diagnostics;
 using System.Reflection;
+using System.Globalization;
+using System.Resources;
 
 namespace SourceManager.Desktop
 {
@@ -15,23 +13,29 @@ namespace SourceManager.Desktop
         /// Ponto de entrada principal para o aplicativo.
         /// </summary>
         [STAThread]
-        static void Main(string[] args)
+        static void Main()
         {
-
-            bool createdNew;
-
-            Mutex m = new Mutex(true, "my" + Application.ProductName, out createdNew);
+            Mutex m = new Mutex(true, $"my{Application.ProductName}", out bool createdNew);
+            m.Dispose();
 
             if (!createdNew)
             {
+                var Rm = new ResourceManager("SourceManager.Desktop.Properties", Assembly.GetExecutingAssembly());
+
                 // myApp is already running...
-                MessageBox.Show("O aplicativo já está em execução!", Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show(Rm.GetString("MessageBoxText01", CultureInfo.CurrentCulture),
+                                Application.ProductName,
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Information);
                 return;
             }
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmSourceManager());
+            using (FrmMain frm = new FrmMain())
+            {
+                Application.Run(frm);
+            }
         }
     }
 }

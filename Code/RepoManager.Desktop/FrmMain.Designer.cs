@@ -1,6 +1,6 @@
 ﻿namespace SourceManager.Desktop
 {
-    partial class FrmSourceManager
+    partial class FrmMain
     {
         /// <summary>
         /// Variável de designer necessária.
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmSourceManager));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMain));
             this.lbLog = new System.Windows.Forms.ListBox();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.abrirNoExplorerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -273,7 +273,7 @@
             this.txtPasta.Size = new System.Drawing.Size(468, 22);
             this.txtPasta.TabIndex = 17;
             // 
-            // FrmSourceManager
+            // FrmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -283,7 +283,7 @@
             this.Controls.Add(this.lbLog);
             this.Controls.Add(this.pnMain);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "FrmSourceManager";
+            this.Name = "FrmMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Repo Manager";
             this.Load += new System.EventHandler(this.FrmSourceManager_Load);

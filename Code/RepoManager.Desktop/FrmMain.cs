@@ -15,21 +15,24 @@ using SourceManager.Desktop.Model;
 
 namespace SourceManager.Desktop
 {
-    public partial class FrmSourceManager : Form
+    public partial class FrmMain : Form
     {
-        public FrmSourceManager()
+        public FrmMain()
         {
             InitializeComponent();
 
-            Reg.subKey = "SOFTWARE\\" + Application.CompanyName + "\\" + Application.ProductName;
+            MyReg.SubKey = "SOFTWARE\\" + Application.CompanyName + "\\" + Application.ProductName;
         }
 
         private void FrmSourceManager_Load(object sender, EventArgs e)
         {
-            txtPasta.Text = Reg.Read("PastaVerifica");
+            txtPasta.Text = MyReg.Read("PastaVerifica");
             this.Text = Application.ProductName + " - " 
                 + Application.CompanyName
                 + "          Version: " + Application.ProductVersion;
+
+            MyForm.FormName = "FrmMain";
+            MyForm.ListBoxName = "lbLog";
             BeginProcess();
             EndProcess();
         }
@@ -46,11 +49,11 @@ namespace SourceManager.Desktop
             tsLabel.Text = "Starting processing...";
             this.Refresh();
 
-            RepoBusiness gb = new RepoBusiness(txtPasta.Text, ref lbLog, ref statusStrip1);
+            RepoBusiness gb = new RepoBusiness(txtPasta.Text, 0);
 
             gb.CheckPending();
 
-            Reg.Write("PastaVerifica", txtPasta.Text);
+            MyReg.Write("PastaVerifica", txtPasta.Text);
 
             EndProcess(sender);
         }
@@ -64,11 +67,11 @@ namespace SourceManager.Desktop
             tsLabel.Text = "Starting processing...";
             this.Refresh();
 
-            RepoBusiness gb = new RepoBusiness(txtPasta.Text, ref lbLog, ref statusStrip1);
+            RepoBusiness gb = new RepoBusiness(txtPasta.Text, 0);
 
             gb.ListAll();
 
-            Reg.Write("PastaVerifica", txtPasta.Text);
+            MyReg.Write("PastaVerifica", txtPasta.Text);
 
             EndProcess(sender);
         }
@@ -82,11 +85,11 @@ namespace SourceManager.Desktop
             tsLabel.Text = "Starting processing...";
             this.Refresh();
 
-            RepoBusiness gb = new RepoBusiness(txtPasta.Text, ref lbLog, ref statusStrip1);
+            RepoBusiness gb = new RepoBusiness(txtPasta.Text, 0);
 
             gb.ListBlocked();
 
-            Reg.Write("PastaVerifica", txtPasta.Text);
+            MyReg.Write("PastaVerifica", txtPasta.Text);
 
             EndProcess(sender);
 
@@ -217,7 +220,7 @@ namespace SourceManager.Desktop
         {
 
             TrelloController trello = new TrelloController();
-            var ret = await trello.GetBoards();
+            var ret = await trello.GetBoards().ConfigureAwait(true);
 
             foreach (TrelloBoard tb in ret)
             {

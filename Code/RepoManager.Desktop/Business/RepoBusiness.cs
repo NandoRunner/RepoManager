@@ -8,6 +8,8 @@ using LibGit2Sharp;
 using System.Collections;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using FAndradeTecInfo.Utils;
+using System.Globalization;
 
 namespace SourceManager.Desktop.Business
 {
@@ -15,44 +17,53 @@ namespace SourceManager.Desktop.Business
     {
         private readonly string _basePath;
         private readonly string _workingPath;
-        private readonly ListBox _lbRepo;
-        private readonly StatusStrip _statusStrip;
         private int numRepos;
         private int numPendingRepos;
+        private CultureInfo ci;
 
-        private readonly List<string> listIgnoreCheck;
+        private List<string> listIgnoreCheck;
 
 
-        public StringBuilder sb;
+        private StringBuilder sb;
 
         private readonly ArrayList lstRepos;
+
+        public StringBuilder Sb { get => sb; set => sb = value; }
+
+        private void Init()
+        {
+            listIgnoreCheck = new List<string>();
+
+            MyStatusStrip.FormName = "FrmMain";
+            MyStatusStrip.StatusStripName = "statusStrip1";
+
+            ci = new CultureInfo("pt-BR");
+        }
 
         public RepoBusiness(string workingPath)
         {
             _workingPath = workingPath;
 
-            listIgnoreCheck = new List<string>();
+            Init();
         }
 
-        public RepoBusiness(string basePath, ref ListBox lbRepo, ref StatusStrip statusStrip)
+        public RepoBusiness(string basePath, int num)
         {
-            listIgnoreCheck = new List<string>();
+            Init();
 
             _basePath = basePath;
-            _lbRepo = lbRepo;
-            _lbRepo.Items.Clear();
-            _statusStrip = statusStrip;
-            numRepos = 0;
-            numPendingRepos = 0;
+
+            MyForm.ClearListBox();
+            numRepos = num;
+            numPendingRepos = num;
 
             lstRepos = new ArrayList();
 
-            sb = new StringBuilder();
+            Sb = new StringBuilder();
 
             LoadRepos(_basePath);
 
-            ((ToolStripProgressBar)_statusStrip.Items[1]).Maximum = lstRepos.Count;
-            _statusStrip.Refresh();
+            MyStatusStrip.InitStatusStrip(string.Empty, lstRepos.Count);
         }
 
         public void OpenExplorer()
@@ -157,10 +168,9 @@ namespace SourceManager.Desktop.Business
         {
             LoadIgnoreCheck();
 
-            _lbRepo.DataSource = listIgnoreCheck;
-            _lbRepo.Refresh();
-            ((ToolStripLabel)_statusStrip.Items[0]).Text = listIgnoreCheck.Count.ToString() + " Ignored repos found";
-            _statusStrip.Refresh();
+            MyForm.UpdateListBox(listIgnoreCheck);
+
+            MyStatusStrip.UpdateLabel(listIgnoreCheck.Count.ToString(ci) + " Ignored repos found");
         }
 
 
@@ -169,30 +179,27 @@ namespace SourceManager.Desktop.Business
         {
             foreach (string repo in lstRepos)
             {
-                ((ToolStripProgressBar)_statusStrip.Items[1]).Value++;
-                _statusStrip.Refresh();
+                MyStatusStrip.UpdateProgressBar();
 
                 if (!onlyPending)
                 {
-                    _lbRepo.Items.Add(repo.Replace(_basePath, ""));
-                    _lbRepo.Refresh();
-                    ((ToolStripLabel)_statusStrip.Items[0]).Text = (++numRepos).ToString() + " repos found";
-                    _statusStrip.Refresh();
+                    MyForm.UpdateListBox(repo.Replace(_basePath, ""));
+                    MyStatusStrip.UpdateLabel((++numRepos).ToString(ci) + " repos found");
                     continue;
                 }
 
                 if (listIgnoreCheck.Contains(repo))
                     continue;
-                
-                var objRepo = new LibGit2Sharp.Repository(repo);
-                LibGit2Sharp.RepositoryStatus rs = objRepo.RetrieveStatus();
 
-                if (rs.IsDirty)
+                using (Repository objRepo = new Repository(repo))
                 {
-                    _lbRepo.Items.Add(repo.Replace(_basePath, ""));
-                    _lbRepo.Refresh();
-                    ((ToolStripLabel)_statusStrip.Items[0]).Text = (++numPendingRepos).ToString() + " Pending changes repos found"; ;
-                    _statusStrip.Refresh();
+                    RepositoryStatus rs = objRepo.RetrieveStatus();
+
+                    if (rs.IsDirty)
+                    {
+                        MyForm.UpdateListBox(repo.Replace(_basePath, ""));
+                        MyStatusStrip.UpdateLabel((++numPendingRepos).ToString(ci) + " Pending changes repos found");
+                    }
                 }
             }
         }

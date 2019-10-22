@@ -40,7 +40,7 @@ namespace SourceManager.Desktop.Business.Implementattions
 
                 var factory = new TrelloFactory();
     
-                var me = await factory.Me();
+                var me = await factory.Me().ConfigureAwait(true);
 
 
                 foreach (var board in me.Boards)

@@ -20,7 +20,7 @@ namespace SourceManager.Desktop.Controllers
 
         public async Task<List<TrelloBoard>> GetBoards()
         {
-            var ret = await _board.FindAll();
+            var ret = await _board.FindAll().ConfigureAwait(true);
 
             return ret;
         }
