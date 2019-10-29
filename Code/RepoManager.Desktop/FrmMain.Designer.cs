@@ -65,7 +65,7 @@
             this.lbLog.ItemHeight = 16;
             this.lbLog.Location = new System.Drawing.Point(12, 168);
             this.lbLog.Name = "lbLog";
-            this.lbLog.Size = new System.Drawing.Size(741, 196);
+            this.lbLog.Size = new System.Drawing.Size(760, 356);
             this.lbLog.TabIndex = 2;
             this.lbLog.DoubleClick += new System.EventHandler(this.lbRepo_DoubleClick);
             // 
@@ -127,9 +127,9 @@
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tsLabel,
             this.tsProgressBar});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 393);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 539);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(765, 22);
+            this.statusStrip1.Size = new System.Drawing.Size(784, 22);
             this.statusStrip1.TabIndex = 4;
             this.statusStrip1.Text = "statusStrip1";
             // 
@@ -158,7 +158,7 @@
             this.pnMain.Controls.Add(this.txtPasta);
             this.pnMain.Location = new System.Drawing.Point(12, 12);
             this.pnMain.Name = "pnMain";
-            this.pnMain.Size = new System.Drawing.Size(741, 137);
+            this.pnMain.Size = new System.Drawing.Size(760, 137);
             this.pnMain.TabIndex = 17;
             // 
             // btnListBlocked
@@ -177,6 +177,7 @@
             // btnTrelloBoards
             // 
             this.btnTrelloBoards.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnTrelloBoards.Enabled = false;
             this.btnTrelloBoards.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTrelloBoards.Location = new System.Drawing.Point(471, 60);
             this.btnTrelloBoards.Name = "btnTrelloBoards";
@@ -192,7 +193,7 @@
             this.btnSair.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnSair.ImageIndex = 0;
             this.btnSair.ImageList = this.imageList1;
-            this.btnSair.Location = new System.Drawing.Point(643, 60);
+            this.btnSair.Location = new System.Drawing.Point(672, 60);
             this.btnSair.Name = "btnSair";
             this.btnSair.Size = new System.Drawing.Size(70, 38);
             this.btnSair.TabIndex = 23;
@@ -221,7 +222,7 @@
             this.btnAbrir.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAbrir.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAbrir.Image = ((System.Drawing.Image)(resources.GetObject("btnAbrir.Image")));
-            this.btnAbrir.Location = new System.Drawing.Point(681, 12);
+            this.btnAbrir.Location = new System.Drawing.Point(710, 12);
             this.btnAbrir.Name = "btnAbrir";
             this.btnAbrir.Size = new System.Drawing.Size(32, 28);
             this.btnAbrir.TabIndex = 21;
@@ -234,7 +235,7 @@
             this.btnPesquisar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnPesquisar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPesquisar.Image = ((System.Drawing.Image)(resources.GetObject("btnPesquisar.Image")));
-            this.btnPesquisar.Location = new System.Drawing.Point(643, 12);
+            this.btnPesquisar.Location = new System.Drawing.Point(672, 12);
             this.btnPesquisar.Name = "btnPesquisar";
             this.btnPesquisar.Size = new System.Drawing.Size(32, 28);
             this.btnPesquisar.TabIndex = 20;
@@ -270,7 +271,7 @@
             this.txtPasta.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPasta.Location = new System.Drawing.Point(155, 16);
             this.txtPasta.Name = "txtPasta";
-            this.txtPasta.Size = new System.Drawing.Size(468, 22);
+            this.txtPasta.Size = new System.Drawing.Size(511, 22);
             this.txtPasta.TabIndex = 17;
             // 
             // FrmMain
@@ -278,7 +279,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnSair;
-            this.ClientSize = new System.Drawing.Size(765, 415);
+            this.ClientSize = new System.Drawing.Size(784, 561);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.lbLog);
             this.Controls.Add(this.pnMain);

@@ -128,8 +128,10 @@ namespace SourceManager.Desktop.Business
         {
             var psi = new System.Diagnostics.ProcessStartInfo
             {
-                FileName = "cmd.exe",
-                Arguments = @"/k ""C:\Program Files\Git\usr\bin\bash.exe"" --login -i ",
+                FileName = @"C:\Program Files\Git\usr\bin\bash.exe",
+                Arguments = " --login -i ",
+                //FileName = "cmd.exe",
+                //Arguments = @"/k ""C:\Program Files\Git\usr\bin\bash.exe"" --login -i ",
                 WorkingDirectory = _workingPath
             };
             System.Diagnostics.Process.Start(psi);
