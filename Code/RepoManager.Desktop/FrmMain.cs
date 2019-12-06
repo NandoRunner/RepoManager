@@ -214,6 +214,16 @@ namespace SourceManager.Desktop
             gitBashToolStripMenuItem.Enabled = selected;
             ignorarChecagemToolStripMenuItem.Enabled = selected;
             desbloquearToolStripMenuItem.Enabled = selected;
+            
+
+            if (selected && lbLog.SelectedItem.ToString().ToLower().Contains("ionic"))
+            {
+                codeToolStripMenuItem.Enabled = selected;
+            }
+            else
+            {
+                codeToolStripMenuItem.Enabled = false;
+            }
         }
 
         private async void btnTrelloBoards_Click(object sender, EventArgs e)
@@ -251,6 +261,12 @@ namespace SourceManager.Desktop
             rb.IgnoreCheck(false);
 
             //EndProcess();
+        }
+
+        private void codeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var rb = new RepoBusiness(txtPasta.Text + lbLog.SelectedItem.ToString());
+            rb.Code();
         }
     }
 }

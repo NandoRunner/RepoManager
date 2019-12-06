@@ -76,6 +76,29 @@ namespace SourceManager.Desktop.Business
             System.Diagnostics.Process.Start(psi);
         }
 
+        public void Code()
+        {
+            var psi = new System.Diagnostics.ProcessStartInfo
+            {
+                FileName = "code",
+                Arguments = _workingPath
+            };
+            System.Diagnostics.Process.Start(psi);
+        }
+
+        public void RunGitBash()
+        {
+            var psi = new System.Diagnostics.ProcessStartInfo
+            {
+                FileName = @"C:\Program Files\Git\usr\bin\bash.exe",
+                Arguments = " --login -i ",
+                //FileName = "cmd.exe",
+                //Arguments = @"/k ""C:\Program Files\Git\usr\bin\bash.exe"" --login -i ",
+                WorkingDirectory = _workingPath
+            };
+            System.Diagnostics.Process.Start(psi);
+        }
+
         public void IgnoreCheck(bool block = true)
         {
             string connString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\_Cloud\Projs\GitHub\RepoManager\Code\RepoManager.Desktop\RepoManager.mdf;Integrated Security=True";
@@ -124,18 +147,7 @@ namespace SourceManager.Desktop.Business
             }
         }
 
-        public void RunGitBash()
-        {
-            var psi = new System.Diagnostics.ProcessStartInfo
-            {
-                FileName = @"C:\Program Files\Git\usr\bin\bash.exe",
-                Arguments = " --login -i ",
-                //FileName = "cmd.exe",
-                //Arguments = @"/k ""C:\Program Files\Git\usr\bin\bash.exe"" --login -i ",
-                WorkingDirectory = _workingPath
-            };
-            System.Diagnostics.Process.Start(psi);
-        }
+
 
         private void LoadRepos(string directory)
         {

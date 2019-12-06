@@ -52,6 +52,8 @@
             this.btnListAll = new System.Windows.Forms.Button();
             this.btnCheck = new System.Windows.Forms.Button();
             this.txtPasta = new System.Windows.Forms.TextBox();
+            this.codeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripSeparator();
             this.contextMenuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.pnMain.SuspendLayout();
@@ -76,10 +78,12 @@
             this.toolStripMenuItem1,
             this.gitBashToolStripMenuItem,
             this.toolStripMenuItem2,
+            this.codeToolStripMenuItem,
+            this.toolStripMenuItem3,
             this.ignorarChecagemToolStripMenuItem,
             this.desbloquearToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(241, 104);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(241, 154);
             this.contextMenuStrip1.Opening += new System.ComponentModel.CancelEventHandler(this.contextMenuStrip1_Opening);
             // 
             // abrirNoExplorerToolStripMenuItem
@@ -274,6 +278,19 @@
             this.txtPasta.Size = new System.Drawing.Size(511, 22);
             this.txtPasta.TabIndex = 17;
             // 
+            // codeToolStripMenuItem
+            // 
+            this.codeToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("codeToolStripMenuItem.Image")));
+            this.codeToolStripMenuItem.Name = "codeToolStripMenuItem";
+            this.codeToolStripMenuItem.Size = new System.Drawing.Size(240, 22);
+            this.codeToolStripMenuItem.Text = "Code";
+            this.codeToolStripMenuItem.Click += new System.EventHandler(this.codeToolStripMenuItem_Click);
+            // 
+            // toolStripMenuItem3
+            // 
+            this.toolStripMenuItem3.Name = "toolStripMenuItem3";
+            this.toolStripMenuItem3.Size = new System.Drawing.Size(237, 6);
+            // 
             // FrmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -321,6 +338,8 @@
         private System.Windows.Forms.ToolStripMenuItem ignorarChecagemToolStripMenuItem;
         private System.Windows.Forms.Button btnListBlocked;
         private System.Windows.Forms.ToolStripMenuItem desbloquearToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem codeToolStripMenuItem;
+        private System.Windows.Forms.ToolStripSeparator toolStripMenuItem3;
     }
 }
 
