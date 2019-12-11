@@ -11,7 +11,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("FAndrade TecInfo")]
 [assembly: AssemblyProduct("RepoManager")]
-[assembly: AssemblyCopyright("Copyright ©  2019")]
+[assembly: AssemblyCopyright("Copyright © 2019")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -33,6 +33,6 @@ using System.Runtime.InteropServices;
 // É possível especificar todos os valores ou usar como padrão os Números de Build e da Revisão
 // utilizando o "*" como mostrado abaixo:
 // [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("1.19.0.16")]
-[assembly: AssemblyFileVersion("1.19.0.16")]
+[assembly: AssemblyVersion("1.19.0.17")]
+[assembly: AssemblyFileVersion("1.19.0.17")]
 [assembly: NeutralResourcesLanguage("en")]

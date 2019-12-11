@@ -36,6 +36,8 @@
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripSeparator();
             this.gitBashToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripSeparator();
+            this.codeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripSeparator();
             this.ignorarChecagemToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.desbloquearToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
@@ -52,8 +54,7 @@
             this.btnListAll = new System.Windows.Forms.Button();
             this.btnCheck = new System.Windows.Forms.Button();
             this.txtPasta = new System.Windows.Forms.TextBox();
-            this.codeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripSeparator();
+            this.chkSendByEmail = new System.Windows.Forms.CheckBox();
             this.contextMenuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.pnMain.SuspendLayout();
@@ -83,7 +84,7 @@
             this.ignorarChecagemToolStripMenuItem,
             this.desbloquearToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(241, 154);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(241, 132);
             this.contextMenuStrip1.Opening += new System.ComponentModel.CancelEventHandler(this.contextMenuStrip1_Opening);
             // 
             // abrirNoExplorerToolStripMenuItem
@@ -111,6 +112,19 @@
             // 
             this.toolStripMenuItem2.Name = "toolStripMenuItem2";
             this.toolStripMenuItem2.Size = new System.Drawing.Size(237, 6);
+            // 
+            // codeToolStripMenuItem
+            // 
+            this.codeToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("codeToolStripMenuItem.Image")));
+            this.codeToolStripMenuItem.Name = "codeToolStripMenuItem";
+            this.codeToolStripMenuItem.Size = new System.Drawing.Size(240, 22);
+            this.codeToolStripMenuItem.Text = "Code";
+            this.codeToolStripMenuItem.Click += new System.EventHandler(this.codeToolStripMenuItem_Click);
+            // 
+            // toolStripMenuItem3
+            // 
+            this.toolStripMenuItem3.Name = "toolStripMenuItem3";
+            this.toolStripMenuItem3.Size = new System.Drawing.Size(237, 6);
             // 
             // ignorarChecagemToolStripMenuItem
             // 
@@ -151,6 +165,7 @@
             // pnMain
             // 
             this.pnMain.BackColor = System.Drawing.Color.LemonChiffon;
+            this.pnMain.Controls.Add(this.chkSendByEmail);
             this.pnMain.Controls.Add(this.btnListBlocked);
             this.pnMain.Controls.Add(this.btnTrelloBoards);
             this.pnMain.Controls.Add(this.btnSair);
@@ -278,18 +293,15 @@
             this.txtPasta.Size = new System.Drawing.Size(511, 22);
             this.txtPasta.TabIndex = 17;
             // 
-            // codeToolStripMenuItem
+            // chkSendByEmail
             // 
-            this.codeToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("codeToolStripMenuItem.Image")));
-            this.codeToolStripMenuItem.Name = "codeToolStripMenuItem";
-            this.codeToolStripMenuItem.Size = new System.Drawing.Size(240, 22);
-            this.codeToolStripMenuItem.Text = "Code";
-            this.codeToolStripMenuItem.Click += new System.EventHandler(this.codeToolStripMenuItem_Click);
-            // 
-            // toolStripMenuItem3
-            // 
-            this.toolStripMenuItem3.Name = "toolStripMenuItem3";
-            this.toolStripMenuItem3.Size = new System.Drawing.Size(237, 6);
+            this.chkSendByEmail.AutoSize = true;
+            this.chkSendByEmail.Location = new System.Drawing.Point(23, 104);
+            this.chkSendByEmail.Name = "chkSendByEmail";
+            this.chkSendByEmail.Size = new System.Drawing.Size(93, 17);
+            this.chkSendByEmail.TabIndex = 26;
+            this.chkSendByEmail.Text = "Send by Email";
+            this.chkSendByEmail.UseVisualStyleBackColor = true;
             // 
             // FrmMain
             // 
@@ -340,6 +352,7 @@
         private System.Windows.Forms.ToolStripMenuItem desbloquearToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem codeToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripMenuItem3;
+        private System.Windows.Forms.CheckBox chkSendByEmail;
     }
 }
 

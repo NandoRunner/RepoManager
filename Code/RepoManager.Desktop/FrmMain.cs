@@ -55,6 +55,9 @@ namespace SourceManager.Desktop
 
             MyReg.Write("PastaVerifica", txtPasta.Text);
 
+            if (chkSendByEmail.Checked)
+                SendToEmail("Pending Changes Repositories List");
+
             EndProcess(sender);
         }
 
@@ -73,7 +76,45 @@ namespace SourceManager.Desktop
 
             MyReg.Write("PastaVerifica", txtPasta.Text);
 
+            if (chkSendByEmail.Checked)
+                SendToEmail("All Repositories List");
+
             EndProcess(sender);
+        }
+
+        private void SendToEmail(string subject)
+        {
+            var emailFrom  = string.IsNullOrEmpty(MyReg.Read("EmailFrom")) ? string.Empty : MyReg.Read("EmailFrom");
+
+            using (SimpleLogin frm = new SimpleLogin(Application.ProductName, emailFrom))
+            {
+                var result = frm.ShowDialog();
+                if (result == DialogResult.OK)
+                {
+
+                    BaseEmail email = new BaseEmail(frm.Login, "smtp.gmail.com", "587", frm.Pwd);
+
+                    try
+                    {
+                        List<string> values = new List<string>();
+
+                        foreach (object o in lbLog.Items)
+                            values.Add(o.ToString());
+
+                        string selectedItems = String.Join("\n", values);
+
+                        email.SendMessage(subject, selectedItems, "nando.az@gmail.com");
+
+                        MyReg.Write("EmailFrom", frm.Login);
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message, "Sending email error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+
+                    
+                }
+            }
         }
 
         private void btnListBlocked_Click(object sender, EventArgs e)
@@ -131,6 +172,7 @@ namespace SourceManager.Desktop
             if (sender != null) ((Button)sender).BackColor = Color.Orange;
 
             pnMain.Enabled = true;
+            chkSendByEmail.Checked = false;
             Cursor.Current = Cursors.Default;
         }
 
