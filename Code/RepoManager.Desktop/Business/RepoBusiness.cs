@@ -205,15 +205,22 @@ namespace SourceManager.Desktop.Business
                 if (listIgnoreCheck.Contains(repo))
                     continue;
 
-                using (Repository objRepo = new Repository(repo))
+                try
                 {
-                    RepositoryStatus rs = objRepo.RetrieveStatus();
-
-                    if (rs.IsDirty)
+                    using (Repository objRepo = new Repository(repo))
                     {
-                        MyForm.UpdateListBox(repo.Replace(_basePath, ""));
-                        MyStatusStrip.UpdateLabel((++numPendingRepos).ToString(ci) + " Pending changes repos found");
+                        RepositoryStatus rs = objRepo.RetrieveStatus();
+
+                        if (rs.IsDirty)
+                        {
+                            MyForm.UpdateListBox(repo.Replace(_basePath, ""));
+                            MyStatusStrip.UpdateLabel((++numPendingRepos).ToString(ci) + " Pending changes repos found");
+                        }
                     }
+                }
+                catch (LibGit2SharpException ex)
+                {
+                    MessageBox.Show($"{repo}\n\n{ex.Message}", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
         }
