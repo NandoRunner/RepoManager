@@ -20,6 +20,12 @@ namespace SourceManager.Desktop.Business
         private int numRepos;
         private int numPendingRepos;
         private CultureInfo ci;
+        private DateTime dtIni;
+
+        private int all = 0;
+        private int repos = 0;
+        private int level = 0;
+
 
         private List<string> listIgnoreCheck;
 
@@ -49,6 +55,8 @@ namespace SourceManager.Desktop.Business
 
         public RepoBusiness(string basePath, int num)
         {
+            dtIni = DateTime.Now;
+
             Init();
 
             _basePath = basePath;
@@ -141,13 +149,12 @@ namespace SourceManager.Desktop.Business
                         while (reader.Read())
                         {
                             listIgnoreCheck.Add(reader.GetString(1));
+                            Application.DoEvents();
                         }
                     }
                 }
             }
         }
-
-
 
         private void LoadRepos(string directory)
         {
@@ -155,13 +162,25 @@ namespace SourceManager.Desktop.Business
 
             foreach (string subdirectory in subdirectoryEntries)
             {
+                var mydir = new DirectoryInfo(subdirectory);
+                if (mydir.Name.Substring(0, 1) == "_")
+                { 
+                    continue;
+                }
+
+                this.all++;
+                Application.DoEvents();
                 if (!LibGit2Sharp.Repository.IsValid(subdirectory))
                 {
+                    level++;
                     LoadRepos(subdirectory);
+                    level--;
                 }
                 else
                 {
+                    this.repos++;
                     lstRepos.Add(subdirectory);
+                    MyStatusStrip.UpdateLabel($"repos: {this.repos} / all: {this.all}");
                 }
             }
         }
@@ -171,6 +190,8 @@ namespace SourceManager.Desktop.Business
             LoadIgnoreCheck();
 
             ExecSubDirectories(true);
+
+
         }
 
         public void ListAll()
@@ -193,6 +214,7 @@ namespace SourceManager.Desktop.Business
         {
             foreach (string repo in lstRepos)
             {
+                Application.DoEvents();
                 MyStatusStrip.UpdateProgressBar();
 
                 if (!onlyPending)
@@ -222,6 +244,15 @@ namespace SourceManager.Desktop.Business
                 {
                     MessageBox.Show($"{repo}\n\n{ex.Message}", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
+            }
+
+            if (onlyPending)
+            {
+                MyStatusStrip.UpdateLabel($"{this.numPendingRepos} Pending changes repos found in {(DateTime.Now - dtIni).Seconds} seconds");
+            }
+            else
+            {
+                MyStatusStrip.UpdateLabel($"{this.repos} Pending changes repos found in {(DateTime.Now - dtIni).Seconds} seconds");
             }
         }
     }
