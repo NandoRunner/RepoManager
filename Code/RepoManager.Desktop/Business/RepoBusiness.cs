@@ -74,38 +74,6 @@ namespace SourceManager.Desktop.Business
             MyStatusStrip.InitStatusStrip(string.Empty, lstRepos.Count);
         }
 
-        public void OpenExplorer()
-        {
-            var psi = new System.Diagnostics.ProcessStartInfo
-            {
-                FileName = "explorer.exe",
-                Arguments = _workingPath
-            };
-            System.Diagnostics.Process.Start(psi);
-        }
-
-        public void Code()
-        {
-            var psi = new System.Diagnostics.ProcessStartInfo
-            {
-                FileName = "code",
-                Arguments = _workingPath
-            };
-            System.Diagnostics.Process.Start(psi);
-        }
-
-        public void RunGitBash()
-        {
-            var psi = new System.Diagnostics.ProcessStartInfo
-            {
-                FileName = @"C:\Program Files\Git\usr\bin\bash.exe",
-                Arguments = " --login -i ",
-                //FileName = "cmd.exe",
-                //Arguments = @"/k ""C:\Program Files\Git\usr\bin\bash.exe"" --login -i ",
-                WorkingDirectory = _workingPath
-            };
-            System.Diagnostics.Process.Start(psi);
-        }
 
         public void IgnoreCheck(bool block = true)
         {

@@ -1,12 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
-using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using FAndradeTecInfo.Utils;
 using SourceManager.Desktop.Business;
@@ -17,6 +13,7 @@ namespace SourceManager.Desktop
 {
     public partial class FrmMain : Form
     {
+        private string selectedPath;
         public FrmMain()
         {
             InitializeComponent();
@@ -53,8 +50,6 @@ namespace SourceManager.Desktop
 
             gb.CheckPending();
 
-            MyReg.Write("PastaVerifica", txtPasta.Text);
-
             if (chkSendByEmail.Checked)
                 SendToEmail("Pending Changes Repositories List");
 
@@ -74,8 +69,6 @@ namespace SourceManager.Desktop
 
             gb.ListAll();
 
-            MyReg.Write("PastaVerifica", txtPasta.Text);
-
             if (chkSendByEmail.Checked)
                 SendToEmail("All Repositories List");
 
@@ -91,19 +84,11 @@ namespace SourceManager.Desktop
                 var result = frm.ShowDialog();
                 if (result == DialogResult.OK)
                 {
-
-                    BaseEmail email = new BaseEmail(frm.Login, "smtp.gmail.com", "587", frm.Pwd);
-
+                    string body = String.Join("\n", lbLog.Items.Cast<String>().ToList());
                     try
                     {
-                        List<string> values = new List<string>();
-
-                        foreach (object o in lbLog.Items)
-                            values.Add(o.ToString());
-
-                        string selectedItems = String.Join("\n", values);
-
-                        email.SendMessage(subject, selectedItems, "nando.az@gmail.com");
+                        BaseEmail email = new BaseEmail(frm.Login, "smtp.gmail.com", "587", frm.Pwd);
+                        email.SendMessage(subject, body, "nando.az@gmail.com");
 
                         MyReg.Write("EmailFrom", frm.Login);
                     }
@@ -111,8 +96,6 @@ namespace SourceManager.Desktop
                     {
                         MessageBox.Show(ex.Message, "Sending email error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
-
-                    
                 }
             }
         }
@@ -130,10 +113,7 @@ namespace SourceManager.Desktop
 
             gb.ListBlocked();
 
-            MyReg.Write("PastaVerifica", txtPasta.Text);
-
             EndProcess(sender);
-
         }
 
         private void BeginProcess(object sender = null)
@@ -164,13 +144,15 @@ namespace SourceManager.Desktop
                 ignorarChecagemToolStripMenuItem.Visible = visible;
 
             }
-
         }
 
         private void EndProcess(object sender = null)
         {
-            if (sender != null) ((Button)sender).BackColor = Color.Orange;
-
+            if (sender != null)
+            {
+                ((Button)sender).BackColor = Color.Orange;
+                MyReg.Write("PastaVerifica", txtPasta.Text);
+            }
             pnMain.Enabled = true;
             chkSendByEmail.Checked = false;
             Cursor.Current = Cursors.Default;
@@ -181,8 +163,7 @@ namespace SourceManager.Desktop
             if (lbLog.SelectedIndex == -1)
                 return;
 
-            var rb = new RepoBusiness(txtPasta.Text + lbLog.SelectedItem.ToString());
-            rb.RunGitBash();
+            gitBashToolStripMenuItem_Click(sender, e);
         }
 
         private void btnPesquisar_Click(object sender, EventArgs e)
@@ -201,7 +182,7 @@ namespace SourceManager.Desktop
 
         private void btnAbrir_Click(object sender, EventArgs e)
         {
-            System.Diagnostics.Process.Start("explorer.exe", txtPasta.Text);
+            MyFS.RunExplorer(txtPasta.Text);
         }
 
         private void btnSair_Click(object sender, EventArgs e)
@@ -223,7 +204,7 @@ namespace SourceManager.Desktop
                 return false;
             }
 
-            if (!System.IO.Directory.Exists(txtPasta.Text))
+            if (!MyFS.FolderExists(txtPasta.Text))
             {
                 MessageBox.Show("Pasta de projetos não encontrada!", caption,
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -235,22 +216,31 @@ namespace SourceManager.Desktop
 
         private void abrirNoExplorerToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            var rb = new RepoBusiness(txtPasta.Text + lbLog.SelectedItem.ToString());
-            rb.OpenExplorer();
+            MyFS.RunExplorer(this.selectedPath);
         }
 
         private void gitBashToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            var rb = new RepoBusiness(txtPasta.Text + lbLog.SelectedItem.ToString());
-            rb.RunGitBash();
+            MyFS.RunGitBash(this.selectedPath);
+        }
 
+        private void codeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MyFS.RunVSCode(this.selectedPath);
         }
 
         private void contextMenuStrip1_Opening(object sender, CancelEventArgs e)
         {
             bool selected = true;
 
-            if (lbLog.SelectedIndex == -1) selected = false;
+            if (lbLog.SelectedIndex == -1)
+            {
+                selected = false;
+            }
+            else
+            {
+                this.selectedPath = txtPasta.Text + lbLog.SelectedItem.ToString();
+            }
 
             abrirNoExplorerToolStripMenuItem.Enabled = selected;
             gitBashToolStripMenuItem.Enabled = selected;
@@ -287,28 +277,22 @@ namespace SourceManager.Desktop
         {
             //BeginProcess();
 
-            var rb = new RepoBusiness(txtPasta.Text + lbLog.SelectedItem.ToString());
+            var rb = new RepoBusiness(this.selectedPath);
             rb.IgnoreCheck();
 
             //EndProcess();
         }
 
-
-
         private void desbloquearToolStripMenuItem_Click(object sender, EventArgs e)
         {
             //BeginProcess();
 
-            var rb = new RepoBusiness(txtPasta.Text + lbLog.SelectedItem.ToString());
+            var rb = new RepoBusiness(this.selectedPath);
             rb.IgnoreCheck(false);
 
             //EndProcess();
         }
 
-        private void codeToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            var rb = new RepoBusiness(txtPasta.Text + lbLog.SelectedItem.ToString());
-            rb.Code();
-        }
+
     }
 }
