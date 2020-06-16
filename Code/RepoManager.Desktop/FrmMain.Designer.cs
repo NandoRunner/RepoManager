@@ -44,6 +44,7 @@
             this.tsLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.tsProgressBar = new System.Windows.Forms.ToolStripProgressBar();
             this.pnMain = new System.Windows.Forms.Panel();
+            this.chkSendByEmail = new System.Windows.Forms.CheckBox();
             this.btnListBlocked = new System.Windows.Forms.Button();
             this.btnTrelloBoards = new System.Windows.Forms.Button();
             this.btnSair = new System.Windows.Forms.Button();
@@ -54,7 +55,6 @@
             this.btnListAll = new System.Windows.Forms.Button();
             this.btnCheck = new System.Windows.Forms.Button();
             this.txtPasta = new System.Windows.Forms.TextBox();
-            this.chkSendByEmail = new System.Windows.Forms.CheckBox();
             this.contextMenuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.pnMain.SuspendLayout();
@@ -70,6 +70,7 @@
             this.lbLog.Name = "lbLog";
             this.lbLog.Size = new System.Drawing.Size(760, 356);
             this.lbLog.TabIndex = 2;
+            this.lbLog.SelectedIndexChanged += new System.EventHandler(this.lbLog_SelectedIndexChanged);
             this.lbLog.DoubleClick += new System.EventHandler(this.lbRepo_DoubleClick);
             // 
             // contextMenuStrip1
@@ -179,6 +180,16 @@
             this.pnMain.Name = "pnMain";
             this.pnMain.Size = new System.Drawing.Size(760, 137);
             this.pnMain.TabIndex = 17;
+            // 
+            // chkSendByEmail
+            // 
+            this.chkSendByEmail.AutoSize = true;
+            this.chkSendByEmail.Location = new System.Drawing.Point(23, 104);
+            this.chkSendByEmail.Name = "chkSendByEmail";
+            this.chkSendByEmail.Size = new System.Drawing.Size(93, 17);
+            this.chkSendByEmail.TabIndex = 26;
+            this.chkSendByEmail.Text = "Send by Email";
+            this.chkSendByEmail.UseVisualStyleBackColor = true;
             // 
             // btnListBlocked
             // 
@@ -292,16 +303,6 @@
             this.txtPasta.Name = "txtPasta";
             this.txtPasta.Size = new System.Drawing.Size(511, 22);
             this.txtPasta.TabIndex = 17;
-            // 
-            // chkSendByEmail
-            // 
-            this.chkSendByEmail.AutoSize = true;
-            this.chkSendByEmail.Location = new System.Drawing.Point(23, 104);
-            this.chkSendByEmail.Name = "chkSendByEmail";
-            this.chkSendByEmail.Size = new System.Drawing.Size(93, 17);
-            this.chkSendByEmail.TabIndex = 26;
-            this.chkSendByEmail.Text = "Send by Email";
-            this.chkSendByEmail.UseVisualStyleBackColor = true;
             // 
             // FrmMain
             // 

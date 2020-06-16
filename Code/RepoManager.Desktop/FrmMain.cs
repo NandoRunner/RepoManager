@@ -293,6 +293,9 @@ namespace SourceManager.Desktop
             //EndProcess();
         }
 
-
+        private void lbLog_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            this.selectedPath = txtPasta.Text + lbLog.SelectedItem.ToString();
+        }
     }
 }
