@@ -221,6 +221,18 @@
       <Project>{d27f1821-f7c8-4d31-be57-8452279f0b4c}</Project>
       <Name>FAndradeTecInfo.Utils</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\..\Resource\FandradeTecInfoUtils\FAndradeTI.Util.Network\FAndradeTI.Util.Network.csproj">
+      <Project>{5B55922F-BF2C-49DB-A2F9-BA91A0218180}</Project>
+      <Name>FAndradeTI.Util.Network</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Resource\FandradeTecInfoUtils\FAndradeTI.Util.WinForms\FAndradeTI.Util.WinForms.csproj">
+      <Project>{71C2CDEF-BF16-4574-9FC4-5CFDB00AF709}</Project>
+      <Name>FAndradeTI.Util.WinForms</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Resource\FandradeTecInfoUtils\FAndradeTI.Util\FAndradeTI.Util.csproj">
+      <Project>{171E8FF8-1DE7-493E-B380-14129E3A9859}</Project>
+      <Name>FAndradeTI.Util</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Lib\" />

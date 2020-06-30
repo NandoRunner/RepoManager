@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using System.Data.SqlClient;
 using FAndradeTecInfo.Utils;
 using System.Globalization;
+using FAndradeTI.Util.WinForms;
 
 namespace SourceManager.Desktop.Business
 {
@@ -40,8 +41,8 @@ namespace SourceManager.Desktop.Business
         {
             listIgnoreCheck = new List<string>();
 
-            MyStatusStrip.FormName = "FrmMain";
-            MyStatusStrip.StatusStripName = "statusStrip1";
+            StatusStripControl.FormName = "FrmMain";
+            StatusStripControl.StatusStripName = "statusStrip1";
 
             ci = new CultureInfo("pt-BR");
         }
@@ -61,7 +62,7 @@ namespace SourceManager.Desktop.Business
 
             _basePath = basePath;
 
-            MyForm.ClearListBox();
+            FormControl.ClearListBox();
             numRepos = num;
             numPendingRepos = num;
 
@@ -71,7 +72,7 @@ namespace SourceManager.Desktop.Business
 
             LoadRepos(_basePath);
 
-            MyStatusStrip.InitStatusStrip(string.Empty, lstRepos.Count);
+            StatusStripControl.InitStatusStrip(string.Empty, lstRepos.Count);
         }
 
 
@@ -148,7 +149,7 @@ namespace SourceManager.Desktop.Business
                 {
                     this.repos++;
                     lstRepos.Add(subdirectory);
-                    MyStatusStrip.UpdateLabel($"repos: {this.repos} / all: {this.all}");
+                    StatusStripControl.UpdateLabel($"repos: {this.repos} / all: {this.all}");
                 }
             }
         }
@@ -171,9 +172,9 @@ namespace SourceManager.Desktop.Business
         {
             LoadIgnoreCheck();
 
-            MyForm.UpdateListBox(listIgnoreCheck);
+            FormControl.UpdateListBox(listIgnoreCheck);
 
-            MyStatusStrip.UpdateLabel(listIgnoreCheck.Count.ToString(ci) + " Ignored repos found");
+            StatusStripControl.UpdateLabel(listIgnoreCheck.Count.ToString(ci) + " Ignored repos found");
         }
 
 
@@ -183,12 +184,12 @@ namespace SourceManager.Desktop.Business
             foreach (string repo in lstRepos)
             {
                 Application.DoEvents();
-                MyStatusStrip.UpdateProgressBar();
+                StatusStripControl.UpdateProgressBar();
 
                 if (!onlyPending)
                 {
-                    MyForm.UpdateListBox(repo.Replace(_basePath, ""));
-                    MyStatusStrip.UpdateLabel((++numRepos).ToString(ci) + " repos found");
+                    FormControl.UpdateListBox(repo.Replace(_basePath, ""));
+                    StatusStripControl.UpdateLabel((++numRepos).ToString(ci) + " repos found");
                     continue;
                 }
 
@@ -203,8 +204,8 @@ namespace SourceManager.Desktop.Business
 
                         if (rs.IsDirty)
                         {
-                            MyForm.UpdateListBox(repo.Replace(_basePath, ""));
-                            MyStatusStrip.UpdateLabel((++numPendingRepos).ToString(ci) + " Pending changes repos found");
+                            FormControl.UpdateListBox(repo.Replace(_basePath, ""));
+                            StatusStripControl.UpdateLabel((++numPendingRepos).ToString(ci) + " Pending changes repos found");
                         }
                     }
                 }
@@ -216,11 +217,11 @@ namespace SourceManager.Desktop.Business
 
             if (onlyPending)
             {
-                MyStatusStrip.UpdateLabel($"{this.numPendingRepos} Pending changes repos found in {(DateTime.Now - dtIni).Seconds} seconds");
+                StatusStripControl.UpdateLabel($"{this.numPendingRepos} Pending changes repos found in {(DateTime.Now - dtIni).Seconds} seconds");
             }
             else
             {
-                MyStatusStrip.UpdateLabel($"{this.repos} Pending changes repos found in {(DateTime.Now - dtIni).Seconds} seconds");
+                StatusStripControl.UpdateLabel($"{this.repos} Pending changes repos found in {(DateTime.Now - dtIni).Seconds} seconds");
             }
         }
     }

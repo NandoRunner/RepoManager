@@ -597,6 +597,18 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_9B82A150BC7716A2A8E9F733DC095806"
+        "OwnerKey" = "8:_5C3D4A7200E2C5DB746AE5029F30BDED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_9B82A150BC7716A2A8E9F733DC095806"
+        "OwnerKey" = "8:_8C4C45DB8BBA4BB9814CE3FFD1C5B574"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_9BAFEE48ECDD9660EC5B877F63249E03"
         "OwnerKey" = "8:_8C4C45DB8BBA4BB9814CE3FFD1C5B574"
         "MsmSig" = "8:_UNDEFINED"
@@ -923,6 +935,12 @@
         {
         "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_570522F3AF4D8F01823B0C3614359D81"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_9B82A150BC7716A2A8E9F733DC095806"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -2869,7 +2887,7 @@
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:FAndradeTecInfo.Utils, Version=1.20.6.3, Culture=neutral, processorArchitecture=MSIL"
+            "AssemblyAsmDisplayName" = "8:FAndradeTecInfo.Utils, Version=1.20.6.5, Culture=neutral, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
                     "_5C3D4A7200E2C5DB746AE5029F30BDED"
@@ -4190,6 +4208,37 @@
                     }
                 }
             "SourcePath" = "8:System.Dynamic.Runtime.dll"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_351ED627ECFF4FC796FFED9EF5569F72"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_9B82A150BC7716A2A8E9F733DC095806"
+            {
+            "AssemblyRegister" = "3:1"
+            "AssemblyIsInGAC" = "11:FALSE"
+            "AssemblyAsmDisplayName" = "8:FAndradeTI.Util.WinForms, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL"
+                "ScatterAssemblies"
+                {
+                    "_9B82A150BC7716A2A8E9F733DC095806"
+                    {
+                    "Name" = "8:FAndradeTI.Util.WinForms.dll"
+                    "Attributes" = "3:512"
+                    }
+                }
+            "SourcePath" = "8:FAndradeTI.Util.WinForms.dll"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_351ED627ECFF4FC796FFED9EF5569F72"
@@ -5702,15 +5751,15 @@
         {
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:FAndrade TecInfo Repo Manager"
-        "ProductCode" = "8:{4E49924F-F74C-408D-B6D9-647FD8BA83F8}"
-        "PackageCode" = "8:{495E8FA2-4107-4B5C-A17E-492F1331DDBE}"
+        "ProductCode" = "8:{A2BEC528-444B-4813-B7C8-7CD4B1B33844}"
+        "PackageCode" = "8:{77C29487-9D3D-4FEB-AD2E-23A444212D6A}"
         "UpgradeCode" = "8:{5D8D8858-F81E-40B7-9360-31BA3DE75851}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
         "RemovePreviousVersions" = "11:TRUE"
         "DetectNewerInstalledVersion" = "11:TRUE"
         "InstallAllUsers" = "11:TRUE"
-        "ProductVersion" = "8:1.20.023"
+        "ProductVersion" = "8:1.20.060"
         "Manufacturer" = "8:FAndrade TecInfo"
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:"

@@ -5,6 +5,9 @@ using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
 using FAndradeTecInfo.Utils;
+using FAndradeTI.Util;
+using FAndradeTI.Util.Network;
+using FAndradeTI.Util.WinForms;
 using SourceManager.Desktop.Business;
 using SourceManager.Desktop.Controllers;
 using SourceManager.Desktop.Model;
@@ -18,18 +21,18 @@ namespace SourceManager.Desktop
         {
             InitializeComponent();
 
-            MyReg.SubKey = "SOFTWARE\\" + Application.CompanyName + "\\" + Application.ProductName;
+            WinReg.SubKey = "SOFTWARE\\" + Application.CompanyName + "\\" + Application.ProductName;
         }
 
         private void FrmSourceManager_Load(object sender, EventArgs e)
         {
-            txtPasta.Text = MyReg.Read("PastaVerifica");
+            txtPasta.Text = WinReg.Read("PastaVerifica");
             this.Text = Application.ProductName + " - " 
                 + Application.CompanyName
                 + "          Version: " + Application.ProductVersion;
 
-            MyForm.FormName = "FrmMain";
-            MyForm.ListBoxName = "lbLog";
+            FormControl.FormName = "FrmMain";
+            FormControl.ListBoxName = "lbLog";
             BeginProcess();
             EndProcess();
         }
@@ -77,7 +80,7 @@ namespace SourceManager.Desktop
 
         private void SendToEmail(string subject)
         {
-            var emailFrom  = string.IsNullOrEmpty(MyReg.Read("EmailFrom")) ? string.Empty : MyReg.Read("EmailFrom");
+            var emailFrom  = string.IsNullOrEmpty(WinReg.Read("EmailFrom")) ? string.Empty : WinReg.Read("EmailFrom");
 
             using (SimpleLogin frm = new SimpleLogin(Application.ProductName, emailFrom))
             {
@@ -87,10 +90,10 @@ namespace SourceManager.Desktop
                     string body = String.Join("\n", lbLog.Items.Cast<String>().ToList());
                     try
                     {
-                        BaseEmail email = new BaseEmail(frm.Login, "smtp.gmail.com", "587", frm.Pwd);
-                        email.SendMessage(subject, body, "nando.az@gmail.com");
+                        var email = new EmailManager(frm.Login, "smtp.gmail.com", "587", frm.Pwd);
+                        email.Send(subject, body, "nando.az@gmail.com");
 
-                        MyReg.Write("EmailFrom", frm.Login);
+                        WinReg.Write("EmailFrom", frm.Login);
                     }
                     catch (Exception ex)
                     {
@@ -151,7 +154,7 @@ namespace SourceManager.Desktop
             if (sender != null)
             {
                 ((Button)sender).BackColor = Color.Orange;
-                MyReg.Write("PastaVerifica", txtPasta.Text);
+                WinReg.Write("PastaVerifica", txtPasta.Text);
             }
             pnMain.Enabled = true;
             chkSendByEmail.Checked = false;
