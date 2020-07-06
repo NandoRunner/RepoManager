@@ -51,6 +51,12 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_0C1C296079C49AE7881E67AA1C5781A4"
+        "OwnerKey" = "8:_8C4C45DB8BBA4BB9814CE3FFD1C5B574"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_0CF38E016AF5672B6FACE83D6D11538F"
         "OwnerKey" = "8:_8C4C45DB8BBA4BB9814CE3FFD1C5B574"
         "MsmSig" = "8:_UNDEFINED"
@@ -65,18 +71,6 @@
         {
         "MsmKey" = "8:_0D5DFD7636C4060D3972309F415495FE"
         "OwnerKey" = "8:_8C4C45DB8BBA4BB9814CE3FFD1C5B574"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_1097EA930C527EDC7DF9EB49AE606792"
-        "OwnerKey" = "8:_8C4C45DB8BBA4BB9814CE3FFD1C5B574"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_1097EA930C527EDC7DF9EB49AE606792"
-        "OwnerKey" = "8:_5C3D4A7200E2C5DB746AE5029F30BDED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -136,6 +130,12 @@
         "Entry"
         {
         "MsmKey" = "8:_2E960C26E260674693FCD1716CCC7606"
+        "OwnerKey" = "8:_8C4C45DB8BBA4BB9814CE3FFD1C5B574"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_3040A3A9AFB79D90986F0491C063F304"
         "OwnerKey" = "8:_8C4C45DB8BBA4BB9814CE3FFD1C5B574"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -597,18 +597,6 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_9B82A150BC7716A2A8E9F733DC095806"
-        "OwnerKey" = "8:_5C3D4A7200E2C5DB746AE5029F30BDED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_9B82A150BC7716A2A8E9F733DC095806"
-        "OwnerKey" = "8:_8C4C45DB8BBA4BB9814CE3FFD1C5B574"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
         "MsmKey" = "8:_9BAFEE48ECDD9660EC5B877F63249E03"
         "OwnerKey" = "8:_8C4C45DB8BBA4BB9814CE3FFD1C5B574"
         "MsmSig" = "8:_UNDEFINED"
@@ -843,6 +831,12 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_E7B9D668AAAD2680FCE1133718282E36"
+        "OwnerKey" = "8:_8C4C45DB8BBA4BB9814CE3FFD1C5B574"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_E99CF608F737C5FED0BF4D30D2CC6E90"
         "OwnerKey" = "8:_8C4C45DB8BBA4BB9814CE3FFD1C5B574"
         "MsmSig" = "8:_UNDEFINED"
@@ -857,18 +851,6 @@
         {
         "MsmKey" = "8:_EE9CA77B9D491F5F5B91C2CFACA07E82"
         "OwnerKey" = "8:_8C4C45DB8BBA4BB9814CE3FFD1C5B574"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_EFEC660422499054B926C0E456DAB5DC"
-        "OwnerKey" = "8:_8C4C45DB8BBA4BB9814CE3FFD1C5B574"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_EFEC660422499054B926C0E456DAB5DC"
-        "OwnerKey" = "8:_5C3D4A7200E2C5DB746AE5029F30BDED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -928,6 +910,24 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_E7B9D668AAAD2680FCE1133718282E36"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_0C1C296079C49AE7881E67AA1C5781A4"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_3040A3A9AFB79D90986F0491C063F304"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_5C3D4A7200E2C5DB746AE5029F30BDED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -935,18 +935,6 @@
         {
         "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_570522F3AF4D8F01823B0C3614359D81"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_9B82A150BC7716A2A8E9F733DC095806"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_1097EA930C527EDC7DF9EB49AE606792"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -1871,6 +1859,37 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_0C1C296079C49AE7881E67AA1C5781A4"
+            {
+            "AssemblyRegister" = "3:1"
+            "AssemblyIsInGAC" = "11:FALSE"
+            "AssemblyAsmDisplayName" = "8:FAndradeTI.Util.WinForms, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL"
+                "ScatterAssemblies"
+                {
+                    "_0C1C296079C49AE7881E67AA1C5781A4"
+                    {
+                    "Name" = "8:FAndradeTI.Util.WinForms.dll"
+                    "Attributes" = "3:512"
+                    }
+                }
+            "SourcePath" = "8:FAndradeTI.Util.WinForms.dll"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_351ED627ECFF4FC796FFED9EF5569F72"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_0CF38E016AF5672B6FACE83D6D11538F"
             {
             "AssemblyRegister" = "3:1"
@@ -1947,37 +1966,6 @@
                     }
                 }
             "SourcePath" = "8:System.Net.Requests.dll"
-            "TargetName" = "8:"
-            "Tag" = "8:"
-            "Folder" = "8:_351ED627ECFF4FC796FFED9EF5569F72"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:TRUE"
-            "IsolateTo" = "8:"
-            }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_1097EA930C527EDC7DF9EB49AE606792"
-            {
-            "AssemblyRegister" = "3:1"
-            "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:Aspose.Cells, Version=20.1.0.0, Culture=neutral, PublicKeyToken=716fcc553a201e56, processorArchitecture=MSIL"
-                "ScatterAssemblies"
-                {
-                    "_1097EA930C527EDC7DF9EB49AE606792"
-                    {
-                    "Name" = "8:Aspose.Cells.dll"
-                    "Attributes" = "3:512"
-                    }
-                }
-            "SourcePath" = "8:Aspose.Cells.dll"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_351ED627ECFF4FC796FFED9EF5569F72"
@@ -2195,6 +2183,37 @@
                     }
                 }
             "SourcePath" = "8:System.ServiceModel.Duplex.dll"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_351ED627ECFF4FC796FFED9EF5569F72"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_3040A3A9AFB79D90986F0491C063F304"
+            {
+            "AssemblyRegister" = "3:1"
+            "AssemblyIsInGAC" = "11:FALSE"
+            "AssemblyAsmDisplayName" = "8:FAndradeTI.Util.Network, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL"
+                "ScatterAssemblies"
+                {
+                    "_3040A3A9AFB79D90986F0491C063F304"
+                    {
+                    "Name" = "8:FAndradeTI.Util.Network.dll"
+                    "Attributes" = "3:512"
+                    }
+                }
+            "SourcePath" = "8:FAndradeTI.Util.Network.dll"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_351ED627ECFF4FC796FFED9EF5569F72"
@@ -4225,37 +4244,6 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_9B82A150BC7716A2A8E9F733DC095806"
-            {
-            "AssemblyRegister" = "3:1"
-            "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:FAndradeTI.Util.WinForms, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL"
-                "ScatterAssemblies"
-                {
-                    "_9B82A150BC7716A2A8E9F733DC095806"
-                    {
-                    "Name" = "8:FAndradeTI.Util.WinForms.dll"
-                    "Attributes" = "3:512"
-                    }
-                }
-            "SourcePath" = "8:FAndradeTI.Util.WinForms.dll"
-            "TargetName" = "8:"
-            "Tag" = "8:"
-            "Folder" = "8:_351ED627ECFF4FC796FFED9EF5569F72"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:TRUE"
-            "IsolateTo" = "8:"
-            }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_9BAFEE48ECDD9660EC5B877F63249E03"
             {
             "AssemblyRegister" = "3:1"
@@ -5381,6 +5369,37 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_E7B9D668AAAD2680FCE1133718282E36"
+            {
+            "AssemblyRegister" = "3:1"
+            "AssemblyIsInGAC" = "11:FALSE"
+            "AssemblyAsmDisplayName" = "8:FAndradeTI.Util, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL"
+                "ScatterAssemblies"
+                {
+                    "_E7B9D668AAAD2680FCE1133718282E36"
+                    {
+                    "Name" = "8:FAndradeTI.Util.dll"
+                    "Attributes" = "3:512"
+                    }
+                }
+            "SourcePath" = "8:FAndradeTI.Util.dll"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_351ED627ECFF4FC796FFED9EF5569F72"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_E99CF608F737C5FED0BF4D30D2CC6E90"
             {
             "AssemblyRegister" = "3:1"
@@ -5751,15 +5770,15 @@
         {
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:FAndrade TecInfo Repo Manager"
-        "ProductCode" = "8:{A2BEC528-444B-4813-B7C8-7CD4B1B33844}"
-        "PackageCode" = "8:{77C29487-9D3D-4FEB-AD2E-23A444212D6A}"
+        "ProductCode" = "8:{827A1C13-6CC3-4A8F-9DEE-BAD65CD01D22}"
+        "PackageCode" = "8:{3E6373CD-4914-4156-85DE-C942735F8189}"
         "UpgradeCode" = "8:{5D8D8858-F81E-40B7-9360-31BA3DE75851}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
         "RemovePreviousVersions" = "11:TRUE"
         "DetectNewerInstalledVersion" = "11:TRUE"
         "InstallAllUsers" = "11:TRUE"
-        "ProductVersion" = "8:1.20.060"
+        "ProductVersion" = "8:1.20.070"
         "Manufacturer" = "8:FAndrade TecInfo"
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:"

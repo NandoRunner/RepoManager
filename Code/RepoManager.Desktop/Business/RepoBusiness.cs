@@ -1,14 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using LibGit2Sharp;
 using System.Collections;
 using System.Windows.Forms;
 using System.Data.SqlClient;
-using FAndradeTecInfo.Utils;
 using System.Globalization;
 using FAndradeTI.Util.WinForms;
 

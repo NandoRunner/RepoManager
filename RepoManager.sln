@@ -5,8 +5,6 @@ VisualStudioVersion = 16.0.29911.84
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RepoManager.Desktop", "Code\RepoManager.Desktop\RepoManager.Desktop.csproj", "{729A2B61-1744-4484-B1FF-5250FDDC5271}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FAndradeTecInfo.Utils", "..\Resource\FandradeTecInfoUtils\FAndradeTecInfo.Utils.csproj", "{D27F1821-F7C8-4D31-BE57-8452279F0B4C}"
-EndProject
 Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "RepoManager.Setup", "Code\RepoManager.Setup\RepoManager.Setup.vdproj", "{FD25EE7D-FB28-487E-A103-6FCA90486354}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FAndradeTI.Util.WinForms", "..\Resource\FandradeTecInfoUtils\FAndradeTI.Util.WinForms\FAndradeTI.Util.WinForms.csproj", "{71C2CDEF-BF16-4574-9FC4-5CFDB00AF709}"
@@ -14,6 +12,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FAndradeTI.Util", "..\Resource\FandradeTecInfoUtils\FAndradeTI.Util\FAndradeTI.Util.csproj", "{171E8FF8-1DE7-493E-B380-14129E3A9859}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FAndradeTI.Util.Network", "..\Resource\FandradeTecInfoUtils\FAndradeTI.Util.Network\FAndradeTI.Util.Network.csproj", "{5B55922F-BF2C-49DB-A2F9-BA91A0218180}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FAndradeTI.Util.FileSystem", "..\Resource\FandradeTecInfoUtils\FAndradeTI.Util.FileSystem\FAndradeTI.Util.FileSystem.csproj", "{024EBF21-4C3E-4BA0-AF79-2EDE68936B0F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -25,10 +25,6 @@ Global
 		{729A2B61-1744-4484-B1FF-5250FDDC5271}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{729A2B61-1744-4484-B1FF-5250FDDC5271}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{729A2B61-1744-4484-B1FF-5250FDDC5271}.Release|Any CPU.Build.0 = Release|Any CPU
-		{D27F1821-F7C8-4D31-BE57-8452279F0B4C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D27F1821-F7C8-4D31-BE57-8452279F0B4C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D27F1821-F7C8-4D31-BE57-8452279F0B4C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D27F1821-F7C8-4D31-BE57-8452279F0B4C}.Release|Any CPU.Build.0 = Release|Any CPU
 		{FD25EE7D-FB28-487E-A103-6FCA90486354}.Debug|Any CPU.ActiveCfg = Debug
 		{FD25EE7D-FB28-487E-A103-6FCA90486354}.Release|Any CPU.ActiveCfg = Release
 		{71C2CDEF-BF16-4574-9FC4-5CFDB00AF709}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -43,6 +39,10 @@ Global
 		{5B55922F-BF2C-49DB-A2F9-BA91A0218180}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5B55922F-BF2C-49DB-A2F9-BA91A0218180}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5B55922F-BF2C-49DB-A2F9-BA91A0218180}.Release|Any CPU.Build.0 = Release|Any CPU
+		{024EBF21-4C3E-4BA0-AF79-2EDE68936B0F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{024EBF21-4C3E-4BA0-AF79-2EDE68936B0F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{024EBF21-4C3E-4BA0-AF79-2EDE68936B0F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{024EBF21-4C3E-4BA0-AF79-2EDE68936B0F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

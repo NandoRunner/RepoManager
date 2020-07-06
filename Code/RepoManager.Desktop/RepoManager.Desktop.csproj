@@ -71,7 +71,9 @@
     <Reference Include="Manatee.Trello, Version=3.0.0.0, Culture=neutral, PublicKeyToken=f502fcc17fc907d6, processorArchitecture=MSIL">
       <HintPath>..\..\packages\Manatee.Trello.3.10.0\lib\net45\Manatee.Trello.dll</HintPath>
     </Reference>
-    <Reference Include="System" />
+    <Reference Include="System">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.dll</HintPath>
+    </Reference>
     <Reference Include="System.Buffers, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\..\packages\System.Buffers.4.4.0\lib\netstandard2.0\System.Buffers.dll</HintPath>
     </Reference>
@@ -217,9 +219,9 @@
     <Analyzer Include="..\..\packages\Microsoft.NetFramework.Analyzers.2.9.6\analyzers\dotnet\cs\Microsoft.NetFramework.CSharp.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\Resource\FandradeTecInfoUtils\FAndradeTecInfo.Utils.csproj">
-      <Project>{d27f1821-f7c8-4d31-be57-8452279f0b4c}</Project>
-      <Name>FAndradeTecInfo.Utils</Name>
+    <ProjectReference Include="..\..\..\Resource\FandradeTecInfoUtils\FAndradeTI.Util.FileSystem\FAndradeTI.Util.FileSystem.csproj">
+      <Project>{024EBF21-4C3E-4BA0-AF79-2EDE68936B0F}</Project>
+      <Name>FAndradeTI.Util.FileSystem</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\..\Resource\FandradeTecInfoUtils\FAndradeTI.Util.Network\FAndradeTI.Util.Network.csproj">
       <Project>{5B55922F-BF2C-49DB-A2F9-BA91A0218180}</Project>

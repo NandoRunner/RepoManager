@@ -1,11 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel;
 using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
-using FAndradeTecInfo.Utils;
 using FAndradeTI.Util;
+using FAndradeTI.Util.FileSystem;
 using FAndradeTI.Util.Network;
 using FAndradeTI.Util.WinForms;
 using SourceManager.Desktop.Business;
@@ -185,7 +184,7 @@ namespace SourceManager.Desktop
 
         private void btnAbrir_Click(object sender, EventArgs e)
         {
-            MyFS.RunExplorer(txtPasta.Text);
+            FS.RunExplorer(txtPasta.Text);
         }
 
         private void btnSair_Click(object sender, EventArgs e)
@@ -207,7 +206,7 @@ namespace SourceManager.Desktop
                 return false;
             }
 
-            if (!MyFS.FolderExists(txtPasta.Text))
+            if (!FS.FolderExists(txtPasta.Text))
             {
                 MessageBox.Show("Pasta de projetos não encontrada!", caption,
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -219,17 +218,17 @@ namespace SourceManager.Desktop
 
         private void abrirNoExplorerToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MyFS.RunExplorer(this.selectedPath);
+            FS.RunExplorer(this.selectedPath);
         }
 
         private void gitBashToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MyFS.RunGitBash(this.selectedPath);
+            FS.RunGitBash(this.selectedPath);
         }
 
         private void codeToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MyFS.RunVSCode(this.selectedPath);
+            FS.RunVSCode(this.selectedPath);
         }
 
         private void contextMenuStrip1_Opening(object sender, CancelEventArgs e)
