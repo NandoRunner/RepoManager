@@ -8,8 +8,6 @@ using FAndradeTI.Util.FileSystem;
 using FAndradeTI.Util.Network;
 using FAndradeTI.Util.WinForms;
 using SourceManager.Desktop.Business;
-using SourceManager.Desktop.Controllers;
-using SourceManager.Desktop.Model;
 
 namespace SourceManager.Desktop
 {
@@ -263,15 +261,7 @@ namespace SourceManager.Desktop
         private async void btnTrelloBoards_Click(object sender, EventArgs e)
         {
 
-            TrelloController trello = new TrelloController();
-            var ret = await trello.GetBoards().ConfigureAwait(true);
 
-            foreach (TrelloBoard tb in ret)
-            {
-                lbLog.Items.Add(tb.name);
-            }
-
-            lbLog.Refresh();
 
         }
 

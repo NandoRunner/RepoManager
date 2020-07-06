@@ -11,10 +11,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FAndradeTI.Util.WinForms", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FAndradeTI.Util", "..\Resource\FandradeTecInfoUtils\FAndradeTI.Util\FAndradeTI.Util.csproj", "{171E8FF8-1DE7-493E-B380-14129E3A9859}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FAndradeTI.Util.Network", "..\Resource\FandradeTecInfoUtils\FAndradeTI.Util.Network\FAndradeTI.Util.Network.csproj", "{5B55922F-BF2C-49DB-A2F9-BA91A0218180}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FAndradeTI.Util.FileSystem", "..\Resource\FandradeTecInfoUtils\FAndradeTI.Util.FileSystem\FAndradeTI.Util.FileSystem.csproj", "{024EBF21-4C3E-4BA0-AF79-2EDE68936B0F}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -35,14 +31,6 @@ Global
 		{171E8FF8-1DE7-493E-B380-14129E3A9859}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{171E8FF8-1DE7-493E-B380-14129E3A9859}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{171E8FF8-1DE7-493E-B380-14129E3A9859}.Release|Any CPU.Build.0 = Release|Any CPU
-		{5B55922F-BF2C-49DB-A2F9-BA91A0218180}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{5B55922F-BF2C-49DB-A2F9-BA91A0218180}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{5B55922F-BF2C-49DB-A2F9-BA91A0218180}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{5B55922F-BF2C-49DB-A2F9-BA91A0218180}.Release|Any CPU.Build.0 = Release|Any CPU
-		{024EBF21-4C3E-4BA0-AF79-2EDE68936B0F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{024EBF21-4C3E-4BA0-AF79-2EDE68936B0F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{024EBF21-4C3E-4BA0-AF79-2EDE68936B0F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{024EBF21-4C3E-4BA0-AF79-2EDE68936B0F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -215,6 +215,7 @@
             this.btnTrelloBoards.TabIndex = 24;
             this.btnTrelloBoards.Text = "&List Trello Boards";
             this.btnTrelloBoards.UseVisualStyleBackColor = true;
+            this.btnTrelloBoards.Visible = false;
             this.btnTrelloBoards.Click += new System.EventHandler(this.btnTrelloBoards_Click);
             // 
             // btnSair
