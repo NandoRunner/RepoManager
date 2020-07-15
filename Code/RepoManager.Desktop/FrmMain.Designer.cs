@@ -144,8 +144,8 @@
             // statusStrip1
             // 
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tsLabel,
-            this.tsProgressBar});
+            this.tsProgressBar,
+            this.tsLabel});
             this.statusStrip1.Location = new System.Drawing.Point(0, 539);
             this.statusStrip1.Name = "statusStrip1";
             this.statusStrip1.Size = new System.Drawing.Size(784, 22);
@@ -216,7 +216,6 @@
             this.btnTrelloBoards.Text = "&List Trello Boards";
             this.btnTrelloBoards.UseVisualStyleBackColor = true;
             this.btnTrelloBoards.Visible = false;
-            this.btnTrelloBoards.Click += new System.EventHandler(this.btnTrelloBoards_Click);
             // 
             // btnSair
             // 

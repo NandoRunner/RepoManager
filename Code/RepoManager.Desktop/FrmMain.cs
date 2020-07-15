@@ -7,7 +7,6 @@ using FAndradeTI.Util;
 using FAndradeTI.Util.FileSystem;
 using FAndradeTI.Util.Network;
 using FAndradeTI.Util.WinForms;
-using SourceManager.Desktop.Business;
 
 namespace SourceManager.Desktop
 {
@@ -46,9 +45,7 @@ namespace SourceManager.Desktop
             tsLabel.Text = "Starting processing...";
             this.Refresh();
 
-            RepoBusiness gb = new RepoBusiness(txtPasta.Text, 0);
-
-            gb.CheckPending();
+            Business.CheckPending(txtPasta.Text);
 
             if (chkSendByEmail.Checked)
                 SendToEmail("Pending Changes Repositories List");
@@ -65,9 +62,8 @@ namespace SourceManager.Desktop
             tsLabel.Text = "Starting processing...";
             this.Refresh();
 
-            RepoBusiness gb = new RepoBusiness(txtPasta.Text, 0);
+            Business.ListAll(txtPasta.Text);
 
-            gb.ListAll();
 
             if (chkSendByEmail.Checked)
                 SendToEmail("All Repositories List");
@@ -85,17 +81,14 @@ namespace SourceManager.Desktop
                 if (result == DialogResult.OK)
                 {
                     string body = String.Join("\n", lbLog.Items.Cast<String>().ToList());
-                    try
-                    {
-                        var email = new EmailManager(frm.Login, "smtp.gmail.com", "587", frm.Pwd);
-                        email.Send(subject, body, "nando.az@gmail.com");
 
-                        WinReg.Write("EmailFrom", frm.Login);
-                    }
-                    catch (Exception ex)
+                    var email = new EmailManager(frm.Login, "smtp.gmail.com", "587", frm.Pwd);
+                    if (!email.Send(subject, body, "nando.az@gmail.com"))
                     {
-                        MessageBox.Show(ex.Message, "Sending email error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show(EmailManager.LastErrorMessage, "Sending email error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
+
+                    WinReg.Write("EmailFrom", frm.Login);
                 }
             }
         }
@@ -109,9 +102,7 @@ namespace SourceManager.Desktop
             tsLabel.Text = "Starting processing...";
             this.Refresh();
 
-            RepoBusiness gb = new RepoBusiness(txtPasta.Text, 0);
-
-            gb.ListBlocked();
+            Business.ListBlocked(txtPasta.Text);
 
             EndProcess(sender);
         }
@@ -182,7 +173,7 @@ namespace SourceManager.Desktop
 
         private void btnAbrir_Click(object sender, EventArgs e)
         {
-            FS.RunExplorer(txtPasta.Text);
+            ProcManager.RunExplorer(txtPasta.Text);
         }
 
         private void btnSair_Click(object sender, EventArgs e)
@@ -216,17 +207,17 @@ namespace SourceManager.Desktop
 
         private void abrirNoExplorerToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FS.RunExplorer(this.selectedPath);
+            ProcManager.RunExplorer(this.selectedPath);
         }
 
         private void gitBashToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FS.RunGitBash(this.selectedPath);
+            ProcManager.RunGitBash(this.selectedPath);
         }
 
         private void codeToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FS.RunVSCode(this.selectedPath);
+            ProcManager.RunVSCode(this.selectedPath);
         }
 
         private void contextMenuStrip1_Opening(object sender, CancelEventArgs e)
@@ -246,9 +237,10 @@ namespace SourceManager.Desktop
             gitBashToolStripMenuItem.Enabled = selected;
             ignorarChecagemToolStripMenuItem.Enabled = selected;
             desbloquearToolStripMenuItem.Enabled = selected;
-            
 
-            if (selected && lbLog.SelectedItem.ToString().ToLower().Contains("ionic"))
+
+            //if (selected && lbLog.SelectedItem.ToString().ToLower().Contains("ionic"))
+            if (selected)
             {
                 codeToolStripMenuItem.Enabled = selected;
             }
@@ -258,19 +250,11 @@ namespace SourceManager.Desktop
             }
         }
 
-        private async void btnTrelloBoards_Click(object sender, EventArgs e)
-        {
-
-
-
-        }
-
         private void ignorarChecagemToolStripMenuItem_Click(object sender, EventArgs e)
         {
             //BeginProcess();
-
-            var rb = new RepoBusiness(this.selectedPath);
-            rb.IgnoreCheck();
+            
+            Business.IgnoreCheck(this.selectedPath);
 
             //EndProcess();
         }
@@ -279,8 +263,7 @@ namespace SourceManager.Desktop
         {
             //BeginProcess();
 
-            var rb = new RepoBusiness(this.selectedPath);
-            rb.IgnoreCheck(false);
+            Business.IgnoreCheck(this.selectedPath, false);
 
             //EndProcess();
         }

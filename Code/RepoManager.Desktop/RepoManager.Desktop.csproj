@@ -46,8 +46,8 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <RunCodeAnalysis>true</RunCodeAnalysis>
-    <CodeAnalysisRuleSet>ManagedMinimumRules.ruleset</CodeAnalysisRuleSet>
+    <RunCodeAnalysis>false</RunCodeAnalysis>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -57,16 +57,23 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <RunCodeAnalysis>false</RunCodeAnalysis>
   </PropertyGroup>
   <PropertyGroup>
     <ApplicationIcon>Resources\vc_git.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="FAndradeTI.Util.FileSystem, Version=1.0.2.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\FAndradeTI.Util.FileSystem.1.0.2\lib\net472\FAndradeTI.Util.FileSystem.dll</HintPath>
+    <Reference Include="FAndradeTI.Util, Version=1.0.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\FAndradeTI.Util.1.0.3\lib\net472\FAndradeTI.Util.dll</HintPath>
     </Reference>
-    <Reference Include="FAndradeTI.Util.Network, Version=1.0.1.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\FAndradeTI.Util.Network.1.0.1\lib\net472\FAndradeTI.Util.Network.dll</HintPath>
+    <Reference Include="FAndradeTI.Util.FileSystem, Version=1.0.4.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\FAndradeTI.Util.FileSystem.1.0.4\lib\net472\FAndradeTI.Util.FileSystem.dll</HintPath>
+    </Reference>
+    <Reference Include="FAndradeTI.Util.Network, Version=1.0.4.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\FAndradeTI.Util.Network.1.0.4\lib\net472\FAndradeTI.Util.Network.dll</HintPath>
+    </Reference>
+    <Reference Include="FAndradeTI.Util.WinForms, Version=1.0.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\FAndradeTI.Util.WinForms.1.0.1\lib\net472\FAndradeTI.Util.WinForms.dll</HintPath>
     </Reference>
     <Reference Include="LibGit2Sharp, Version=0.26.0.0, Culture=neutral, PublicKeyToken=7cbde695407f0333, processorArchitecture=MSIL">
       <HintPath>..\..\packages\LibGit2Sharp.0.26.0\lib\net46\LibGit2Sharp.dll</HintPath>
@@ -87,7 +94,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Business\RepoBusiness.cs" />
+    <Compile Include="Business.cs" />
     <Compile Include="FrmMain.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -163,16 +170,6 @@
     <Analyzer Include="..\..\packages\Microsoft.NetCore.Analyzers.2.9.6\analyzers\dotnet\cs\Microsoft.NetCore.CSharp.Analyzers.dll" />
     <Analyzer Include="..\..\packages\Microsoft.NetFramework.Analyzers.2.9.6\analyzers\dotnet\cs\Microsoft.NetFramework.Analyzers.dll" />
     <Analyzer Include="..\..\packages\Microsoft.NetFramework.Analyzers.2.9.6\analyzers\dotnet\cs\Microsoft.NetFramework.CSharp.Analyzers.dll" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\..\..\Resource\FandradeTecInfoUtils\FAndradeTI.Util.WinForms\FAndradeTI.Util.WinForms.csproj">
-      <Project>{71C2CDEF-BF16-4574-9FC4-5CFDB00AF709}</Project>
-      <Name>FAndradeTI.Util.WinForms</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\..\Resource\FandradeTecInfoUtils\FAndradeTI.Util\FAndradeTI.Util.csproj">
-      <Project>{171E8FF8-1DE7-493E-B380-14129E3A9859}</Project>
-      <Name>FAndradeTI.Util</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Lib\" />
