@@ -15,134 +15,116 @@
     {
         "Entry"
         {
-        "MsmKey" = "8:_07A76B64566FB0E2FFEAEEFC8E817D93"
-        "OwnerKey" = "8:_8C4C45DB8BBA4BB9814CE3FFD1C5B574"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
         "MsmKey" = "8:_09B6D0B0989DEB9207B1CC1FBF60A9E8"
         "OwnerKey" = "8:_BBE932E87F4A2BBD684E5C4CBF2F5212"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_3C5F2D00889F43A5B08FA377F3C16464"
+        "MsmKey" = "8:_274FB7E8780C0F8647ED222F1EA7C8AE"
+        "OwnerKey" = "8:_8351717B4EA041A4A16B8D4AB4069B3C"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_2C1E2B886A7239F80ABD91B9033F3B15"
+        "OwnerKey" = "8:_8351717B4EA041A4A16B8D4AB4069B3C"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_73B51B1FB7ED442689D0520873261682"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_5A906B9649C24A50EEF2D2023B31DC70"
-        "OwnerKey" = "8:_8C4C45DB8BBA4BB9814CE3FFD1C5B574"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_63FFD72A20D548F48407ACE985B37EDB"
+        "MsmKey" = "8:_8351717B4EA041A4A16B8D4AB4069B3C"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_67E84592A7B2C0A5C1685FB2169034E8"
-        "OwnerKey" = "8:_8C4C45DB8BBA4BB9814CE3FFD1C5B574"
+        "MsmKey" = "8:_9A85D6BD7B23B684C8BD36491DE1BE3B"
+        "OwnerKey" = "8:_8351717B4EA041A4A16B8D4AB4069B3C"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_6E7889671093E144729FAA0C73D3858D"
-        "OwnerKey" = "8:_8C4C45DB8BBA4BB9814CE3FFD1C5B574"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_840556D7F918349B1E445CC8E72C3149"
-        "OwnerKey" = "8:_8C4C45DB8BBA4BB9814CE3FFD1C5B574"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_84240BE005A44FC4A271864A180CC25F"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_8C4C45DB8BBA4BB9814CE3FFD1C5B574"
-        "OwnerKey" = "8:_UNDEFINED"
+        "MsmKey" = "8:_9FA5909AB1DBE4856019215AE46BBBBD"
+        "OwnerKey" = "8:_8351717B4EA041A4A16B8D4AB4069B3C"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_BBE932E87F4A2BBD684E5C4CBF2F5212"
-        "OwnerKey" = "8:_8C4C45DB8BBA4BB9814CE3FFD1C5B574"
+        "OwnerKey" = "8:_8351717B4EA041A4A16B8D4AB4069B3C"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_BBE932E87F4A2BBD684E5C4CBF2F5212"
-        "OwnerKey" = "8:_67E84592A7B2C0A5C1685FB2169034E8"
+        "OwnerKey" = "8:_9A85D6BD7B23B684C8BD36491DE1BE3B"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_C677251723194E1393A8B5619B8F9CCB"
+        "MsmKey" = "8:_C3B2E9CAF7884BFF9699287BC763A05D"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_C8B0E6A4099C47588A719152070B0EA5"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_8C4C45DB8BBA4BB9814CE3FFD1C5B574"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_840556D7F918349B1E445CC8E72C3149"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_6E7889671093E144729FAA0C73D3858D"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_5A906B9649C24A50EEF2D2023B31DC70"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_67E84592A7B2C0A5C1685FB2169034E8"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_07A76B64566FB0E2FFEAEEFC8E817D93"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_BBE932E87F4A2BBD684E5C4CBF2F5212"
+        "MsmKey" = "8:_C93F177AB38652F1F916F9E6CB965750"
+        "OwnerKey" = "8:_8351717B4EA041A4A16B8D4AB4069B3C"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_09B6D0B0989DEB9207B1CC1FBF60A9E8"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_8351717B4EA041A4A16B8D4AB4069B3C"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_274FB7E8780C0F8647ED222F1EA7C8AE"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_2C1E2B886A7239F80ABD91B9033F3B15"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_C93F177AB38652F1F916F9E6CB965750"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_9A85D6BD7B23B684C8BD36491DE1BE3B"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_9FA5909AB1DBE4856019215AE46BBBBD"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_BBE932E87F4A2BBD684E5C4CBF2F5212"
         "MsmSig" = "8:_UNDEFINED"
         }
     }
@@ -240,37 +222,6 @@
         }
         "File"
         {
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_07A76B64566FB0E2FFEAEEFC8E817D93"
-            {
-            "AssemblyRegister" = "3:1"
-            "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:FAndradeTI.Util, Version=1.0.3.0, Culture=neutral, processorArchitecture=MSIL"
-                "ScatterAssemblies"
-                {
-                    "_07A76B64566FB0E2FFEAEEFC8E817D93"
-                    {
-                    "Name" = "8:FAndradeTI.Util.dll"
-                    "Attributes" = "3:512"
-                    }
-                }
-            "SourcePath" = "8:FAndradeTI.Util.dll"
-            "TargetName" = "8:"
-            "Tag" = "8:"
-            "Folder" = "8:_351ED627ECFF4FC796FFED9EF5569F72"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:TRUE"
-            "IsolateTo" = "8:"
-            }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_09B6D0B0989DEB9207B1CC1FBF60A9E8"
             {
             "AssemblyRegister" = "3:1"
@@ -302,147 +253,14 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_3C5F2D00889F43A5B08FA377F3C16464"
-            {
-            "SourcePath" = "8:..\\RepoManager.Desktop\\bin\\Debug\\lib\\win32\\x86\\git2-572e4d8.pdb"
-            "TargetName" = "8:git2-572e4d8.pdb"
-            "Tag" = "8:"
-            "Folder" = "8:_FDC2554568C140EC9E75982BEAA5716F"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_5A906B9649C24A50EEF2D2023B31DC70"
-            {
-            "AssemblyRegister" = "3:1"
-            "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:FAndradeTI.Util.Network, Version=1.0.4.0, Culture=neutral, processorArchitecture=MSIL"
-                "ScatterAssemblies"
-                {
-                    "_5A906B9649C24A50EEF2D2023B31DC70"
-                    {
-                    "Name" = "8:FAndradeTI.Util.Network.dll"
-                    "Attributes" = "3:512"
-                    }
-                }
-            "SourcePath" = "8:FAndradeTI.Util.Network.dll"
-            "TargetName" = "8:"
-            "Tag" = "8:"
-            "Folder" = "8:_351ED627ECFF4FC796FFED9EF5569F72"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:TRUE"
-            "IsolateTo" = "8:"
-            }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_63FFD72A20D548F48407ACE985B37EDB"
-            {
-            "SourcePath" = "8:..\\RepoManager.Desktop\\bin\\Debug\\lib\\win32\\x64\\git2-572e4d8.pdb"
-            "TargetName" = "8:git2-572e4d8.pdb"
-            "Tag" = "8:"
-            "Folder" = "8:_687471C2C4A94A46968FE125D31CC4D7"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_67E84592A7B2C0A5C1685FB2169034E8"
-            {
-            "AssemblyRegister" = "3:1"
-            "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:FAndradeTI.Util.FileSystem, Version=1.0.4.0, Culture=neutral, processorArchitecture=MSIL"
-                "ScatterAssemblies"
-                {
-                    "_67E84592A7B2C0A5C1685FB2169034E8"
-                    {
-                    "Name" = "8:FAndradeTI.Util.FileSystem.dll"
-                    "Attributes" = "3:512"
-                    }
-                }
-            "SourcePath" = "8:FAndradeTI.Util.FileSystem.dll"
-            "TargetName" = "8:"
-            "Tag" = "8:"
-            "Folder" = "8:_351ED627ECFF4FC796FFED9EF5569F72"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:TRUE"
-            "IsolateTo" = "8:"
-            }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_6E7889671093E144729FAA0C73D3858D"
-            {
-            "AssemblyRegister" = "3:1"
-            "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:FAndradeTI.Util.WinForms, Version=1.0.1.0, Culture=neutral, processorArchitecture=MSIL"
-                "ScatterAssemblies"
-                {
-                    "_6E7889671093E144729FAA0C73D3858D"
-                    {
-                    "Name" = "8:FAndradeTI.Util.WinForms.dll"
-                    "Attributes" = "3:512"
-                    }
-                }
-            "SourcePath" = "8:FAndradeTI.Util.WinForms.dll"
-            "TargetName" = "8:"
-            "Tag" = "8:"
-            "Folder" = "8:_351ED627ECFF4FC796FFED9EF5569F72"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:TRUE"
-            "IsolateTo" = "8:"
-            }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_840556D7F918349B1E445CC8E72C3149"
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_274FB7E8780C0F8647ED222F1EA7C8AE"
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
             "AssemblyAsmDisplayName" = "8:LibGit2Sharp, Version=0.26.0.0, Culture=neutral, PublicKeyToken=7cbde695407f0333, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_840556D7F918349B1E445CC8E72C3149"
+                    "_274FB7E8780C0F8647ED222F1EA7C8AE"
                     {
                     "Name" = "8:LibGit2Sharp.dll"
                     "Attributes" = "3:512"
@@ -466,12 +284,43 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_84240BE005A44FC4A271864A180CC25F"
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_2C1E2B886A7239F80ABD91B9033F3B15"
             {
-            "SourcePath" = "8:..\\RepoManager.Desktop\\bin\\Debug\\lib\\win32\\x64\\git2-572e4d8.dll"
-            "TargetName" = "8:git2-572e4d8.dll"
+            "AssemblyRegister" = "3:1"
+            "AssemblyIsInGAC" = "11:FALSE"
+            "AssemblyAsmDisplayName" = "8:FAndradeTI.Util.WinForms, Version=1.0.2.0, Culture=neutral, processorArchitecture=MSIL"
+                "ScatterAssemblies"
+                {
+                    "_2C1E2B886A7239F80ABD91B9033F3B15"
+                    {
+                    "Name" = "8:FAndradeTI.Util.WinForms.dll"
+                    "Attributes" = "3:512"
+                    }
+                }
+            "SourcePath" = "8:FAndradeTI.Util.WinForms.dll"
+            "TargetName" = "8:"
             "Tag" = "8:"
-            "Folder" = "8:_687471C2C4A94A46968FE125D31CC4D7"
+            "Folder" = "8:_351ED627ECFF4FC796FFED9EF5569F72"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_73B51B1FB7ED442689D0520873261682"
+            {
+            "SourcePath" = "8:..\\..\\..\\ProjectResource\\images\\fandradeti.ico"
+            "TargetName" = "8:fandradeti.ico"
+            "Tag" = "8:"
+            "Folder" = "8:_351ED627ECFF4FC796FFED9EF5569F72"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -484,6 +333,68 @@
             "Register" = "3:1"
             "Exclude" = "11:FALSE"
             "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_9A85D6BD7B23B684C8BD36491DE1BE3B"
+            {
+            "AssemblyRegister" = "3:1"
+            "AssemblyIsInGAC" = "11:FALSE"
+            "AssemblyAsmDisplayName" = "8:FAndradeTI.Util.FileSystem, Version=1.0.8.0, Culture=neutral, processorArchitecture=MSIL"
+                "ScatterAssemblies"
+                {
+                    "_9A85D6BD7B23B684C8BD36491DE1BE3B"
+                    {
+                    "Name" = "8:FAndradeTI.Util.FileSystem.dll"
+                    "Attributes" = "3:512"
+                    }
+                }
+            "SourcePath" = "8:FAndradeTI.Util.FileSystem.dll"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_351ED627ECFF4FC796FFED9EF5569F72"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_9FA5909AB1DBE4856019215AE46BBBBD"
+            {
+            "AssemblyRegister" = "3:1"
+            "AssemblyIsInGAC" = "11:FALSE"
+            "AssemblyAsmDisplayName" = "8:FAndradeTI.Util, Version=1.0.3.0, Culture=neutral, processorArchitecture=MSIL"
+                "ScatterAssemblies"
+                {
+                    "_9FA5909AB1DBE4856019215AE46BBBBD"
+                    {
+                    "Name" = "8:FAndradeTI.Util.dll"
+                    "Attributes" = "3:512"
+                    }
+                }
+            "SourcePath" = "8:FAndradeTI.Util.dll"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_351ED627ECFF4FC796FFED9EF5569F72"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_BBE932E87F4A2BBD684E5C4CBF2F5212"
@@ -517,10 +428,10 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_C677251723194E1393A8B5619B8F9CCB"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_C3B2E9CAF7884BFF9699287BC763A05D"
             {
-            "SourcePath" = "8:..\\..\\..\\Resource\\_Images\\fatecinfo.ico"
-            "TargetName" = "8:fatecinfo.ico"
+            "SourcePath" = "8:..\\RepoManager.Desktop\\bin\\Debug\\git2-106a5f2.dll"
+            "TargetName" = "8:git2-106a5f2.dll"
             "Tag" = "8:"
             "Folder" = "8:_351ED627ECFF4FC796FFED9EF5569F72"
             "Condition" = "8:"
@@ -537,12 +448,23 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_C8B0E6A4099C47588A719152070B0EA5"
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_C93F177AB38652F1F916F9E6CB965750"
             {
-            "SourcePath" = "8:..\\RepoManager.Desktop\\bin\\Debug\\lib\\win32\\x86\\git2-572e4d8.dll"
-            "TargetName" = "8:git2-572e4d8.dll"
+            "AssemblyRegister" = "3:1"
+            "AssemblyIsInGAC" = "11:FALSE"
+            "AssemblyAsmDisplayName" = "8:FAndradeTI.Util.Network, Version=1.0.4.0, Culture=neutral, processorArchitecture=MSIL"
+                "ScatterAssemblies"
+                {
+                    "_C93F177AB38652F1F916F9E6CB965750"
+                    {
+                    "Name" = "8:FAndradeTI.Util.Network.dll"
+                    "Attributes" = "3:512"
+                    }
+                }
+            "SourcePath" = "8:FAndradeTI.Util.Network.dll"
+            "TargetName" = "8:"
             "Tag" = "8:"
-            "Folder" = "8:_FDC2554568C140EC9E75982BEAA5716F"
+            "Folder" = "8:_351ED627ECFF4FC796FFED9EF5569F72"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -554,7 +476,7 @@
             "PackageAs" = "3:1"
             "Register" = "3:1"
             "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
+            "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
         }
@@ -573,50 +495,6 @@
             "Property" = "8:TARGETDIR"
                 "Folders"
                 {
-                    "{9EF0B969-E518-4E46-987F-47570745A589}:_13D8C2FDB5CC44C08F3A9ADDEAC77ACF"
-                    {
-                    "Name" = "8:lib"
-                    "AlwaysCreate" = "11:FALSE"
-                    "Condition" = "8:"
-                    "Transitive" = "11:FALSE"
-                    "Property" = "8:_4C1CE653715F40F99C7E4440447CA6CC"
-                        "Folders"
-                        {
-                            "{9EF0B969-E518-4E46-987F-47570745A589}:_CA3516E2756E4AB6B9B354A0DAD96AF8"
-                            {
-                            "Name" = "8:win32"
-                            "AlwaysCreate" = "11:FALSE"
-                            "Condition" = "8:"
-                            "Transitive" = "11:FALSE"
-                            "Property" = "8:_F5BAD31E00B940D295D2FCD7905BC9A3"
-                                "Folders"
-                                {
-                                    "{9EF0B969-E518-4E46-987F-47570745A589}:_687471C2C4A94A46968FE125D31CC4D7"
-                                    {
-                                    "Name" = "8:x64"
-                                    "AlwaysCreate" = "11:FALSE"
-                                    "Condition" = "8:"
-                                    "Transitive" = "11:FALSE"
-                                    "Property" = "8:_4413BD670B424EECA8D8B81946115116"
-                                        "Folders"
-                                        {
-                                        }
-                                    }
-                                    "{9EF0B969-E518-4E46-987F-47570745A589}:_FDC2554568C140EC9E75982BEAA5716F"
-                                    {
-                                    "Name" = "8:x86"
-                                    "AlwaysCreate" = "11:FALSE"
-                                    "Condition" = "8:"
-                                    "Transitive" = "11:FALSE"
-                                    "Property" = "8:_0C5FAF4747C44846B40AF442218CA554"
-                                        "Folders"
-                                        {
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    }
                 }
             }
             "{1525181F-901A-416C-8A58-119130FE478E}:_91158068D70F4A1399AB3D15D2609F45"
@@ -679,15 +557,15 @@
         {
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:FAndrade TecInfo Repo Manager"
-        "ProductCode" = "8:{DB3C78F9-9920-4041-889C-B08E3D4B8285}"
-        "PackageCode" = "8:{A110DB5C-B634-4EAF-B790-53582CBE47D3}"
+        "ProductCode" = "8:{BDDC14BF-5861-4B6F-A00F-0834422FA02D}"
+        "PackageCode" = "8:{FD92553B-A6A7-436C-B9E7-2F6B95E7ECF6}"
         "UpgradeCode" = "8:{5D8D8858-F81E-40B7-9360-31BA3DE75851}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
         "RemovePreviousVersions" = "11:TRUE"
         "DetectNewerInstalledVersion" = "11:TRUE"
         "InstallAllUsers" = "11:FALSE"
-        "ProductVersion" = "8:1.20.10"
+        "ProductVersion" = "8:1.20.11"
         "Manufacturer" = "8:FAndrade TecInfo"
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:"
@@ -697,7 +575,7 @@
         "Keywords" = "8:"
         "ARPCOMMENTS" = "8:Repo Manager"
         "ARPURLINFOABOUT" = "8:"
-        "ARPPRODUCTICON" = "8:_C677251723194E1393A8B5619B8F9CCB"
+        "ARPPRODUCTICON" = "8:_73B51B1FB7ED442689D0520873261682"
         "ARPIconIndex" = "3:0"
         "SearchPath" = "8:"
         "UseSystemSearchPath" = "11:TRUE"
@@ -800,32 +678,32 @@
         }
         "Shortcut"
         {
-            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_6B9CB230573A40F5A927A8564B0911D8"
+            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_17AED0F7FFFF4D94A06244D069BEB224"
             {
             "Name" = "8:Repo Manager"
             "Arguments" = "8:"
             "Description" = "8:"
             "ShowCmd" = "3:1"
-            "IconIndex" = "3:32512"
+            "IconIndex" = "3:0"
             "Transitive" = "11:FALSE"
-            "Target" = "8:_8C4C45DB8BBA4BB9814CE3FFD1C5B574"
+            "Target" = "8:_8351717B4EA041A4A16B8D4AB4069B3C"
             "Folder" = "8:_FD38D7560A7B41F8BA206404BAE4D1FE"
             "WorkingFolder" = "8:_351ED627ECFF4FC796FFED9EF5569F72"
-            "Icon" = "8:_8C4C45DB8BBA4BB9814CE3FFD1C5B574"
+            "Icon" = "8:_73B51B1FB7ED442689D0520873261682"
             "Feature" = "8:"
             }
-            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_99FD8F558E254E078C2284CD582B1BB8"
+            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_C90B7E7D4865480396D041D3D1396F79"
             {
             "Name" = "8:Repo Manager"
             "Arguments" = "8:"
             "Description" = "8:"
             "ShowCmd" = "3:1"
-            "IconIndex" = "3:32512"
+            "IconIndex" = "3:0"
             "Transitive" = "11:FALSE"
-            "Target" = "8:_8C4C45DB8BBA4BB9814CE3FFD1C5B574"
+            "Target" = "8:_8351717B4EA041A4A16B8D4AB4069B3C"
             "Folder" = "8:_8500538B5C2F4EE7B3FB7289FDB85731"
             "WorkingFolder" = "8:_351ED627ECFF4FC796FFED9EF5569F72"
-            "Icon" = "8:_8C4C45DB8BBA4BB9814CE3FFD1C5B574"
+            "Icon" = "8:_73B51B1FB7ED442689D0520873261682"
             "Feature" = "8:"
             }
         }
@@ -1227,7 +1105,7 @@
         }
         "ProjectOutput"
         {
-            "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_8C4C45DB8BBA4BB9814CE3FFD1C5B574"
+            "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_8351717B4EA041A4A16B8D4AB4069B3C"
             {
             "SourcePath" = "8:..\\RepoManager.Desktop\\obj\\Debug\\SourceManager.Desktop.exe"
             "TargetName" = "8:"

@@ -41,8 +41,8 @@
             this.ignorarChecagemToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.desbloquearToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
-            this.tsLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.tsProgressBar = new System.Windows.Forms.ToolStripProgressBar();
+            this.tsInfo = new System.Windows.Forms.ToolStripStatusLabel();
             this.pnMain = new System.Windows.Forms.Panel();
             this.chkSendByEmail = new System.Windows.Forms.CheckBox();
             this.btnListBlocked = new System.Windows.Forms.Button();
@@ -85,7 +85,7 @@
             this.ignorarChecagemToolStripMenuItem,
             this.desbloquearToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(241, 132);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(241, 154);
             this.contextMenuStrip1.Opening += new System.ComponentModel.CancelEventHandler(this.contextMenuStrip1_Opening);
             // 
             // abrirNoExplorerToolStripMenuItem
@@ -129,6 +129,7 @@
             // 
             // ignorarChecagemToolStripMenuItem
             // 
+            this.ignorarChecagemToolStripMenuItem.Enabled = false;
             this.ignorarChecagemToolStripMenuItem.Name = "ignorarChecagemToolStripMenuItem";
             this.ignorarChecagemToolStripMenuItem.Size = new System.Drawing.Size(240, 22);
             this.ignorarChecagemToolStripMenuItem.Text = "Ignore Check Pending Changes";
@@ -145,23 +146,23 @@
             // 
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tsProgressBar,
-            this.tsLabel});
+            this.tsInfo});
             this.statusStrip1.Location = new System.Drawing.Point(0, 539);
             this.statusStrip1.Name = "statusStrip1";
             this.statusStrip1.Size = new System.Drawing.Size(784, 22);
             this.statusStrip1.TabIndex = 4;
             this.statusStrip1.Text = "statusStrip1";
             // 
-            // tsLabel
-            // 
-            this.tsLabel.Name = "tsLabel";
-            this.tsLabel.Size = new System.Drawing.Size(118, 17);
-            this.tsLabel.Text = "toolStripStatusLabel1";
-            // 
             // tsProgressBar
             // 
             this.tsProgressBar.Name = "tsProgressBar";
             this.tsProgressBar.Size = new System.Drawing.Size(100, 16);
+            // 
+            // tsInfo
+            // 
+            this.tsInfo.Name = "tsInfo";
+            this.tsInfo.Size = new System.Drawing.Size(118, 17);
+            this.tsInfo.Text = "toolStripStatusLabel1";
             // 
             // pnMain
             // 
@@ -331,8 +332,8 @@
         #endregion
         private System.Windows.Forms.ListBox lbLog;
         private System.Windows.Forms.StatusStrip statusStrip1;
-        private System.Windows.Forms.ToolStripStatusLabel tsLabel;
         private System.Windows.Forms.ToolStripProgressBar tsProgressBar;
+        private System.Windows.Forms.ToolStripStatusLabel tsInfo;
         private System.Windows.Forms.Panel pnMain;
         internal System.Windows.Forms.Button btnAbrir;
         internal System.Windows.Forms.Button btnPesquisar;

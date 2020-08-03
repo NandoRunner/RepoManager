@@ -42,7 +42,7 @@ namespace SourceManager.Desktop
 
             BeginProcess(sender);
 
-            tsLabel.Text = "Starting processing...";
+            tsInfo.Text = "Starting processing...";
             this.Refresh();
 
             Business.CheckPending(txtPasta.Text);
@@ -59,7 +59,7 @@ namespace SourceManager.Desktop
 
             BeginProcess(sender);
 
-            tsLabel.Text = "Starting processing...";
+            tsInfo.Text = "Starting processing...";
             this.Refresh();
 
             Business.ListAll(txtPasta.Text);
@@ -99,7 +99,7 @@ namespace SourceManager.Desktop
 
             BeginProcess(sender);
 
-            tsLabel.Text = "Starting processing...";
+            tsInfo.Text = "Starting processing...";
             this.Refresh();
 
             Business.ListBlocked(txtPasta.Text);
@@ -114,7 +114,7 @@ namespace SourceManager.Desktop
             lbLog.DataSource = null;
             lbLog.Items.Clear();
             tsProgressBar.Value = 0;
-            tsLabel.Text = "";
+            tsInfo.Text = "";
 
             foreach(Control c in pnMain.Controls)
             {
@@ -132,7 +132,8 @@ namespace SourceManager.Desktop
                     visible = false;
                 }
                 desbloquearToolStripMenuItem.Visible = !visible;
-                ignorarChecagemToolStripMenuItem.Visible = visible;
+                //todo: revert
+                //ignorarChecagemToolStripMenuItem.Visible = visible;
 
             }
         }
@@ -235,12 +236,13 @@ namespace SourceManager.Desktop
 
             abrirNoExplorerToolStripMenuItem.Enabled = selected;
             gitBashToolStripMenuItem.Enabled = selected;
-            ignorarChecagemToolStripMenuItem.Enabled = selected;
+            //todo: revert
+            //ignorarChecagemToolStripMenuItem.Enabled = selected;
             desbloquearToolStripMenuItem.Enabled = selected;
 
 
-            //if (selected && lbLog.SelectedItem.ToString().ToLower().Contains("ionic"))
-            if (selected)
+            if (selected && lbLog.SelectedItem.ToString().ToLower().Contains("ionic"))
+            //if (selected)
             {
                 codeToolStripMenuItem.Enabled = selected;
             }

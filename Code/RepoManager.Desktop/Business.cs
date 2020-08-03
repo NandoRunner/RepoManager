@@ -55,7 +55,7 @@ namespace SourceManager.Desktop
         {
             Init(basePath);
 
-            LoadIgnoreCheck();
+            //LoadIgnoreCheck();
 
             ExecSubDirectories(basePath, true);
         }
@@ -64,13 +64,14 @@ namespace SourceManager.Desktop
         {
             Init(basePath);
 
-            LoadIgnoreCheck();
+            //LoadIgnoreCheck();
 
             FormControl.UpdateListBox(listIgnoreCheck);
 
             StatusStripControl.UpdateLabel(listIgnoreCheck.Count.ToString() + " Ignored repos found");
         }
 
+        // todo: replace localdb by json
         private static void LoadIgnoreCheck()
         {
             listIgnoreCheck.Clear();
