@@ -6,12 +6,12 @@ using System.Runtime.InteropServices;
 // As informações gerais sobre um assembly são controladas por
 // conjunto de atributos. Altere estes valores de atributo para modificar as informações
 // associada a um assembly.
-[assembly: AssemblyTitle("Repo Manager Desktop")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyTitle("Repo Manager")]
+[assembly: AssemblyDescription("Git Repository Manager")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("FAndrade TecInfo")]
-[assembly: AssemblyProduct("RepoManager")]
-[assembly: AssemblyCopyright("Copyright © 2019-2020")]
+[assembly: AssemblyCompany("FAndradeTI (NandoRunner)")]
+[assembly: AssemblyProduct("Repo Manager")]
+[assembly: AssemblyCopyright("MIT License Copyright (c) 2019-2020 Fernando Andrade (NandoRunner)")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -33,6 +33,6 @@ using System.Runtime.InteropServices;
 // É possível especificar todos os valores ou usar como padrão os Números de Build e da Revisão
 // utilizando o "*" como mostrado abaixo:
 // [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("1.20.11")]
-[assembly: AssemblyFileVersion("1.20.11")]
-[assembly: NeutralResourcesLanguage("en")]
+[assembly: AssemblyVersion("1.20.13")]
+[assembly: AssemblyFileVersion("1.20.13")]
+[assembly: NeutralResourcesLanguage("")]

@@ -4,9 +4,9 @@
 "ProjectType" = "8:{978C614F-708E-4E1A-B201-565925725DBA}"
 "IsWebType" = "8:FALSE"
 "ProjectName" = "8:RepoManager.Setup"
-"LanguageId" = "3:1046"
+"LanguageId" = "3:0"
 "CodePage" = "3:1252"
-"UILanguageId" = "3:1046"
+"UILanguageId" = "3:0"
 "SccProjectName" = "8:"
 "SccLocalPath" = "8:"
 "SccAuxPath" = "8:"
@@ -82,12 +82,6 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_09B6D0B0989DEB9207B1CC1FBF60A9E8"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_8351717B4EA041A4A16B8D4AB4069B3C"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -125,6 +119,12 @@
         {
         "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_BBE932E87F4A2BBD684E5C4CBF2F5212"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_09B6D0B0989DEB9207B1CC1FBF60A9E8"
         "MsmSig" = "8:_UNDEFINED"
         }
     }
@@ -487,7 +487,7 @@
         {
             "{3C67513D-01DD-4637-8A68-80971EB9504F}:_351ED627ECFF4FC796FFED9EF5569F72"
             {
-            "DefaultLocation" = "8:[ProgramFilesFolder][Manufacturer]\\[ProductName]"
+            "DefaultLocation" = "8:[ProgramFiles64Folder][Manufacturer]\\[ProductName]"
             "Name" = "8:#1925"
             "AlwaysCreate" = "11:FALSE"
             "Condition" = "8:"
@@ -508,7 +508,7 @@
                 {
                     "{9EF0B969-E518-4E46-987F-47570745A589}:_8500538B5C2F4EE7B3FB7289FDB85731"
                     {
-                    "Name" = "8:FAndrade TecInfo Apps"
+                    "Name" = "8:FAndradeTI Apps"
                     "AlwaysCreate" = "11:FALSE"
                     "Condition" = "8:"
                     "Transitive" = "11:FALSE"
@@ -530,7 +530,7 @@
                 {
                     "{9EF0B969-E518-4E46-987F-47570745A589}:_FD38D7560A7B41F8BA206404BAE4D1FE"
                     {
-                    "Name" = "8:FAndrade TecInfo Apps"
+                    "Name" = "8:FAndradeTI Apps"
                     "AlwaysCreate" = "11:FALSE"
                     "Condition" = "8:"
                     "Transitive" = "11:FALSE"
@@ -550,36 +550,36 @@
         }
         "MsiBootstrapper"
         {
-        "LangId" = "3:1046"
+        "LangId" = "3:0"
         "RequiresElevation" = "11:FALSE"
         }
         "Product"
         {
         "Name" = "8:Microsoft Visual Studio"
-        "ProductName" = "8:FAndrade TecInfo Repo Manager"
-        "ProductCode" = "8:{BDDC14BF-5861-4B6F-A00F-0834422FA02D}"
-        "PackageCode" = "8:{FD92553B-A6A7-436C-B9E7-2F6B95E7ECF6}"
+        "ProductName" = "8:FAndradeTI Repo Manager"
+        "ProductCode" = "8:{D8FF1C52-04BF-4F3C-868C-39A5E3E8D0D9}"
+        "PackageCode" = "8:{E0F2211D-9B09-4B9F-B060-E9AD7661A4B7}"
         "UpgradeCode" = "8:{5D8D8858-F81E-40B7-9360-31BA3DE75851}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
         "RemovePreviousVersions" = "11:TRUE"
         "DetectNewerInstalledVersion" = "11:TRUE"
         "InstallAllUsers" = "11:FALSE"
-        "ProductVersion" = "8:1.20.11"
-        "Manufacturer" = "8:FAndrade TecInfo"
+        "ProductVersion" = "8:1.20.13"
+        "Manufacturer" = "8:FAndradeTI"
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:"
         "Title" = "8:Repo Manager"
         "Subject" = "8:"
-        "ARPCONTACT" = "8:FAndrade TecInfo"
+        "ARPCONTACT" = "8:Fernando Andrade (NandoRunner)"
         "Keywords" = "8:"
-        "ARPCOMMENTS" = "8:Repo Manager"
+        "ARPCOMMENTS" = "8:Git Repository Manager"
         "ARPURLINFOABOUT" = "8:"
         "ARPPRODUCTICON" = "8:_73B51B1FB7ED442689D0520873261682"
         "ARPIconIndex" = "3:0"
         "SearchPath" = "8:"
         "UseSystemSearchPath" = "11:TRUE"
-        "TargetPlatform" = "3:0"
+        "TargetPlatform" = "3:1"
         "PreBuildEvent" = "8:"
         "PostBuildEvent" = "8:"
         "RunPostBuildEvent" = "3:0"
@@ -684,12 +684,12 @@
             "Arguments" = "8:"
             "Description" = "8:"
             "ShowCmd" = "3:1"
-            "IconIndex" = "3:0"
+            "IconIndex" = "3:32512"
             "Transitive" = "11:FALSE"
             "Target" = "8:_8351717B4EA041A4A16B8D4AB4069B3C"
             "Folder" = "8:_FD38D7560A7B41F8BA206404BAE4D1FE"
             "WorkingFolder" = "8:_351ED627ECFF4FC796FFED9EF5569F72"
-            "Icon" = "8:_73B51B1FB7ED442689D0520873261682"
+            "Icon" = "8:_8351717B4EA041A4A16B8D4AB4069B3C"
             "Feature" = "8:"
             }
             "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_C90B7E7D4865480396D041D3D1396F79"
@@ -698,12 +698,12 @@
             "Arguments" = "8:"
             "Description" = "8:"
             "ShowCmd" = "3:1"
-            "IconIndex" = "3:0"
+            "IconIndex" = "3:32512"
             "Transitive" = "11:FALSE"
             "Target" = "8:_8351717B4EA041A4A16B8D4AB4069B3C"
             "Folder" = "8:_8500538B5C2F4EE7B3FB7289FDB85731"
             "WorkingFolder" = "8:_351ED627ECFF4FC796FFED9EF5569F72"
-            "Icon" = "8:_73B51B1FB7ED442689D0520873261682"
+            "Icon" = "8:_8351717B4EA041A4A16B8D4AB4069B3C"
             "Feature" = "8:"
             }
         }
