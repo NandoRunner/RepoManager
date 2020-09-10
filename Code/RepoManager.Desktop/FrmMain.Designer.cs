@@ -55,6 +55,7 @@
             this.btnListAll = new System.Windows.Forms.Button();
             this.btnCheck = new System.Windows.Forms.Button();
             this.txtPasta = new System.Windows.Forms.TextBox();
+            this.txtEmail = new System.Windows.Forms.TextBox();
             this.contextMenuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.pnMain.SuspendLayout();
@@ -85,7 +86,7 @@
             this.ignorarChecagemToolStripMenuItem,
             this.desbloquearToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(241, 154);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(241, 132);
             this.contextMenuStrip1.Opening += new System.ComponentModel.CancelEventHandler(this.contextMenuStrip1_Opening);
             // 
             // abrirNoExplorerToolStripMenuItem
@@ -167,6 +168,7 @@
             // pnMain
             // 
             this.pnMain.BackColor = System.Drawing.Color.LemonChiffon;
+            this.pnMain.Controls.Add(this.txtEmail);
             this.pnMain.Controls.Add(this.chkSendByEmail);
             this.pnMain.Controls.Add(this.btnListBlocked);
             this.pnMain.Controls.Add(this.btnTrelloBoards);
@@ -185,12 +187,13 @@
             // chkSendByEmail
             // 
             this.chkSendByEmail.AutoSize = true;
-            this.chkSendByEmail.Location = new System.Drawing.Point(23, 104);
+            this.chkSendByEmail.Location = new System.Drawing.Point(23, 108);
             this.chkSendByEmail.Name = "chkSendByEmail";
-            this.chkSendByEmail.Size = new System.Drawing.Size(93, 17);
+            this.chkSendByEmail.Size = new System.Drawing.Size(70, 17);
             this.chkSendByEmail.TabIndex = 26;
-            this.chkSendByEmail.Text = "Send by Email";
+            this.chkSendByEmail.Text = "Send To:";
             this.chkSendByEmail.UseVisualStyleBackColor = true;
+            this.chkSendByEmail.Click += new System.EventHandler(this.chkSendByEmail_Click);
             // 
             // btnListBlocked
             // 
@@ -279,7 +282,7 @@
             this.btnListAll.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnListAll.Location = new System.Drawing.Point(23, 60);
             this.btnListAll.Name = "btnListAll";
-            this.btnListAll.Size = new System.Drawing.Size(130, 38);
+            this.btnListAll.Size = new System.Drawing.Size(126, 38);
             this.btnListAll.TabIndex = 19;
             this.btnListAll.Text = "&List All";
             this.btnListAll.UseVisualStyleBackColor = true;
@@ -289,9 +292,9 @@
             // 
             this.btnCheck.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCheck.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCheck.Location = new System.Drawing.Point(159, 60);
+            this.btnCheck.Location = new System.Drawing.Point(155, 60);
             this.btnCheck.Name = "btnCheck";
-            this.btnCheck.Size = new System.Drawing.Size(170, 38);
+            this.btnCheck.Size = new System.Drawing.Size(174, 38);
             this.btnCheck.TabIndex = 18;
             this.btnCheck.Text = "&Check Pending Changes";
             this.btnCheck.UseVisualStyleBackColor = true;
@@ -304,6 +307,15 @@
             this.txtPasta.Name = "txtPasta";
             this.txtPasta.Size = new System.Drawing.Size(511, 22);
             this.txtPasta.TabIndex = 17;
+            // 
+            // txtEmail
+            // 
+            this.txtEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEmail.Location = new System.Drawing.Point(155, 104);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(511, 22);
+            this.txtEmail.TabIndex = 27;
+            this.txtEmail.Visible = false;
             // 
             // FrmMain
             // 
@@ -355,6 +367,7 @@
         private System.Windows.Forms.ToolStripMenuItem codeToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripMenuItem3;
         private System.Windows.Forms.CheckBox chkSendByEmail;
+        private System.Windows.Forms.TextBox txtEmail;
     }
 }
 

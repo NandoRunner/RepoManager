@@ -23,6 +23,7 @@ namespace SourceManager.Desktop
         private void FrmSourceManager_Load(object sender, EventArgs e)
         {
             txtPasta.Text = WinReg.Read("PastaVerifica");
+            txtEmail.Text = WinReg.Read("ToEmail") ?? string.Empty;
             this.Text = Application.ProductName + " - " 
                 + Application.CompanyName
                 + "          Version: " + Application.ProductVersion;
@@ -73,7 +74,7 @@ namespace SourceManager.Desktop
 
         private void SendToEmail(string subject)
         {
-            var emailFrom  = string.IsNullOrEmpty(WinReg.Read("EmailFrom")) ? string.Empty : WinReg.Read("EmailFrom");
+            var emailFrom  = WinReg.Read("FromEmail") ?? string.Empty;
 
             using (SimpleLogin frm = new SimpleLogin(Application.ProductName, emailFrom))
             {
@@ -82,13 +83,13 @@ namespace SourceManager.Desktop
                 {
                     string body = String.Join("\n", lbLog.Items.Cast<String>().ToList());
 
-                    var email = new EmailManager(frm.Login, "smtp.gmail.com", "587", frm.Pwd);
-                    if (!email.Send(subject, body, "nando.az@gmail.com"))
+                    var email = new GmailManager(frm.Login, "", frm.Pwd);
+                    if (!email.Send(subject, body, txtEmail.Text, ""))
                     {
                         MessageBox.Show(EmailManager.LastErrorMessage, "Sending email error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
 
-                    WinReg.Write("EmailFrom", frm.Login);
+                    WinReg.Write("FromEmail", frm.Login);
                 }
             }
         }
@@ -144,9 +145,11 @@ namespace SourceManager.Desktop
             {
                 ((Button)sender).BackColor = Color.Orange;
                 WinReg.Write("PastaVerifica", txtPasta.Text);
+                WinReg.Write("ToEmail", txtEmail.Text);
+
             }
             pnMain.Enabled = true;
-            chkSendByEmail.Checked = false;
+            //chkSendByEmail.Checked = false;
             Cursor.Current = Cursors.Default;
         }
 
@@ -199,6 +202,13 @@ namespace SourceManager.Desktop
             if (!FS.FolderExists(txtPasta.Text))
             {
                 MessageBox.Show("Pasta de projetos não encontrada!", caption,
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+
+            if (chkSendByEmail.Checked && string.IsNullOrEmpty(txtEmail.Text))
+            {
+                MessageBox.Show("Email destino inválido!", caption,
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
@@ -273,6 +283,11 @@ namespace SourceManager.Desktop
         private void lbLog_SelectedIndexChanged(object sender, EventArgs e)
         {
             this.selectedPath = txtPasta.Text + lbLog.SelectedItem.ToString();
+        }
+
+        private void chkSendByEmail_Click(object sender, EventArgs e)
+        {
+            txtEmail.Visible = chkSendByEmail.Checked;
         }
     }
 }

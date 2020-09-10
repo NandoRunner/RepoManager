@@ -22,7 +22,7 @@ namespace SourceManager.Desktop
 
         public static int level = 0;
         public static int all = 0;
-        public static int repos = 0;
+        //public static int repos = 0;
 
         private static List<string> listIgnoreCheck = new List<string>();
         private static ArrayList lstRepos;
@@ -109,7 +109,7 @@ namespace SourceManager.Desktop
                 if (!onlyPending)
                 {
                     FormControl.UpdateListBox(repo.Replace(basePath, ""));
-                    StatusStripControl.UpdateLabel((++numRepos).ToString() + " repos found");
+                    StatusStripControl.UpdateLabel((numRepos).ToString() + " repos found");
                     continue;
                 }
 
@@ -141,7 +141,7 @@ namespace SourceManager.Desktop
             }
             else
             {
-                StatusStripControl.UpdateLabel($"{repos} Pending changes repos found in {(DateTime.Now - dtIni).Seconds} seconds");
+                StatusStripControl.UpdateLabel($"{numRepos} repos found in {(DateTime.Now - dtIni).Seconds} seconds");
             }
         }
 
@@ -197,9 +197,9 @@ namespace SourceManager.Desktop
                 }
                 else
                 {
-                    repos++;
+                    numRepos++;
                     lstRepos.Add(subdirectory);
-                    StatusStripControl.UpdateLabel($"repos: {repos} / all: {all}");
+                    StatusStripControl.UpdateLabel($"repos: {numRepos} / all: {all}");
                 }
             }
         }

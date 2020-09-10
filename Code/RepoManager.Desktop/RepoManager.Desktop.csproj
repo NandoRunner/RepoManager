@@ -67,11 +67,11 @@
     <Reference Include="FAndradeTI.Util, Version=1.0.3.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\packages\FAndradeTI.Util.1.0.3\lib\net472\FAndradeTI.Util.dll</HintPath>
     </Reference>
-    <Reference Include="FAndradeTI.Util.FileSystem, Version=1.0.8.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\FAndradeTI.Util.FileSystem.1.0.8\lib\net472\FAndradeTI.Util.FileSystem.dll</HintPath>
+    <Reference Include="FAndradeTI.Util.FileSystem, Version=1.0.12.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\FAndradeTI.Util.FileSystem.1.0.12\lib\net472\FAndradeTI.Util.FileSystem.dll</HintPath>
     </Reference>
-    <Reference Include="FAndradeTI.Util.Network, Version=1.0.4.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\FAndradeTI.Util.Network.1.0.4\lib\net472\FAndradeTI.Util.Network.dll</HintPath>
+    <Reference Include="FAndradeTI.Util.Network, Version=1.0.5.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\FAndradeTI.Util.Network.1.0.5\lib\net472\FAndradeTI.Util.Network.dll</HintPath>
     </Reference>
     <Reference Include="FAndradeTI.Util.WinForms, Version=1.0.2.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\packages\FAndradeTI.Util.WinForms.1.0.2\lib\net472\FAndradeTI.Util.WinForms.dll</HintPath>
