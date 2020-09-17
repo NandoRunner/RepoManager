@@ -1,51 +1,60 @@
 ﻿using FAndradeTI.Util.WinForms;
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Data.SqlClient;
 using LibGit2Sharp;
-using System.Data;
+using RepoManager.Desktop.Model;
+using FAndradeTI.Util.FileSystem;
+using Microsoft.Alm.Authentication;
+using System.Globalization;
 
-namespace SourceManager.Desktop
+namespace RepoManager.Desktop
 {
     public static class Business
     {
-        private static int numRepos;
-        private static int numPendingRepos;
+        private static int _numRepos;
+        private static int _numPending;
+        private static int _numRestored;
+        private static string _basePath;
 
-        private static DateTime dtIni;
 
-        public static int level = 0;
-        public static int all = 0;
-        //public static int repos = 0;
+        private static DateTime _dtIni;
 
-        private static List<string> listIgnoreCheck = new List<string>();
-        private static ArrayList lstRepos;
+        private static int _level;
+        private static int _all;
 
-        public static StringBuilder Sb = new StringBuilder();
+        private static List<string> _listIgnoreCheck;
+
+        private static List<RepoInfo> _listRepo;
+
 
         private static void Init(string basePath)
         {
-            dtIni = DateTime.Now;
+            _dtIni = DateTime.Now;
 
             FormControl.ClearListBox();
-            numRepos = 0;
-            numPendingRepos = 0;
+            _numRepos = 0;
+            _numPending = 0;
+            _numRestored = 0;
 
-            lstRepos = new ArrayList();
+            _level = 0;
+            _all = 0;
+
+
+            _listIgnoreCheck = new List<string>();
+            _listRepo = new List<RepoInfo>();
+
+            _basePath = basePath;
 
             LoadRepos(basePath);
 
-            StatusStripControl.InitStatusStrip(string.Empty, lstRepos.Count);
+            StatusStripControl.InitStatusStrip(string.Empty, _listRepo.Count);
         }
 
 
-        public static  void ListAll(string basePath)
+        public static void ListAll(string basePath)
         {
             Init(basePath);
             ExecSubDirectories(basePath, false);
@@ -66,66 +75,64 @@ namespace SourceManager.Desktop
 
             //LoadIgnoreCheck();
 
-            FormControl.UpdateListBox(listIgnoreCheck);
+            FormControl.UpdateListBox(_listIgnoreCheck);
 
-            StatusStripControl.UpdateLabel(listIgnoreCheck.Count.ToString() + " Ignored repos found");
+            StatusStripControl.UpdateLabel(_listIgnoreCheck.Count.ToString(CultureInfo.CurrentCulture) + " Ignored repos found");
         }
 
         // todo: replace localdb by json
-        private static void LoadIgnoreCheck()
-        {
-            listIgnoreCheck.Clear();
+        ////private static void LoadIgnoreCheck()
+        ////{
+        ////    _listIgnoreCheck.Clear();
 
-            string connString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\_Cloud\Projs\GitHub\RepoManager\Code\RepoManager.Desktop\RepoManager.mdf;Integrated Security=True";
-            using (var conn = new SqlConnection(connString))
-            {
-                string sqlString = @"select * from ignoreCheck";
-                using (var command = new SqlCommand(sqlString, conn))
-                {
-                    conn.Open();
-                    var reader = command.ExecuteReader();
+        ////    string connString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\_Cloud\Projs\GitHub\RepoManager\Code\RepoManager.Desktop\RepoManager.mdf;Integrated Security=True";
+        ////    using (var conn = new SqlConnection(connString))
+        ////    {
+        ////        string sqlString = @"select * from ignoreCheck";
+        ////        using (var command = new SqlCommand(sqlString, conn))
+        ////        {
+        ////            conn.Open();
+        ////            var reader = command.ExecuteReader();
 
-                    if (reader.HasRows)
-                    {
-                        while (reader.Read())
-                        {
-                            listIgnoreCheck.Add(reader.GetString(1));
-                            Application.DoEvents();
-                        }
-                    }
-                }
-            }
-        }
-
-
+        ////            if (reader.HasRows)
+        ////            {
+        ////                while (reader.Read())
+        ////                {
+        ////                    _listIgnoreCheck.Add(reader.GetString(1));
+        ////                    Application.DoEvents();
+        ////                }
+        ////            }
+        ////        }
+        ////    }
+        ////}
 
         private static void ExecSubDirectories(string basePath, bool onlyPending)
         {
-            foreach (string repo in lstRepos)
+            foreach (var repo in _listRepo)
             {
                 Application.DoEvents();
                 StatusStripControl.UpdateProgressBar();
 
                 if (!onlyPending)
                 {
-                    FormControl.UpdateListBox(repo.Replace(basePath, ""));
-                    StatusStripControl.UpdateLabel((numRepos).ToString() + " repos found");
+                    FormControl.UpdateListBox(repo.Path.Replace(basePath, ""));
+                    StatusStripControl.UpdateLabel((_numRepos).ToString(CultureInfo.CurrentCulture) + " repos found");
                     continue;
                 }
 
-                if (listIgnoreCheck.Contains(repo))
+                if (_listIgnoreCheck.Contains(repo.Path))
                     continue;
 
                 try
                 {
-                    using (Repository objRepo = new Repository(repo))
+                    using (Repository objRepo = new Repository(FS.PathCombine(_basePath, repo.Path)))
                     {
                         RepositoryStatus rs = objRepo.RetrieveStatus();
 
                         if (rs.IsDirty)
                         {
-                            FormControl.UpdateListBox(repo.Replace(basePath, ""));
-                            StatusStripControl.UpdateLabel((++numPendingRepos).ToString() + " Pending changes repos found");
+                            FormControl.UpdateListBox(repo.Path.Replace(basePath, ""));
+                            StatusStripControl.UpdateLabel((++_numPending).ToString(CultureInfo.CurrentCulture) + " repos with pending changes  found");
                         }
                     }
                 }
@@ -137,43 +144,42 @@ namespace SourceManager.Desktop
 
             if (onlyPending)
             {
-                StatusStripControl.UpdateLabel($"{numPendingRepos} Pending changes repos found in {(DateTime.Now - dtIni).Seconds} seconds");
+                StatusStripControl.UpdateLabel($"{_numPending} repos with pending changes found in {(DateTime.Now - _dtIni).Seconds} seconds");
             }
             else
             {
-                StatusStripControl.UpdateLabel($"{numRepos} repos found in {(DateTime.Now - dtIni).Seconds} seconds");
+                StatusStripControl.UpdateLabel($"{_numRepos} repos found in {(DateTime.Now - _dtIni).Seconds} seconds");
             }
         }
 
-        public static void IgnoreCheck(string workingPath, bool block = true)
-        {
-            string connString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\_Cloud\Projs\GitHub\RepoManager\Code\RepoManager.Desktop\RepoManager.mdf;Integrated Security=True";
+        //public static void IgnoreCheck(string workingPath, bool block = true)
+        //{
+        //    string connString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\_Cloud\Projs\GitHub\RepoManager\Code\RepoManager.Desktop\RepoManager.mdf;Integrated Security=True";
 
-            using (var conn = new SqlConnection(connString))
-            {
-                string sqlString = string.Empty;
+        //    using (var conn = new SqlConnection(connString))
+        //    {
+        //        string sqlString = string.Empty;
 
-                using (var command = new SqlCommand())
-                {
-                    command.Connection = conn;
-                    command.Parameters.Add("@name", SqlDbType.NChar).Value = workingPath;
+        //        using (var command = new SqlCommand())
+        //        {
+        //            command.Connection = conn;
+        //            command.Parameters.Add("@name", SqlDbType.NChar).Value = workingPath;
 
-                    if (!block)
-                    {
-                        command.CommandText = "DELETE FROM ignoreCheck WHERE name=@name";
-                    }
-                    else
-                    {
-                        command.CommandText = "INSERT INTOO  ignoreCheck (name) VALUES (@name)";
-                    }
+        //            if (!block)
+        //            {
+        //                command.CommandText = "DELETE FROM ignoreCheck WHERE name=@name";
+        //            }
+        //            else
+        //            {
+        //                command.CommandText = "INSERT INTOO  ignoreCheck (name) VALUES (@name)";
+        //            }
 
-                    conn.Open();
-                    var result = command.ExecuteNonQuery();
-                }
-            }
+        //            conn.Open();
+        //            var result = command.ExecuteNonQuery();
+        //        }
+        //    }
 
-        }
-
+        //}
 
         public static void LoadRepos(string directory)
         {
@@ -187,21 +193,112 @@ namespace SourceManager.Desktop
                     continue;
                 }
 
-                all++;
+                _all++;
                 //Application.DoEvents();
                 if (!LibGit2Sharp.Repository.IsValid(subdirectory))
                 {
-                    level++;
+                    _level++;
                     LoadRepos(subdirectory);
-                    level--;
+                    _level--;
                 }
                 else
                 {
-                    numRepos++;
-                    lstRepos.Add(subdirectory);
-                    StatusStripControl.UpdateLabel($"repos: {numRepos} / all: {all}");
+                    _numRepos++;
+                    var ri = new RepoInfo()
+                    {
+                        Name = subdirectory.Split('\\').Last().ToString(),
+                        Path = subdirectory.Replace(_basePath+"\\", "")
+                    };
+                    _listRepo.Add(ri);
+                    StatusStripControl.UpdateLabel($"repos: {_numRepos} / all: {_all}");
                 }
             }
+        }
+
+
+        public static void SaveListRepo(string file)
+        {
+            FS.SaveJson<RepoInfo>(_listRepo, file);
+        }
+
+
+        public static void RestoreListRepo(string basePath, string file, string userName)
+        {
+            if (file == null)   throw new ArgumentNullException(nameof(file));
+
+            dynamic list;
+
+            if (file.Split('.').Last().ToString() == "txt") list = FS.LoadText(file);
+            else list = FS.LoadJson<RepoInfo>(file);
+
+            foreach (var item in list)
+            {
+                if (item.GetType() == file.GetType())
+                {
+                    var ri = new RepoInfo()
+                    {
+                        Name = ((string)item).Split('\\').Last().ToString(),
+                        Path = FS.PathCombine(basePath, (string)item)
+                    };
+
+                    if (FS.FolderExists(ri.Path)) continue;
+
+                    Application.DoEvents();
+                    FormControl.UpdateListBox((string)item);
+                    RestoreRepo(ri, basePath, userName);
+                }
+                else
+                {
+                    RestoreRepo(item, basePath, userName);
+                }
+            }
+            StatusStripControl.UpdateLabel($"{_numRestored} repos restored in {(DateTime.Now - _dtIni).Seconds} seconds");
+        }
+
+        private static void RestoreRepo(RepoInfo ri, string basePath, string userName)
+        {
+            var fullPath = ri.Path.Replace("\\" + ri.Name, "");
+
+            if (!FS.FolderExists(fullPath)) FS.CreateFolder(fullPath);
+
+            var cloneUrl = $"{ri.Name}.git";
+
+            var site = ri.Path.Replace(basePath + "\\", "").Split('\\').First().ToString().ToLower(CultureInfo.CurrentCulture);
+
+            if (site == "github")
+            {
+                cloneUrl = $"https://github.com/{userName}/" + cloneUrl;
+                RestoreGit(ri, cloneUrl);
+            }
+            else
+            {
+                if (site == "bitbucket") cloneUrl = $"https://{userName}1@bitbucket.org/atexbr/" + cloneUrl;
+                else if (site == "gitlab") cloneUrl = $"http://67.205.172.109/{userName}/{cloneUrl}";
+                ProcManager.RunGitClone(fullPath, cloneUrl);
+            }
+
+            Application.DoEvents();
+            StatusStripControl.UpdateLabel($"{(++_numRestored).ToString(CultureInfo.CurrentCulture)} repos restored - {ri.Name}");
+        }
+
+        private static void RestoreGit(RepoInfo ri, string cloneUrl)
+        {
+            var secrets = new SecretStore("git");
+            var auth = new BasicAuthentication(secrets);
+
+            var creds = auth.GetCredentials(new TargetUri("https://github.com"));
+
+            var options = new CloneOptions
+            {
+                CredentialsProvider = (_url, _user, _cred) => new UsernamePasswordCredentials
+                {
+                    Username = creds.Username,
+                    Password = creds.Password
+                },
+            };
+
+            Repository.Clone(cloneUrl, ri.Path, options);
+
         }
 
     }

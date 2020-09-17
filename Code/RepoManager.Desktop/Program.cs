@@ -5,7 +5,7 @@ using System.Reflection;
 using System.Globalization;
 using System.Resources;
 
-namespace SourceManager.Desktop
+namespace RepoManager.Desktop
 {
     static class Program
     {
@@ -20,7 +20,7 @@ namespace SourceManager.Desktop
 
             if (!createdNew)
             {
-                var Rm = new ResourceManager("SourceManager.Desktop.Properties", Assembly.GetExecutingAssembly());
+                var Rm = new ResourceManager("RepoManager.Desktop.Properties", Assembly.GetExecutingAssembly());
 
                 // myApp is already running...
                 MessageBox.Show(Rm.GetString("MessageBoxText01", CultureInfo.CurrentCulture),

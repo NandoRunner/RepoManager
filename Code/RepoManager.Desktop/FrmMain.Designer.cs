@@ -1,4 +1,4 @@
-﻿namespace SourceManager.Desktop
+﻿namespace RepoManager.Desktop
 {
     partial class FrmMain
     {
@@ -44,9 +44,10 @@
             this.tsProgressBar = new System.Windows.Forms.ToolStripProgressBar();
             this.tsInfo = new System.Windows.Forms.ToolStripStatusLabel();
             this.pnMain = new System.Windows.Forms.Panel();
+            this.btnRestore = new System.Windows.Forms.Button();
+            this.txtEmail = new System.Windows.Forms.TextBox();
             this.chkSendByEmail = new System.Windows.Forms.CheckBox();
             this.btnListBlocked = new System.Windows.Forms.Button();
-            this.btnTrelloBoards = new System.Windows.Forms.Button();
             this.btnSair = new System.Windows.Forms.Button();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.label1 = new System.Windows.Forms.Label();
@@ -55,7 +56,6 @@
             this.btnListAll = new System.Windows.Forms.Button();
             this.btnCheck = new System.Windows.Forms.Button();
             this.txtPasta = new System.Windows.Forms.TextBox();
-            this.txtEmail = new System.Windows.Forms.TextBox();
             this.contextMenuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.pnMain.SuspendLayout();
@@ -168,10 +168,10 @@
             // pnMain
             // 
             this.pnMain.BackColor = System.Drawing.Color.LemonChiffon;
+            this.pnMain.Controls.Add(this.btnRestore);
             this.pnMain.Controls.Add(this.txtEmail);
             this.pnMain.Controls.Add(this.chkSendByEmail);
             this.pnMain.Controls.Add(this.btnListBlocked);
-            this.pnMain.Controls.Add(this.btnTrelloBoards);
             this.pnMain.Controls.Add(this.btnSair);
             this.pnMain.Controls.Add(this.label1);
             this.pnMain.Controls.Add(this.btnAbrir);
@@ -183,6 +183,27 @@
             this.pnMain.Name = "pnMain";
             this.pnMain.Size = new System.Drawing.Size(760, 137);
             this.pnMain.TabIndex = 17;
+            // 
+            // btnRestore
+            // 
+            this.btnRestore.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnRestore.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRestore.Location = new System.Drawing.Point(471, 60);
+            this.btnRestore.Name = "btnRestore";
+            this.btnRestore.Size = new System.Drawing.Size(126, 38);
+            this.btnRestore.TabIndex = 28;
+            this.btnRestore.Text = "&Restore";
+            this.btnRestore.UseVisualStyleBackColor = true;
+            this.btnRestore.Click += new System.EventHandler(this.btnRestore_Click);
+            // 
+            // txtEmail
+            // 
+            this.txtEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEmail.Location = new System.Drawing.Point(155, 104);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(511, 22);
+            this.txtEmail.TabIndex = 27;
+            this.txtEmail.Visible = false;
             // 
             // chkSendByEmail
             // 
@@ -207,19 +228,6 @@
             this.btnListBlocked.Text = "&List Blocked";
             this.btnListBlocked.UseVisualStyleBackColor = false;
             this.btnListBlocked.Click += new System.EventHandler(this.btnListBlocked_Click);
-            // 
-            // btnTrelloBoards
-            // 
-            this.btnTrelloBoards.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnTrelloBoards.Enabled = false;
-            this.btnTrelloBoards.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTrelloBoards.Location = new System.Drawing.Point(471, 60);
-            this.btnTrelloBoards.Name = "btnTrelloBoards";
-            this.btnTrelloBoards.Size = new System.Drawing.Size(130, 38);
-            this.btnTrelloBoards.TabIndex = 24;
-            this.btnTrelloBoards.Text = "&List Trello Boards";
-            this.btnTrelloBoards.UseVisualStyleBackColor = true;
-            this.btnTrelloBoards.Visible = false;
             // 
             // btnSair
             // 
@@ -308,15 +316,6 @@
             this.txtPasta.Size = new System.Drawing.Size(511, 22);
             this.txtPasta.TabIndex = 17;
             // 
-            // txtEmail
-            // 
-            this.txtEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEmail.Location = new System.Drawing.Point(155, 104);
-            this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(511, 22);
-            this.txtEmail.TabIndex = 27;
-            this.txtEmail.Visible = false;
-            // 
             // FrmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -330,7 +329,7 @@
             this.Name = "FrmMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Repo Manager";
-            this.Load += new System.EventHandler(this.FrmSourceManager_Load);
+            this.Load += new System.EventHandler(this.FrmRepoManager_Load);
             this.contextMenuStrip1.ResumeLayout(false);
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
@@ -359,7 +358,6 @@
         private System.Windows.Forms.ToolStripMenuItem abrirNoExplorerToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem gitBashToolStripMenuItem;
-        private System.Windows.Forms.Button btnTrelloBoards;
         private System.Windows.Forms.ToolStripSeparator toolStripMenuItem2;
         private System.Windows.Forms.ToolStripMenuItem ignorarChecagemToolStripMenuItem;
         private System.Windows.Forms.Button btnListBlocked;
@@ -368,6 +366,7 @@
         private System.Windows.Forms.ToolStripSeparator toolStripMenuItem3;
         private System.Windows.Forms.CheckBox chkSendByEmail;
         private System.Windows.Forms.TextBox txtEmail;
+        private System.Windows.Forms.Button btnRestore;
     }
 }
 

@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SourceManager.Desktop.Properties {
+namespace RepoManager.Desktop.Properties {
     using System;
     
     
@@ -33,13 +33,13 @@ namespace SourceManager.Desktop.Properties {
         }
         
         /// <summary>
-        ///   Retorna a instância de ResourceManager armazenada em cache usada por essa classe.
+        ///   Retorna a instância de ReRepoManager armazenada em cache usada por essa classe.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Resources.ResourceManager ResourceManager {
+        internal static global::System.Resources.ResourceManager ReRepoManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("SourceManager.Desktop.Properties.Resources", typeof(Resources).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("RepoManager.Desktop.Properties.Resources", typeof(Resources).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -65,7 +65,7 @@ namespace SourceManager.Desktop.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap iconfinder_Log_Out_27856 {
             get {
-                object obj = ResourceManager.GetObject("iconfinder_Log_Out_27856", resourceCulture);
+                object obj = ReRepoManager.GetObject("iconfinder_Log_Out_27856", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -75,7 +75,7 @@ namespace SourceManager.Desktop.Properties {
         /// </summary>
         internal static System.Drawing.Icon iconfinder_social_media_social_media_logo_git_1916016 {
             get {
-                object obj = ResourceManager.GetObject("iconfinder_social_media_social_media_logo_git_1916016", resourceCulture);
+                object obj = ReRepoManager.GetObject("iconfinder_social_media_social_media_logo_git_1916016", resourceCulture);
                 return ((System.Drawing.Icon)(obj));
             }
         }
@@ -85,7 +85,7 @@ namespace SourceManager.Desktop.Properties {
         /// </summary>
         internal static string MessageBoxText01 {
             get {
-                return ResourceManager.GetString("MessageBoxText01", resourceCulture);
+                return ReRepoManager.GetString("MessageBoxText01", resourceCulture);
             }
         }
         
@@ -94,7 +94,7 @@ namespace SourceManager.Desktop.Properties {
         /// </summary>
         internal static System.Drawing.Icon vc_git {
             get {
-                object obj = ResourceManager.GetObject("vc_git", resourceCulture);
+                object obj = ReRepoManager.GetObject("vc_git", resourceCulture);
                 return ((System.Drawing.Icon)(obj));
             }
         }
