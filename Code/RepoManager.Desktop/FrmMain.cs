@@ -81,8 +81,8 @@ namespace RepoManager.Desktop
 
             Business.CheckPending(txtPasta.Text);
 
-            if (chkSendByEmail.Checked)
-                SendToEmail("Pending Changes Repositories List");
+            //if (chkSendByEmail.Checked)
+            //    SendToEmail("Pending Changes Repositories List");
 
             EndProcess(sender);
         }
@@ -98,7 +98,8 @@ namespace RepoManager.Desktop
 
             Business.ListAll(txtPasta.Text);
 
-            Business.SaveListRepo(_json);
+            Business.SaveListRepo(FS.PathCombine(Environment.GetFolderPath(
+    Environment.SpecialFolder.MyDoc‌​uments), _json));
 
             if (chkSendByEmail.Checked)
                 SendToEmail("All Repositories List");
@@ -286,7 +287,8 @@ namespace RepoManager.Desktop
 
                     var email = new GmailManager(frm.Login, "", frm.Pwd)
                     {
-                        Attach = _json
+                        Attach = FS.PathCombine(Environment.GetFolderPath(
+    Environment.SpecialFolder.MyDoc‌​uments), _json)
                     };
 
                     if (!email.Send(subject, body, txtEmail.Text, ""))
