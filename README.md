@@ -7,13 +7,14 @@ Below is the list of funcionalities:
 - List repos with pending changes
 - Send e-mail with selcted list of repos throught Gmail
 - Ignore a repo from future listing
+- Restore repos from GitHub, Bitbucket and GitLab
 
 
 Requirements:
-1) Git for Windows 
+1) Git for Windows
 https://gitforwindows.org/
 
-2) GitHub personal access token before restoring repositores 
+2) GitHub personal access token (PAT)
 https://github.com/settings/tokens
 
 Run command:
