@@ -249,6 +249,8 @@ namespace RepoManager.Desktop
                 }
                 else
                 {
+                    item.Path = FS.PathCombine(basePath, item.Path);
+
                     RestoreRepo(item, basePath, userName);
                 }
             }
