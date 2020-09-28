@@ -171,7 +171,8 @@ namespace RepoManager.Desktop
 
         private void codeToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            ProcManager.RunVSCode(this._selectedPath);
+            if (!ProcManager.RunVSCode(this._selectedPath))
+                MessageBox.Show("code.exe not found!\n\nCheck PATH environment variable or install VSCode", ProcManager.Message, MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
         private void contextMenuStrip1_Opening(object sender, CancelEventArgs e)
@@ -249,7 +250,8 @@ namespace RepoManager.Desktop
         }
         private void gitBashToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            ProcManager.RunGitBash(this._selectedPath);
+            if (!ProcManager.RunGitBash(this._selectedPath))
+                MessageBox.Show("bash.exe not found!\n\nCheck PATH environment variable or install GIT", ProcManager.Message, MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
         private void ignorarChecagemToolStripMenuItem_Click(object sender, EventArgs e)

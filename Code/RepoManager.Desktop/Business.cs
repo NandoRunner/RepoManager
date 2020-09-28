@@ -251,6 +251,8 @@ namespace RepoManager.Desktop
                 {
                     item.Path = FS.PathCombine(basePath, item.Path);
 
+                    if (FS.FolderExists(item.Path)) continue;
+
                     RestoreRepo(item, basePath, userName);
                 }
             }

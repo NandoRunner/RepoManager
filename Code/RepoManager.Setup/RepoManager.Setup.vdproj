@@ -386,11 +386,6 @@
             "AssemblyAsmDisplayName" = "8:Microsoft.IdentityModel.Clients.ActiveDirectory, Version=3.19.8.16603, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_0F5E8F421F91E6484A462D943F029F42"
-                    {
-                    "Name" = "8:Microsoft.IdentityModel.Clients.ActiveDirectory.dll"
-                    "Attributes" = "3:512"
-                    }
                 }
             "SourcePath" = "8:Microsoft.IdentityModel.Clients.ActiveDirectory.dll"
             "TargetName" = "8:"
@@ -510,11 +505,6 @@
             "AssemblyAsmDisplayName" = "8:Microsoft.IdentityModel.Clients.ActiveDirectory.Platform, Version=3.19.8.16603, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_5E3AF551ED2F70DA268614C26068246F"
-                    {
-                    "Name" = "8:Microsoft.IdentityModel.Clients.ActiveDirectory.Platform.dll"
-                    "Attributes" = "3:512"
-                    }
                 }
             "SourcePath" = "8:Microsoft.IdentityModel.Clients.ActiveDirectory.Platform.dll"
             "TargetName" = "8:"
@@ -572,11 +562,6 @@
             "AssemblyAsmDisplayName" = "8:FAndradeTI.Util.FileSystem, Version=1.0.13.0, Culture=neutral, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_929D4F8646E9F43C1C3D762CDD6E9AF5"
-                    {
-                    "Name" = "8:FAndradeTI.Util.FileSystem.dll"
-                    "Attributes" = "3:512"
-                    }
                 }
             "SourcePath" = "8:FAndradeTI.Util.FileSystem.dll"
             "TargetName" = "8:"
@@ -869,15 +854,15 @@
         {
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:NandoRunner Repo Manager"
-        "ProductCode" = "8:{5CC1811C-FE0F-413D-8FEC-12B6B3366796}"
-        "PackageCode" = "8:{647D30EB-B704-475C-8390-1DE3A44B869D}"
+        "ProductCode" = "8:{54A37CB8-5665-428A-8126-9E4DF031BD42}"
+        "PackageCode" = "8:{BE43EC16-6F8B-464F-9045-D2C0F3953559}"
         "UpgradeCode" = "8:{5D8D8858-F81E-40B7-9360-31BA3DE75851}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
         "RemovePreviousVersions" = "11:TRUE"
         "DetectNewerInstalledVersion" = "11:TRUE"
         "InstallAllUsers" = "11:FALSE"
-        "ProductVersion" = "8:1.20.22"
+        "ProductVersion" = "8:1.20.23"
         "Manufacturer" = "8:FAndradeTI"
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:"
