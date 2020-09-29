@@ -234,9 +234,7 @@ namespace RepoManager.Desktop
         {
             txtPasta.Text = WinReg.Read("PastaVerifica");
             txtEmail.Text = WinReg.Read("ToEmail") ?? string.Empty;
-            this.Text = Application.ProductName + " - " 
-                + Application.CompanyName
-                + "          Version: " + Application.ProductVersion;
+            this.Text = AppInfo.GetFullTitle();
 
             FormControl.FormName = "FrmMain";
             FormControl.ListBoxName = "lbLog";
