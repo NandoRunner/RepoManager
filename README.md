@@ -21,3 +21,13 @@ Run command:
 git config --global credential.helper manager
 
 The first time you are pushing to a repo, a popup will ask for your credentials: username and your PAT.
+
+
+For sending an email with you list of repos, you need to use your gmail credentials and activate "less secure apps":
+https://myaccount.google.com/u/2/lesssecureapps
+
+Sugestion: Do not use your main google account, use a secondary one that there is no problem on activating "less secure apps".
+
+
+
+
