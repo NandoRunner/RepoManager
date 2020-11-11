@@ -9,6 +9,7 @@ using RepoManager.Desktop.Model;
 using FAndradeTI.Util.FileSystem;
 using Microsoft.Alm.Authentication;
 using System.Globalization;
+using System.Reflection;
 
 namespace RepoManager.Desktop
 {
@@ -29,6 +30,9 @@ namespace RepoManager.Desktop
 
         private static List<RepoInfo> _listRepo;
 
+        private static Dictionary<string, RepoType> _dicRepo;
+
+        public static Dictionary<string, RepoType> DicRepo { get => _dicRepo; }
 
         private static void Init(string basePath)
         {
@@ -45,6 +49,7 @@ namespace RepoManager.Desktop
 
             _listIgnoreCheck = new List<string>();
             _listRepo = new List<RepoInfo>();
+            _dicRepo = new Dictionary<string, RepoType>();
 
             _basePath = basePath;
 
@@ -204,12 +209,35 @@ namespace RepoManager.Desktop
                 else
                 {
                     _numRepos++;
+
+
                     var ri = new RepoInfo()
                     {
                         Name = subdirectory.Split('\\').Last().ToString(),
                         Path = subdirectory.Replace(_basePath+"\\", "")
+
                     };
+
+                    if (!string.IsNullOrEmpty(Directory.EnumerateFiles(subdirectory, "*.sln", SearchOption.TopDirectoryOnly)
+                                .FirstOrDefault()))
+                    {
+                        _dicRepo.Add(ri.Path, RepoType.VisualStudio);
+                    }
+                    else if(FS.FileExists(FS.PathCombine(subdirectory, @"app\build.gradle")))
+                    {
+                        _dicRepo.Add(ri.Path, RepoType.AndroidStudio);
+                    }
+                    else if (FS.FileExists(FS.PathCombine(subdirectory, @"package.json")))
+                    {
+                        _dicRepo.Add(ri.Path, RepoType.VSCode);
+                    }
+                    else
+                    {
+                        _dicRepo.Add(ri.Path, RepoType.undefined);
+                    }
+
                     _listRepo.Add(ri);
+
                     StatusStripControl.UpdateLabel($"repos: {_numRepos} / all: {_all}");
                 }
             }

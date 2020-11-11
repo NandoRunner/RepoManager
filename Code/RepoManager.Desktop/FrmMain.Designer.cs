@@ -32,12 +32,16 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMain));
             this.lbLog = new System.Windows.Forms.ListBox();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.abrirNoExplorerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiGitBash = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripSeparator();
-            this.gitBashToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiExplorer = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripSeparator();
-            this.codeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiVSCode = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripSeparator();
+            this.tsmiVisualStudio = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.tsmiAndroidStudio = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.ignorarChecagemToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.desbloquearToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
@@ -73,60 +77,92 @@
             this.lbLog.TabIndex = 2;
             this.lbLog.SelectedIndexChanged += new System.EventHandler(this.lbLog_SelectedIndexChanged);
             this.lbLog.DoubleClick += new System.EventHandler(this.lbRepo_DoubleClick);
+            this.lbLog.MouseDown += new System.Windows.Forms.MouseEventHandler(this.lbLog_MouseDown);
             // 
             // contextMenuStrip1
             // 
             this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.abrirNoExplorerToolStripMenuItem,
+            this.tsmiGitBash,
             this.toolStripMenuItem1,
-            this.gitBashToolStripMenuItem,
+            this.tsmiExplorer,
             this.toolStripMenuItem2,
-            this.codeToolStripMenuItem,
+            this.tsmiVSCode,
             this.toolStripMenuItem3,
+            this.tsmiVisualStudio,
+            this.toolStripSeparator1,
+            this.tsmiAndroidStudio,
+            this.toolStripSeparator2,
             this.ignorarChecagemToolStripMenuItem,
             this.desbloquearToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(241, 132);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(241, 188);
             this.contextMenuStrip1.Opening += new System.ComponentModel.CancelEventHandler(this.contextMenuStrip1_Opening);
             // 
-            // abrirNoExplorerToolStripMenuItem
+            // tsmiGitBash
             // 
-            this.abrirNoExplorerToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("abrirNoExplorerToolStripMenuItem.Image")));
-            this.abrirNoExplorerToolStripMenuItem.Name = "abrirNoExplorerToolStripMenuItem";
-            this.abrirNoExplorerToolStripMenuItem.Size = new System.Drawing.Size(240, 22);
-            this.abrirNoExplorerToolStripMenuItem.Text = "Open in Explorer";
-            this.abrirNoExplorerToolStripMenuItem.Click += new System.EventHandler(this.abrirNoExplorerToolStripMenuItem_Click);
+            this.tsmiGitBash.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.tsmiGitBash.Image = ((System.Drawing.Image)(resources.GetObject("tsmiGitBash.Image")));
+            this.tsmiGitBash.Name = "tsmiGitBash";
+            this.tsmiGitBash.Size = new System.Drawing.Size(240, 22);
+            this.tsmiGitBash.Text = "Git Bash";
+            this.tsmiGitBash.Click += new System.EventHandler(this.tsmiGitBash_Click);
             // 
             // toolStripMenuItem1
             // 
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
             this.toolStripMenuItem1.Size = new System.Drawing.Size(237, 6);
             // 
-            // gitBashToolStripMenuItem
+            // tsmiExplorer
             // 
-            this.gitBashToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("gitBashToolStripMenuItem.Image")));
-            this.gitBashToolStripMenuItem.Name = "gitBashToolStripMenuItem";
-            this.gitBashToolStripMenuItem.Size = new System.Drawing.Size(240, 22);
-            this.gitBashToolStripMenuItem.Text = "Git Bash";
-            this.gitBashToolStripMenuItem.Click += new System.EventHandler(this.gitBashToolStripMenuItem_Click);
+            this.tsmiExplorer.Image = ((System.Drawing.Image)(resources.GetObject("tsmiExplorer.Image")));
+            this.tsmiExplorer.Name = "tsmiExplorer";
+            this.tsmiExplorer.Size = new System.Drawing.Size(240, 22);
+            this.tsmiExplorer.Text = "Open in Explorer";
+            this.tsmiExplorer.Click += new System.EventHandler(this.tsmiExplorer_Click);
             // 
             // toolStripMenuItem2
             // 
             this.toolStripMenuItem2.Name = "toolStripMenuItem2";
             this.toolStripMenuItem2.Size = new System.Drawing.Size(237, 6);
             // 
-            // codeToolStripMenuItem
+            // tsmiVSCode
             // 
-            this.codeToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("codeToolStripMenuItem.Image")));
-            this.codeToolStripMenuItem.Name = "codeToolStripMenuItem";
-            this.codeToolStripMenuItem.Size = new System.Drawing.Size(240, 22);
-            this.codeToolStripMenuItem.Text = "Code";
-            this.codeToolStripMenuItem.Click += new System.EventHandler(this.codeToolStripMenuItem_Click);
+            this.tsmiVSCode.Image = ((System.Drawing.Image)(resources.GetObject("tsmiVSCode.Image")));
+            this.tsmiVSCode.Name = "tsmiVSCode";
+            this.tsmiVSCode.Size = new System.Drawing.Size(240, 22);
+            this.tsmiVSCode.Text = "Code";
+            this.tsmiVSCode.Click += new System.EventHandler(this.tsmiVSCode_Click);
             // 
             // toolStripMenuItem3
             // 
             this.toolStripMenuItem3.Name = "toolStripMenuItem3";
             this.toolStripMenuItem3.Size = new System.Drawing.Size(237, 6);
+            // 
+            // tsmiVisualStudio
+            // 
+            this.tsmiVisualStudio.Image = ((System.Drawing.Image)(resources.GetObject("tsmiVisualStudio.Image")));
+            this.tsmiVisualStudio.Name = "tsmiVisualStudio";
+            this.tsmiVisualStudio.Size = new System.Drawing.Size(240, 22);
+            this.tsmiVisualStudio.Text = "Visual Studio";
+            this.tsmiVisualStudio.Click += new System.EventHandler(this.tsmiVisualStudio_Click);
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(237, 6);
+            // 
+            // tsmiAndroidStudio
+            // 
+            this.tsmiAndroidStudio.Image = ((System.Drawing.Image)(resources.GetObject("tsmiAndroidStudio.Image")));
+            this.tsmiAndroidStudio.Name = "tsmiAndroidStudio";
+            this.tsmiAndroidStudio.Size = new System.Drawing.Size(240, 22);
+            this.tsmiAndroidStudio.Text = "Android Studio";
+            this.tsmiAndroidStudio.Click += new System.EventHandler(this.tsmiAndroidStudio_Click);
+            // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(237, 6);
             // 
             // ignorarChecagemToolStripMenuItem
             // 
@@ -134,6 +170,7 @@
             this.ignorarChecagemToolStripMenuItem.Name = "ignorarChecagemToolStripMenuItem";
             this.ignorarChecagemToolStripMenuItem.Size = new System.Drawing.Size(240, 22);
             this.ignorarChecagemToolStripMenuItem.Text = "Ignore Check Pending Changes";
+            this.ignorarChecagemToolStripMenuItem.Visible = false;
             this.ignorarChecagemToolStripMenuItem.Click += new System.EventHandler(this.ignorarChecagemToolStripMenuItem_Click);
             // 
             // desbloquearToolStripMenuItem
@@ -141,6 +178,7 @@
             this.desbloquearToolStripMenuItem.Name = "desbloquearToolStripMenuItem";
             this.desbloquearToolStripMenuItem.Size = new System.Drawing.Size(240, 22);
             this.desbloquearToolStripMenuItem.Text = "Unblock Check";
+            this.desbloquearToolStripMenuItem.Visible = false;
             this.desbloquearToolStripMenuItem.Click += new System.EventHandler(this.desbloquearToolStripMenuItem_Click);
             // 
             // statusStrip1
@@ -227,6 +265,7 @@
             this.btnListBlocked.TabIndex = 25;
             this.btnListBlocked.Text = "&List Blocked";
             this.btnListBlocked.UseVisualStyleBackColor = false;
+            this.btnListBlocked.Visible = false;
             this.btnListBlocked.Click += new System.EventHandler(this.btnListBlocked_Click);
             // 
             // btnSair
@@ -355,18 +394,22 @@
         private System.Windows.Forms.Button btnSair;
         private System.Windows.Forms.ImageList imageList1;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem abrirNoExplorerToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem tsmiExplorer;
         private System.Windows.Forms.ToolStripSeparator toolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem gitBashToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem tsmiGitBash;
         private System.Windows.Forms.ToolStripSeparator toolStripMenuItem2;
         private System.Windows.Forms.ToolStripMenuItem ignorarChecagemToolStripMenuItem;
         private System.Windows.Forms.Button btnListBlocked;
         private System.Windows.Forms.ToolStripMenuItem desbloquearToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem codeToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem tsmiVSCode;
         private System.Windows.Forms.ToolStripSeparator toolStripMenuItem3;
         private System.Windows.Forms.CheckBox chkSendByEmail;
         private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.Button btnRestore;
+        private System.Windows.Forms.ToolStripMenuItem tsmiVisualStudio;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+        private System.Windows.Forms.ToolStripMenuItem tsmiAndroidStudio;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
     }
 }
 

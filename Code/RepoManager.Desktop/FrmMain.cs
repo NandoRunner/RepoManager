@@ -14,21 +14,15 @@ namespace RepoManager.Desktop
 {
     public partial class FrmMain : Form
     {
+        private string _initMessage;
         private string _json;
         private string _selectedPath;
         private string _userName;
-        private string _initMessage;
-
         public FrmMain()
         {
             InitializeComponent();
 
             WinReg.SubKey = "SOFTWARE\\" + Application.CompanyName + "\\" + Application.ProductName;
-        }
-
-        private void abrirNoExplorerToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            ProcManager.RunExplorer(this._selectedPath);
         }
 
         private void BeginProcess(object sender = null)
@@ -169,12 +163,6 @@ namespace RepoManager.Desktop
             txtEmail.Visible = chkSendByEmail.Checked;
         }
 
-        private void codeToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            if (!ProcManager.RunVSCode(this._selectedPath))
-                MessageBox.Show("code.exe not found!\n\nCheck PATH environment variable or install VSCode", ProcManager.Message, MessageBoxButtons.OK, MessageBoxIcon.Error);
-        }
-
         private void contextMenuStrip1_Opening(object sender, CancelEventArgs e)
         {
             bool selected = true;
@@ -188,22 +176,31 @@ namespace RepoManager.Desktop
                 this._selectedPath = FS.PathCombine(txtPasta.Text, lbLog.SelectedItem.ToString());
             }
 
-            abrirNoExplorerToolStripMenuItem.Enabled = selected;
-            gitBashToolStripMenuItem.Enabled = selected;
+            tsmiExplorer.Enabled = selected;
+            tsmiGitBash.Enabled = selected;
+
             //todo: revert
             //ignorarChecagemToolStripMenuItem.Enabled = selected;
             desbloquearToolStripMenuItem.Enabled = selected;
 
-            string[] listCodeProjs = { "ionic", "react", "rails" };
+            tsmiAndroidStudio.Enabled = tsmiVisualStudio.Enabled = tsmiVSCode.Enabled = false;
 
-            if (selected && listCodeProjs.Any(lbLog.SelectedItem.ToString().ToLower(CultureInfo.CurrentCulture).Contains))
-            //if (selected)
+            if (!selected) return;
+
+
+            switch (Business.DicRepo[lbLog.SelectedItem.ToString()])
             {
-                codeToolStripMenuItem.Enabled = selected;
-            }
-            else
-            {
-                codeToolStripMenuItem.Enabled = false;
+                case RepoType.AndroidStudio:
+                    tsmiAndroidStudio.Enabled = true;
+                    break;
+
+                case RepoType.VisualStudio:
+                    tsmiVisualStudio.Enabled = true;
+                    break;
+
+                case RepoType.VSCode:
+                    tsmiVSCode.Enabled = true;
+                    break;
             }
         }
 
@@ -246,11 +243,6 @@ namespace RepoManager.Desktop
             BeginProcess();
             EndProcess();
         }
-        private void gitBashToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            if (!ProcManager.RunGitBash(this._selectedPath))
-                MessageBox.Show("bash.exe not found!\n\nCheck PATH environment variable or install GIT", ProcManager.Message, MessageBoxButtons.OK, MessageBoxIcon.Error);
-        }
 
         private void ignorarChecagemToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -271,12 +263,12 @@ namespace RepoManager.Desktop
             if (lbLog.SelectedIndex == -1)
                 return;
 
-            gitBashToolStripMenuItem_Click(sender, e);
+            tsmiGitBash_Click(sender, e);
         }
 
         private void SendToEmail(string subject)
         {
-            var emailFrom  = WinReg.Read("FromEmail") ?? string.Empty;
+            var emailFrom = WinReg.Read("FromEmail") ?? string.Empty;
 
             using (SimpleLogin frm = new SimpleLogin(Application.ProductName, emailFrom))
             {
@@ -299,6 +291,30 @@ namespace RepoManager.Desktop
                     WinReg.Write("FromEmail", frm.Login);
                 }
             }
+        }
+
+        private void tsmiExplorer_Click(object sender, EventArgs e)
+        {
+            ProcManager.RunExplorer(this._selectedPath);
+        }
+        private void tsmiGitBash_Click(object sender, EventArgs e)
+        {
+            if (!ProcManager.RunGitBash(this._selectedPath))
+                MessageBox.Show("bash.exe not found!\n\nCheck PATH environment variable or install GIT", ProcManager.Message, MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
+
+        private void tsmiVisualStudio_Click(object sender, EventArgs e)
+        {
+            if (!ProcManager.RunVisualStudio(FS.PathCombine(this._selectedPath, this._selectedPath.Split('\\').Last() + ".sln")))
+            {
+                MessageBox.Show("Error opening Visual Studio solution!\n\nCheck if Visual Studio is installed", ProcManager.Message, MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void tsmiVSCode_Click(object sender, EventArgs e)
+        {
+            if (!ProcManager.RunVSCode(this._selectedPath))
+                MessageBox.Show("code.exe not found!\n\nCheck PATH environment variable or install VSCode", ProcManager.Message, MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
         private bool ValidarCampos()
         {
@@ -326,6 +342,27 @@ namespace RepoManager.Desktop
             }
 
             return true;
+        }
+
+        private void tsmiAndroidStudio_Click(object sender, EventArgs e)
+        {
+            //todo: open with android
+
+            MessageBox.Show("Not available yet!", "Open Android Studio project", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void lbLog_MouseDown(object sender, MouseEventArgs e)
+        {
+            // Select on right-click
+            if (e.Button == MouseButtons.Right)   //(1)
+            {
+                int indexOfItemUnderMouseToDrag;
+                indexOfItemUnderMouseToDrag = lbLog.IndexFromPoint(e.X, e.Y); //(2)
+                if (indexOfItemUnderMouseToDrag != ListBox.NoMatches)
+                {
+                    lbLog.SelectedIndex = indexOfItemUnderMouseToDrag; //(3)
+                }
+            }
         }
     }
 }

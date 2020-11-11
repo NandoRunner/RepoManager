@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RepoManager.Desktop", "Code
 EndProject
 Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "RepoManager.Setup", "Code\RepoManager.Setup\RepoManager.Setup.vdproj", "{FD25EE7D-FB28-487E-A103-6FCA90486354}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FAndradeTI.Util.FileSystem", "..\FAndradeTI.Utilities\FAndradeTI.Util.FileSystem\FAndradeTI.Util.FileSystem.csproj", "{024EBF21-4C3E-4BA0-AF79-2EDE68936B0F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -19,6 +21,10 @@ Global
 		{729A2B61-1744-4484-B1FF-5250FDDC5271}.Release|Any CPU.Build.0 = Release|Any CPU
 		{FD25EE7D-FB28-487E-A103-6FCA90486354}.Debug|Any CPU.ActiveCfg = Debug
 		{FD25EE7D-FB28-487E-A103-6FCA90486354}.Release|Any CPU.ActiveCfg = Release
+		{024EBF21-4C3E-4BA0-AF79-2EDE68936B0F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{024EBF21-4C3E-4BA0-AF79-2EDE68936B0F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{024EBF21-4C3E-4BA0-AF79-2EDE68936B0F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{024EBF21-4C3E-4BA0-AF79-2EDE68936B0F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
