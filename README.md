@@ -24,6 +24,7 @@ The first time you are pushing to a repo, a popup will ask for your credentials:
 
 
 Email:
+
 For sending an email with you list of repos, you need to use your gmail credentials and activate "less secure apps":
 https://myaccount.google.com/u/2/lesssecureapps
 
