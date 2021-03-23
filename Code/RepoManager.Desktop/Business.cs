@@ -227,7 +227,7 @@ namespace RepoManager.Desktop
                     {
                         _dicRepo.Add(ri.Path, RepoType.AndroidStudio);
                     }
-                    else if (FS.FileExists(FS.PathCombine(subdirectory, @"package.json")))
+                    else if (FS.FileExists(FS.PathCombine(subdirectory, @"package.json")) || FS.FileExists(FS.PathCombine(subdirectory, @"package-lock.json")))
                     {
                         _dicRepo.Add(ri.Path, RepoType.VSCode);
                     }

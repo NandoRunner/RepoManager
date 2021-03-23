@@ -75,7 +75,7 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_B7269C7BBB13B4B5440516972FA16CAF"
+        "MsmKey" = "8:_AD40D7CAF07D373C1AA00FF794DCCE3E"
         "OwnerKey" = "8:_8351717B4EA041A4A16B8D4AB4069B3C"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -100,7 +100,7 @@
         "Entry"
         {
         "MsmKey" = "8:_BBE932E87F4A2BBD684E5C4CBF2F5212"
-        "OwnerKey" = "8:_B7269C7BBB13B4B5440516972FA16CAF"
+        "OwnerKey" = "8:_AD40D7CAF07D373C1AA00FF794DCCE3E"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -202,13 +202,13 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_9FA5909AB1DBE4856019215AE46BBBBD"
+        "OwnerKey" = "8:_AD40D7CAF07D373C1AA00FF794DCCE3E"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_B7269C7BBB13B4B5440516972FA16CAF"
+        "OwnerKey" = "8:_9FA5909AB1DBE4856019215AE46BBBBD"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -510,14 +510,14 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_B7269C7BBB13B4B5440516972FA16CAF"
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_AD40D7CAF07D373C1AA00FF794DCCE3E"
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
             "AssemblyAsmDisplayName" = "8:FAndradeTI.Util.FileSystem, Version=1.0.15.0, Culture=neutral, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_B7269C7BBB13B4B5440516972FA16CAF"
+                    "_AD40D7CAF07D373C1AA00FF794DCCE3E"
                     {
                     "Name" = "8:FAndradeTI.Util.FileSystem.dll"
                     "Attributes" = "3:512"
@@ -814,15 +814,15 @@
         {
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:NandoRunner Repo Manager"
-        "ProductCode" = "8:{B3E2A2CE-411E-44AF-B320-6246702C4F66}"
-        "PackageCode" = "8:{FEED69C3-F5D1-4877-8217-1A13A9F620C7}"
+        "ProductCode" = "8:{050D6366-5F1C-472B-92DB-96EFEFB37F1A}"
+        "PackageCode" = "8:{FF64508F-E806-47EF-8E71-367B1FA0B082}"
         "UpgradeCode" = "8:{5D8D8858-F81E-40B7-9360-31BA3DE75851}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
         "RemovePreviousVersions" = "11:TRUE"
         "DetectNewerInstalledVersion" = "11:TRUE"
         "InstallAllUsers" = "11:FALSE"
-        "ProductVersion" = "8:1.20.27"
+        "ProductVersion" = "8:1.21.0"
         "Manufacturer" = "8:FAndradeTI"
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:"
