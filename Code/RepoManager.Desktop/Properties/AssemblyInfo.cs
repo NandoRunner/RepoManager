@@ -11,7 +11,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("FAndradeTI (NandoRunner)")]
 [assembly: AssemblyProduct("Repo Manager")]
-[assembly: AssemblyCopyright("MIT License Copyright (c) 2019-2020 Fernando Andrade (NandoRunner)")]
+[assembly: AssemblyCopyright("MIT License Copyright (c) 2019-2021 Fernando Andrade (NandoRunner)")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -33,6 +33,6 @@ using System.Runtime.InteropServices;
 // É possível especificar todos os valores ou usar como padrão os Números de Build e da Revisão
 // utilizando o "*" como mostrado abaixo:
 // [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("1.21.0")]
-[assembly: AssemblyFileVersion("1.21.0")]
+[assembly: AssemblyVersion("1.21.1")]
+[assembly: AssemblyFileVersion("1.21.1")]
 [assembly: NeutralResourcesLanguage("en")]

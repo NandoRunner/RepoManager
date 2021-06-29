@@ -681,11 +681,6 @@
             "AssemblyAsmDisplayName" = "8:Microsoft.IdentityModel.Clients.ActiveDirectory, Version=4.5.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_E967EA039194D59D432E4AADB3FD69D2"
-                    {
-                    "Name" = "8:Microsoft.IdentityModel.Clients.ActiveDirectory.dll"
-                    "Attributes" = "3:512"
-                    }
                 }
             "SourcePath" = "8:Microsoft.IdentityModel.Clients.ActiveDirectory.dll"
             "TargetName" = "8:"
@@ -814,15 +809,15 @@
         {
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:NandoRunner Repo Manager"
-        "ProductCode" = "8:{050D6366-5F1C-472B-92DB-96EFEFB37F1A}"
-        "PackageCode" = "8:{FF64508F-E806-47EF-8E71-367B1FA0B082}"
+        "ProductCode" = "8:{8D75B24F-DAD5-4BC5-8FC0-5FF85AAD8745}"
+        "PackageCode" = "8:{B58FED78-254A-4D17-A846-0E5F74B239C5}"
         "UpgradeCode" = "8:{5D8D8858-F81E-40B7-9360-31BA3DE75851}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
         "RemovePreviousVersions" = "11:TRUE"
         "DetectNewerInstalledVersion" = "11:TRUE"
         "InstallAllUsers" = "11:FALSE"
-        "ProductVersion" = "8:1.21.0"
+        "ProductVersion" = "8:1.21.1"
         "Manufacturer" = "8:FAndradeTI"
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:"

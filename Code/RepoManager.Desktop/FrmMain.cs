@@ -364,5 +364,10 @@ namespace RepoManager.Desktop
                 }
             }
         }
+
+        private void txtPasta_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
